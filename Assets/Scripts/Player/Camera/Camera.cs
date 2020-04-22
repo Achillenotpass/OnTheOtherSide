@@ -40,13 +40,24 @@ public class Camera : MonoBehaviour
         Debug.Log("aaa = " + transform.rotation.x);
         Debug.Log("bbb = " + mouseLook.y);
         //Debug.Log(transform.eulerAngles.x);
-        if (mouseLook.y <= -30)
+        if (transform.rotation.x > 0.25f)
         {
             m_StopInferiorAngle = true;
         }
-        if (mouseLook.y >= 40)
+        if (transform.rotation.x < -0.40f)
         {
             m_StopSuperiorAngle = true;
+        }
+
+        if(m_StopSuperiorAngle)
+        {
+            if (m_ActualMouseLook.y > mouseLook.y)
+                m_StopSuperiorAngle = false;
+        }
+        if (m_StopInferiorAngle)
+        {
+            if (m_ActualMouseLook.y < mouseLook.y)
+                m_StopInferiorAngle = false;
         }
 
         if (m_StopSuperiorAngle)
@@ -58,17 +69,6 @@ public class Camera : MonoBehaviour
         {
             mouseLook.y = -30;
             m_ActualMouseLook = new Vector2(mouseLook.x, mouseLook.y);
-        }
-
-        if (m_StopSuperiorAngle)
-        {
-            if (m_ActualMouseLook.y > mouseLook.y)
-                m_StopSuperiorAngle = false;
-        }
-        if (m_StopInferiorAngle)
-        {
-            if (m_ActualMouseLook.y < mouseLook.y)
-                m_StopInferiorAngle = false;
         }
     }
 
