@@ -23,7 +23,7 @@ public class Camera : MonoBehaviour
 
     void Start()
     {
-        character = transform.parent.parent.gameObject;
+        character = transform.parent.gameObject;
     }
 
     // Update is called once per frame

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Crouching : MonoBehaviour
 {
-    private BoxCollider m_PlayerCollider;
+    public BoxCollider playerCollider;
 
-    private Camera m_PlayerCamera;
+    public Camera playerCamera;
 
     private Player m_PlayerScript;
 
@@ -16,13 +16,13 @@ public class Crouching : MonoBehaviour
 
     public AnimationCurve invCrouching;
 
+    private KeyCode m_Crouching = KeyCode.C;
+
     private void Start()
     {
-        m_PlayerCollider = GetComponentInChildren<BoxCollider>();
-        m_PlayerCamera = GetComponentInChildren<Camera>();
         m_PlayerScript = GetComponent<Player>();
         m_CurveUtility = GetComponent<CurveUtility>();
-        m_CurveUtility.objectToAnimate = m_PlayerCamera.gameObject;
+        m_CurveUtility.objectToAnimate = playerCamera.gameObject;
     }
     void Update()
     {
@@ -33,35 +33,35 @@ public class Crouching : MonoBehaviour
 
     private void ChangePlayerSpeedOnCrouching()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(m_Crouching))
             m_PlayerScript.speedMove /= 2;
-        if (Input.GetKeyUp(KeyCode.LeftAlt))
+        if (Input.GetKeyUp(m_Crouching))
             m_PlayerScript.speedMove *= 2;
 
     }
 
     private void ChangeColliderOnCrouching()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(m_Crouching))
         {
-            m_PlayerCollider.center = new Vector3(0, -0.25f, 0);
-            m_PlayerCollider.size = new Vector3(1, 0.5f, 1);
+            playerCollider.center = new Vector3(0, -0.439f, 0);
+            playerCollider.size = new Vector3(1, 0.878f, 1);
         }
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(m_Crouching))
         {
-            m_PlayerCollider.center = new Vector3(0, 0, 0);
-            m_PlayerCollider.size = new Vector3(1, 1.756f, 1);
+            playerCollider.center = new Vector3(0, 0, 0);
+            playerCollider.size = new Vector3(1, 1.756f, 1);
         }
     }
 
     private void ChangePositionCameraOnCrouching()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(m_Crouching))
         {
             m_CurveUtility.axeY = crouching;
             m_CurveUtility.BeginMovement();
         }
-        if(Input.GetKeyUp(KeyCode.C))
+        if(Input.GetKeyUp(m_Crouching))
         {
             m_CurveUtility.axeY = invCrouching;
             m_CurveUtility.BeginMovement();
