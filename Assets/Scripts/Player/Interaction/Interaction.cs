@@ -29,12 +29,6 @@ public class Interaction : MonoBehaviour
     
     void Update()
     {
-       
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            transform.Rotate(new Vector3(0.0f, 1.0f, 0.0f));
-        }
         UpdateHeldObjectPosition();
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -52,7 +46,10 @@ public class Interaction : MonoBehaviour
                 //Getting hold of a movable object when pressing left-click
                 else if (hitInfo.transform.gameObject.tag == "Movable")
                 {
+                    //We get the object
                     m_ObjectHeld = hitInfo.transform.gameObject;
+
+                    //m_ObjectHeld.transform.SetParent(transform);
                     //We set the target and rotation of the held object to the current position  and rotation of the held object
                     targetHeldObject.transform.position = m_ObjectHeld.transform.position;
                     targetHeldObject.transform.rotation = m_ObjectHeld.transform.rotation;
@@ -73,7 +70,8 @@ public class Interaction : MonoBehaviour
                 //We activate gravity again
                 m_ObjectHeldRigidbody.useGravity = true;
 
-                
+                //We unparent the object
+                //m_ObjectHeld.transform.SetParent(null);
 
                 m_ObjectHeld = null;
                 m_ObjectHeldRigidbody = null;
@@ -91,6 +89,9 @@ public class Interaction : MonoBehaviour
                 m_ObjectHeldRigidbody.useGravity = true;
                 //And we add a force to the object to throw it away
                 m_ObjectHeldRigidbody.AddForce(m_FpsCamera.transform.forward * throwingForce * Time.deltaTime);
+
+                //We unparent the object
+                //m_ObjectHeld.transform.SetParent(null);
 
                 //The player is not holding anything
                 m_ObjectHeld = null;

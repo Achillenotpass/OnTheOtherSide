@@ -13,9 +13,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &735709697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38,7 +38,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: e386c72ab380c7b499c210515eb61e34, type: 3}
       propertyPath: m_Name
-      value: chaise_bien_mise
+      value: ChaisePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e386c72ab380c7b499c210515eb61e34, type: 3}
       propertyPath: m_TagString

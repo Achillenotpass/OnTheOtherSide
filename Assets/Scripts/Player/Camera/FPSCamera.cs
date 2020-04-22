@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class FPSCamera : MonoBehaviour
 {
     [SerializeField]
     public float sensitivity = 5.0f;
@@ -23,7 +23,7 @@ public class Camera : MonoBehaviour
 
     void Start()
     {
-        character = transform.parent.gameObject;
+        //character = transform.parent.gameObject;
     }
 
     // Update is called once per frame
