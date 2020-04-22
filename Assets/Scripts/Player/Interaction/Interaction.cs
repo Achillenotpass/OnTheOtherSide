@@ -48,12 +48,14 @@ public class Interaction : MonoBehaviour
                     //If it is, we activate his "Interaction" function
                     hitInfo.transform.gameObject.GetComponent<Activable>().Interaction();
                 }
+
                 //Getting hold of a movable object when pressing left-click
                 else if (hitInfo.transform.gameObject.tag == "Movable")
                 {
                     m_ObjectHeld = hitInfo.transform.gameObject;
-                    //We set the target of the held object to the current position of the held object
+                    //We set the target and rotation of the held object to the current position  and rotation of the held object
                     targetHeldObject.transform.position = m_ObjectHeld.transform.position;
+                    targetHeldObject.transform.rotation = m_ObjectHeld.transform.rotation;
 
                     //We also get the object's rigidbody to disable gravity
                     m_ObjectHeldRigidbody = m_ObjectHeld.GetComponent<Rigidbody>();
@@ -71,7 +73,7 @@ public class Interaction : MonoBehaviour
                 //We activate gravity again
                 m_ObjectHeldRigidbody.useGravity = true;
 
-                m_ObjectHeldRigidbody.AddForce((2 * m_HeldObjectCurrentPosition - m_HeldObjectPastPosition) * Time.deltaTime);
+                
 
                 m_ObjectHeld = null;
                 m_ObjectHeldRigidbody = null;
@@ -102,11 +104,10 @@ public class Interaction : MonoBehaviour
         //If the player holds an object
         if (m_ObjectHeld != null)
         {
+            //We actualize the hekd objects rotations
+            m_ObjectHeld.transform.rotation = targetHeldObject.transform.rotation;
             //We actualize the held object's position with a lerp. It tries to reach the position of a gameobject that is parented to the player
-            m_ObjectHeld.transform.position = Vector3.Lerp(m_ObjectHeld.transform.position, targetHeldObject.transform.position, 0.1f);
-
-            m_HeldObjectPastPosition = m_HeldObjectCurrentPosition;
-            m_HeldObjectCurrentPosition = m_ObjectHeld.transform.position;
+            m_ObjectHeld.transform.position = Vector3.Lerp(m_ObjectHeld.transform.position, targetHeldObject.transform.position, 0.3f);
         }
     }
 }
