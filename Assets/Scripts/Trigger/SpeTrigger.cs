@@ -12,26 +12,29 @@ public class SpeTrigger : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Invoke("OneTime", 0.01f);
-            Invoke("MultipleTime", 0.01f);
+            switch(currentTriggerStates)
+            {
+                case TriggerStates.OneTime:
+                    Invoke("OneTime", 0.01f);
+                    break;
+                case TriggerStates.MultipleTime:
+                    Invoke("MultipleTime", 0.01f);
+                    break;
+            }
+            
+            
         }
     }
 
     private void OneTime()
     {
-        if(currentTriggerStates == TriggerStates.OneTime)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 
     private void MultipleTime()
     {
-        if (currentTriggerStates == TriggerStates.MultipleTime)
-        {
-            Invoke("ReactiveTrigger", timerForReactivation);
-            gameObject.SetActive(false);
-        }
+        Invoke("ReactiveTrigger", timerForReactivation);
+        gameObject.SetActive(false);
     }
 
     private void ReactiveTrigger()
