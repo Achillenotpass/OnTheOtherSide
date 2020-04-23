@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public float speedMove = 0.20f;
     public float multiplyMove = 1;
-    bool isRunning = false;
+    bool m_IsRunning = false;
 
     private void Start()
     {
@@ -23,16 +23,16 @@ public class Player : MonoBehaviour
     {
 
         // Variable pour le sprint
-        if (isRunning) { multiplyMove = 3; }
+        if (m_IsRunning) { multiplyMove = 3; }
         else { multiplyMove = 1; }
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Sprint") > 0)
         {
-            isRunning = true;
+            m_IsRunning = true;
         }
         else
         {
-            isRunning = false;
+            m_IsRunning = false;
         }
 
 

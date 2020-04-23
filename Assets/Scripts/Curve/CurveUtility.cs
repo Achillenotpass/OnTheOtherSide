@@ -8,15 +8,15 @@ public class CurveUtility : MonoBehaviour
     public AnimationCurve axeY;
     public AnimationCurve axeZ;
 
-    private Vector3 curve = Vector3.zero;
+    private Vector3 m_Curve = Vector3.zero;
 
-    private float movementTimerX = 0f;
-    private float movementTimerY = 0f;
-    private float movementTimerZ = 0f;
+    private float m_MovementTimerX = 0f;
+    private float m_MovementTimerY = 0f;
+    private float m_MovementTimerZ = 0f;
 
-    private float movementDurationX = 0f;
-    private float movementDurationY = 0f;
-    private float movementDurationZ = 0f;
+    private float m_MovementDurationX = 0f;
+    private float m_MovementDurationY = 0f;
+    private float m_MovementDurationZ = 0f;
 
     public GameObject objectToAnimate;
 
@@ -27,11 +27,11 @@ public class CurveUtility : MonoBehaviour
 
     private void ApplyMovement()
     {
-        movementTimerX += Time.deltaTime;
-        movementTimerY += Time.deltaTime;
-        movementTimerZ += Time.deltaTime;
-        curve = new Vector3(objectToAnimate.transform.parent.position.x + axeX.Evaluate(movementTimerX), objectToAnimate.transform.parent.position.y + axeY.Evaluate(movementTimerY), objectToAnimate.transform.parent.position.z + axeZ.Evaluate(movementTimerZ));
-        objectToAnimate.transform.position = curve;
+        m_MovementTimerX += Time.deltaTime;
+        m_MovementTimerY += Time.deltaTime;
+        m_MovementTimerZ += Time.deltaTime;
+        m_Curve = new Vector3(objectToAnimate.transform.parent.position.x + axeX.Evaluate(m_MovementTimerX), objectToAnimate.transform.parent.position.y + axeY.Evaluate(m_MovementTimerY), objectToAnimate.transform.parent.position.z + axeZ.Evaluate(m_MovementTimerZ));
+        objectToAnimate.transform.position = m_Curve;
     }
 
     private float ComputeAnimCurveDuration(AnimationCurve curve)
@@ -51,11 +51,11 @@ public class CurveUtility : MonoBehaviour
     }
     public void BeginMovement()
     {
-        movementTimerX = 0f;
-        movementDurationX = ComputeAnimCurveDuration(axeX);
-        movementTimerY = 0f;
-        movementDurationY = ComputeAnimCurveDuration(axeY);
-        movementTimerZ = 0f;
-        movementDurationZ = ComputeAnimCurveDuration(axeZ);
+        m_MovementTimerX = 0f;
+        m_MovementDurationX = ComputeAnimCurveDuration(axeX);
+        m_MovementTimerY = 0f;
+        m_MovementDurationY = ComputeAnimCurveDuration(axeY);
+        m_MovementTimerZ = 0f;
+        m_MovementDurationZ = ComputeAnimCurveDuration(axeZ);
     }
 }

@@ -6,14 +6,14 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject pause;
     public GameObject player;
-    bool isPaused = false;
-    Player scriptPlayer;
-    FPSCamera scriptCamera;
+    bool m_IsPaused = false;
+    Player m_ScriptPlayer;
+    FPSCamera m_ScriptCamera;
 
     private void Start()
     {
-        scriptPlayer = player.GetComponent<Player>();
-        scriptCamera = player.GetComponentInChildren<FPSCamera>();
+        m_ScriptPlayer = player.GetComponent<Player>();
+        m_ScriptCamera = player.GetComponentInChildren<FPSCamera>();
         Cursor.visible = false;
     }
     void Update()
@@ -23,19 +23,19 @@ public class MenuScript : MonoBehaviour
 
     public void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.Tab) && !m_IsPaused)
         {
             pause.SetActive(true);
             Cursor.visible = true;
-            isPaused = true;
+            m_IsPaused = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
-            scriptPlayer.enabled = !scriptPlayer.enabled;
-            scriptCamera.enabled = !scriptCamera.enabled;
+            m_ScriptPlayer.enabled = !m_ScriptPlayer.enabled;
+            m_ScriptCamera.enabled = !m_ScriptCamera.enabled;
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.Tab) && isPaused)
+        else if (Input.GetKeyDown(KeyCode.Tab) && m_IsPaused)
         {
             StopMenu(pause);
         }
@@ -43,13 +43,13 @@ public class MenuScript : MonoBehaviour
 
     public void StopMenu(GameObject menu)
     {
-        isPaused = false;
+        m_IsPaused = false;
         Cursor.visible = false;
         menu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
-        scriptPlayer.enabled = !scriptPlayer.enabled;
-        scriptCamera.enabled = !scriptCamera.enabled;
+        m_ScriptPlayer.enabled = !m_ScriptPlayer.enabled;
+        m_ScriptCamera.enabled = !m_ScriptCamera.enabled;
     }
 
     public void QuitGame()

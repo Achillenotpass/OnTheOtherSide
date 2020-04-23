@@ -11,9 +11,9 @@ public class FPSCamera : MonoBehaviour
     // the chacter is the capsule
     public GameObject character;
     // get the incremental value of mouse moving
-    private Vector2 mouseLook;
+    private Vector2 m_MouseLook;
     // smooth the mouse moving
-    private Vector2 smoothV;
+    private Vector2 m_SmoothV;
     // Start is called before the first frame update
 
     // Stop camera
@@ -38,35 +38,35 @@ public class FPSCamera : MonoBehaviour
     void StopMovementOnExtremeAngle()
     {
         //Debug.Log(transform.eulerAngles.x);
-        if (mouseLook.y < -60)
+        if (m_MouseLook.y < -60)
         {
             m_StopInferiorAngle = true;
         }
-        if (mouseLook.y > 60f)
+        if (m_MouseLook.y > 60f)
         {
             m_StopSuperiorAngle = true;
         }
 
         if(m_StopSuperiorAngle)
         {
-            if (m_ActualMouseLook.y > mouseLook.y)
+            if (m_ActualMouseLook.y > m_MouseLook.y)
                 m_StopSuperiorAngle = false;
         }
         if (m_StopInferiorAngle)
         {
-            if (m_ActualMouseLook.y < mouseLook.y)
+            if (m_ActualMouseLook.y < m_MouseLook.y)
                 m_StopInferiorAngle = false;
         }
 
         if (m_StopSuperiorAngle)
         {
-            mouseLook.y = 60;
-            m_ActualMouseLook = new Vector2(mouseLook.x, mouseLook.y);
+            m_MouseLook.y = 60;
+            m_ActualMouseLook = new Vector2(m_MouseLook.x, m_MouseLook.y);
         }
         if (m_StopInferiorAngle)
         {
-            mouseLook.y = -60;
-            m_ActualMouseLook = new Vector2(mouseLook.x, mouseLook.y);
+            m_MouseLook.y = -60;
+            m_ActualMouseLook = new Vector2(m_MouseLook.x, m_MouseLook.y);
         }
     }
 
@@ -75,14 +75,14 @@ public class FPSCamera : MonoBehaviour
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
         // the interpolated float result between the two float values
-        smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
-        smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
+        m_SmoothV.x = Mathf.Lerp(m_SmoothV.x, md.x, 1f / smoothing);
+        m_SmoothV.y = Mathf.Lerp(m_SmoothV.y, md.y, 1f / smoothing);
         // incrementally add to the camera look
-        mouseLook += smoothV;
+        m_MouseLook += m_SmoothV;
 
         // vector3.right means the x-axis
-        transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
-        character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+        transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
+        character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
     }
 
     void ControlM()
@@ -90,13 +90,13 @@ public class FPSCamera : MonoBehaviour
         var md = new Vector2(Input.GetAxisRaw("RightJoystickX"), Input.GetAxisRaw("RightJoystickY"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
         // the interpolated float result between the two float values
-        smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
-        smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
+        m_SmoothV.x = Mathf.Lerp(m_SmoothV.x, md.x, 1f / smoothing);
+        m_SmoothV.y = Mathf.Lerp(m_SmoothV.y, md.y, 1f / smoothing);
         // incrementally add to the camera look
-        mouseLook += smoothV;
+        m_MouseLook += m_SmoothV;
 
         // vector3.right means the x-axis
-        transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
-        character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+        transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
+        character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
     }
 }
