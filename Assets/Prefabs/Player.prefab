@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxInteractionDistance: 1.5
   targetHeldObject: {fileID: 5595040325277228726}
-  throwingForce: 1000
+  throwingForce: 30000
 --- !u!1 &5595040325277228726
 GameObject:
   m_ObjectHideFlags: 0
