@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class SpeTrigger : MonoBehaviour
 {
+    public List<Activable> objectsToActivate = new List<Activable>();
+
     public TriggerStates currentTriggerStates = TriggerStates.Normal;
 
     public float timerForReactivation = 1;
 
     private void OnTriggerEnter(Collider other)
     {
+        foreach (Activable toActivate in objectsToActivate)
+        {
+            toActivate.Interaction();
+        }
+
+
         if(other.gameObject.tag == "Player")
         {
             switch(currentTriggerStates)
