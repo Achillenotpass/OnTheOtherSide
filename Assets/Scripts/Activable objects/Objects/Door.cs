@@ -11,7 +11,7 @@ public class Door : Activable
     public bool isLocked = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         baseRotation = transform.rotation.eulerAngles;
 
