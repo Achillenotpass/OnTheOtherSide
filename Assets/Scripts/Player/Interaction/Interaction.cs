@@ -108,7 +108,7 @@ public class Interaction : MonoBehaviour
             //We actualize the hekd objects rotations
             m_ObjectHeld.transform.rotation = targetHeldObject.transform.rotation;
             //We actualize the held object's position with a lerp. It tries to reach the position of a gameobject that is parented to the player
-            m_ObjectHeld.transform.position = Vector3.Lerp(m_ObjectHeld.transform.position, targetHeldObject.transform.position, 0.3f);
+            m_ObjectHeld.transform.position = Vector3.Lerp(m_ObjectHeld.transform.position, targetHeldObject.transform.position, 0.7f);
         }
     }
 }
