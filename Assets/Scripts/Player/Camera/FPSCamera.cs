@@ -37,8 +37,6 @@ public class FPSCamera : MonoBehaviour
 
     void StopMovementOnExtremeAngle()
     {
-        Debug.Log("aaa = " + transform.rotation.x);
-        Debug.Log("bbb = " + mouseLook.y);
         //Debug.Log(transform.eulerAngles.x);
         if (mouseLook.y < -60)
         {
