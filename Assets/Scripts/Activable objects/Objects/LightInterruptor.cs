@@ -6,7 +6,6 @@ public class LightInterruptor : Activable
 {
     public List<SpeLight> m_LightScripts;
 
-    
     public override void Interaction()
     {
         foreach (SpeLight light in m_LightScripts)

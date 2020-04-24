@@ -67,6 +67,7 @@ public class Monster : MonoBehaviour
             LosingPlayerAggro();
         }
 
+
         if (m_CanSeePlayer)
         {
             SetTarget(m_Player.gameObject);
