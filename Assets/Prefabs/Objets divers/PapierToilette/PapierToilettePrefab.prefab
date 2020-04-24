@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &5540104038682580685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970783275814914161}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15266271, y: 0.39591894, z: 0.40210348}
+  m_Center: {x: -0.04958001, y: -0.00036142897, z: 0.0110088205}
 --- !u!1001 &2970783275814948561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +22,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 9d4554a786226ec4998fb96a224de482, type: 3}
       propertyPath: m_Name
-      value: Papier Toilette
+      value: PapierToilettePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d4554a786226ec4998fb96a224de482, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,3 +74,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 78289275c727fe647b111cd54ae6fb62, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4554a786226ec4998fb96a224de482, type: 3}
+--- !u!1 &2970783275814914161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 9d4554a786226ec4998fb96a224de482,
+    type: 3}
+  m_PrefabInstance: {fileID: 2970783275814948561}
+  m_PrefabAsset: {fileID: 0}

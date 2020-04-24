@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7700534512302700594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098683338895332682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1697729, y: 0.726584, z: 0.4066154}
+  m_Center: {x: -4.0533586, y: 0.017974008, z: 0.120768435}
 --- !u!1001 &4098683338895299562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +22,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f95e4481cfba97247871fba2671fde98, type: 3}
       propertyPath: m_Name
-      value: lavabo 3
+      value: Lavabos3Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f95e4481cfba97247871fba2671fde98, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,3 +74,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f84d303a8aafc7b47a91145069bf69a8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95e4481cfba97247871fba2671fde98, type: 3}
+--- !u!1 &4098683338895332682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: f95e4481cfba97247871fba2671fde98,
+    type: 3}
+  m_PrefabInstance: {fileID: 4098683338895299562}
+  m_PrefabAsset: {fileID: 0}
