@@ -10,8 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3677020735543047850}
   - component: {fileID: 5954485327698479697}
+  - component: {fileID: 6107333621666607565}
+  - component: {fileID: 6807740663208781698}
+  - component: {fileID: 4264400777380483994}
   m_Layer: 0
-  m_Name: "canap\xE9 gris termin\xE9"
+  m_Name: "Canap\xE9GrisPrefab"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,8 +46,47 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.477925, y: 4.916129, z: 4.487798}
-  m_Center: {x: -21.68845, y: 2.4475799, z: 2.049848}
+  m_Size: {x: 10.477925, y: 4.916129, z: 1.3734477}
+  m_Center: {x: -21.68845, y: 2.4475799, z: 0.49267283}
+--- !u!65 &6107333621666607565
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615601910470544189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.15281, y: 2.5626738, z: 4.7060757}
+  m_Center: {x: -21.654192, y: 1.0045737, z: 1.8530377}
+--- !u!65 &6807740663208781698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615601910470544189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3348432, y: 4.571825, z: 4.5718184}
+  m_Center: {x: -17.245218, y: 1.7859124, z: 1.7859093}
+--- !u!65 &4264400777380483994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2615601910470544189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1115893, y: 4.571825, z: 4.5718184}
+  m_Center: {x: -26.398006, y: 1.7859124, z: 1.7859093}
 --- !u!1 &8180247628829738972
 GameObject:
   m_ObjectHideFlags: 0
