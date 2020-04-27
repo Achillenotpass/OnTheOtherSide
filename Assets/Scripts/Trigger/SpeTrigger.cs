@@ -12,15 +12,14 @@ public class SpeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (Activable toActivate in objectsToActivate)
-        {
-            toActivate.Interaction();
-        }
-
 
         if(other.gameObject.tag == "Player")
         {
-            switch(currentTriggerStates)
+            foreach (Activable toActivate in objectsToActivate)
+            {
+                toActivate.Interaction();
+            }
+            switch (currentTriggerStates)
             {
                 case TriggerStates.OneTime:
                     Invoke("OneTime", 0.01f);

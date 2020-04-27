@@ -775,6 +775,41 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.9
       objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.65238595
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.757887
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.71463907
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2260096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -278.557
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 8014453088018235362, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_Name
@@ -899,6 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 515a7527d299825449d681f108c92234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToActivate: []
   currentTriggerStates: 2
   timerForReactivation: 3
 --- !u!1 &864863333
@@ -1196,7 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbb12779d082e54bbd22a248de35696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLightState: 0
+  currentLightState: 2
   timerForReactivation: 1
   currentTimerForReactivation: 0
 --- !u!1 &1176966965

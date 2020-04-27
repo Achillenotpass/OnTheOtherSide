@@ -31,6 +31,9 @@ public class SpeLight : MonoBehaviour
             case LightState.Blinking:
                 LightBlinking();
                 break;
+            case LightState.Blinking2:
+                LightBlinking2();
+                break;
         }
     }
 
@@ -63,6 +66,19 @@ public class SpeLight : MonoBehaviour
         }
     }
 
+    private void LightBlinking2()
+    {
+        if (currentTimerForReactivation > 0)
+        {
+            currentTimerForReactivation -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            Blinking();
+            currentTimerForReactivation = timerForReactivation;
+        }
+    }
+
     private void Blinking()
     {
         m_Light.enabled = !m_Light.enabled;
@@ -74,4 +90,5 @@ public enum LightState
     On,
     Off,
     Blinking,
+    Blinking2,
 }
