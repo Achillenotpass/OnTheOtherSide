@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
       propertyPath: m_Name
-      value: bureau
+      value: BureauPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,6 +54,18 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
       propertyPath: m_Materials.Array.data[0]

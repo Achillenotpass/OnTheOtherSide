@@ -38,7 +38,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: fdd3df29b45d3854e8e316586ea29743, type: 3}
       propertyPath: m_Name
-      value: chaise haute
+      value: TabouretPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fdd3df29b45d3854e8e316586ea29743, type: 3}
       propertyPath: m_TagString
@@ -90,15 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fdd3df29b45d3854e8e316586ea29743, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.778383
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fdd3df29b45d3854e8e316586ea29743, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.778383
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fdd3df29b45d3854e8e316586ea29743, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9885124
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: fdd3df29b45d3854e8e316586ea29743, type: 3}
       propertyPath: m_Materials.Array.data[0]
