@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 600662038580500477}
   - component: {fileID: 600662038580500476}
   m_Layer: 0
-  m_Name: LeftDoor (1)
+  m_Name: PorteSimple
   m_TagString: Activable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2b4cf138ec45324e8ff6e2607f82132, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2b4cf138ec45324e8ff6e2607f82132, type: 3}
       propertyPath: m_LocalPosition.y
@@ -128,6 +128,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.9461504
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e2b4cf138ec45324e8ff6e2607f82132, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d30b5f3def5a2884a905663208e971ef, type: 2}
+    - target: {fileID: 2300000, guid: e2b4cf138ec45324e8ff6e2607f82132, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1418e29b77628f43bc38a465f5b1f04, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b4cf138ec45324e8ff6e2607f82132, type: 3}
 --- !u!4 &5250398963780830320 stripped
