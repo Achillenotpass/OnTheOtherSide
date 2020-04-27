@@ -7,10 +7,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7487200192060782520, guid: 7896db0e031a5ee45aecb8b299103757,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2332913
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487200192060782520, guid: 7896db0e031a5ee45aecb8b299103757,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.20981014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487200192060782520, guid: 7896db0e031a5ee45aecb8b299103757,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.3492459
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487200192060782520, guid: 7896db0e031a5ee45aecb8b299103757,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3.7586665
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487200192060782520, guid: 7896db0e031a5ee45aecb8b299103757,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -3.9662492
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487200192060782520, guid: 7896db0e031a5ee45aecb8b299103757,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.939045
+      objectReference: {fileID: 0}
     - target: {fileID: 8757099189164903294, guid: 7896db0e031a5ee45aecb8b299103757,
         type: 3}
       propertyPath: m_Name
-      value: coussin (2)
+      value: CoussinOrangePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 8757099189165266782, guid: 7896db0e031a5ee45aecb8b299103757,
         type: 3}
