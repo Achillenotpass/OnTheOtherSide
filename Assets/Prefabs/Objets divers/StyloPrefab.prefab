@@ -38,7 +38,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3c7e3d618df6e244b87fa521cb5d8341, type: 3}
       propertyPath: m_Name
-      value: stylo
+      value: StyloPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 3c7e3d618df6e244b87fa521cb5d8341, type: 3}
       propertyPath: m_TagString
@@ -90,15 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3c7e3d618df6e244b87fa521cb5d8341, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.10949638
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3c7e3d618df6e244b87fa521cb5d8341, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.10949638
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3c7e3d618df6e244b87fa521cb5d8341, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.118830144
+      value: 0.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7e3d618df6e244b87fa521cb5d8341, type: 3}
