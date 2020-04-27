@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,6 +18,9 @@ public class Monster : MonoBehaviour
     private bool m_CanSeePlayer = false;
     public float timeBeforeLosingAggro = 1.0f;
     private float m_CurrentTimeBeforeLosingAggro;
+
+    public bool hasSurvivalTime = false;
+    public float survivalTime = 0.0f;
 
 
     private void Awake()
@@ -42,6 +46,18 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasSurvivalTime)
+        {
+            if (survivalTime <= 0.0f)
+            {
+                Disappear();
+            }
+            else
+            {
+                survivalTime = survivalTime - Time.deltaTime;
+            }
+        }
+
         if (Vector3.Distance(m_Player.transform.position, transform.position) <= detectionRange)
         {
             RaycastHit hitInfo;
@@ -80,6 +96,11 @@ public class Monster : MonoBehaviour
         }
     }
 
+    private void Disappear()
+    {
+        Destroy(this.gameObject);
+    }
+
     private void SetTarget(GameObject target)
     {
         m_CurrentTarget = target;
@@ -88,7 +109,7 @@ public class Monster : MonoBehaviour
 
     private void SetRandomTarget()
     {
-        SetTarget(movementTargets[Random.Range(0, movementTargets.Count)]);
+        SetTarget(movementTargets[UnityEngine.Random.Range(0, movementTargets.Count)]);
     }
 
     private void LosingPlayerAggro()

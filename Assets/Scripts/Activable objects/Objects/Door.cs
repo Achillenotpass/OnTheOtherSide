@@ -31,12 +31,7 @@ public class Door : Activable
             transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
 
     public override void Interaction()
