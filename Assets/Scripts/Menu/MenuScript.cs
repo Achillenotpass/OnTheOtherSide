@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -12,18 +13,21 @@ public class MenuScript : MonoBehaviour
 
     private void Start()
     {
-        m_ScriptPlayer = player.GetComponent<Player>();
-        m_ScriptCamera = player.GetComponentInChildren<FPSCamera>();
-        Cursor.visible = false;
+        if(player != null)
+        {
+            m_ScriptPlayer = player.GetComponent<Player>();
+            m_ScriptCamera = player.GetComponentInChildren<FPSCamera>();
+        }
     }
     void Update()
     {
-        PauseMenu();
+        if (player != null) 
+            PauseMenu();
     }
 
     public void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !m_IsPaused)
+        if (Input.GetKeyDown(KeyCode.Tab) && !m_IsPaused)
         {
             pause.SetActive(true);
             Cursor.visible = true;
@@ -35,7 +39,7 @@ public class MenuScript : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && m_IsPaused)
+        else if (Input.GetKeyDown(KeyCode.Tab)&& m_IsPaused)
         {
             StopMenu(pause);
         }
@@ -58,8 +62,10 @@ public class MenuScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void ChangeScene()
+    public void ChangeScene(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
+        if(sceneName == "SecondFloor")
+            Cursor.visible = false;
     }
 }
