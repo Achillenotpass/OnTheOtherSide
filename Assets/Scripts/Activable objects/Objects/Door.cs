@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Door : Activable
 {
+    //SoundEffects
+    public AudioClip lockedDoor;
+    public AudioClip openingDoor;
+    public AudioClip closingDoor;
+    private AudioSource m_AudioSource;
+
     public bool isOpen = false;
     public bool isLeftDoor = false;
     private Vector3 baseRotation;
@@ -13,6 +19,8 @@ public class Door : Activable
     // Start is called before the first frame update
     void Awake()
     {
+        m_AudioSource = GetComponent<AudioSource>();
+
         baseRotation = transform.rotation.eulerAngles;
 
         if (isOpen)
@@ -41,6 +49,7 @@ public class Door : Activable
             isOpen = !isOpen;
             if (isOpen)
             {
+                m_AudioSource.PlayOneShot(openingDoor);
                 if (isLeftDoor)
                 {
                     transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
@@ -52,8 +61,13 @@ public class Door : Activable
             }
             else
             {
+                m_AudioSource.PlayOneShot(closingDoor);
                 transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
             }
+        }
+        else
+        {
+            m_AudioSource.PlayOneShot(lockedDoor);
         }
     }
 }
