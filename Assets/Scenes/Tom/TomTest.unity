@@ -1232,9 +1232,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbbb12779d082e54bbd22a248de35696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLightState: 2
-  timerForReactivation: 1
+  currentLightState: 3
+  timerForReactivation: 0.05
   currentTimerForReactivation: 0
+  timerForLimitedBlinking: 1
+  currentTimerForLimitedBlinking: 0
+  stateOfLightForBlinking: 1
 --- !u!1 &1176966965
 GameObject:
   m_ObjectHideFlags: 0

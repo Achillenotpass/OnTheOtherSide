@@ -8,14 +8,24 @@ public class SpeLight : MonoBehaviour
 
     private Light m_Light;
 
+    [Header("Time between change in the state of the light")]
     public float timerForReactivation = 1;
 
     public float currentTimerForReactivation;
+
+    [Header("Duration of the limited blinking")]
+    public float timerForLimitedBlinking = 5;
+
+    public float currentTimerForLimitedBlinking;
+
+    [Header("Do you want the light on at the end ?")]
+    public bool stateOfLightForBlinking = true;
 
     private void Start()
     {
         m_Light = GetComponent<Light>();
         currentTimerForReactivation = timerForReactivation;
+        currentTimerForLimitedBlinking = timerForLimitedBlinking;
     }
 
     private void Update()
@@ -41,7 +51,7 @@ public class SpeLight : MonoBehaviour
     {
         if(!m_Light.isActiveAndEnabled)
         {
-            m_Light.enabled = !m_Light.enabled;
+            m_Light.enabled = true;
         }
     }
 
@@ -49,7 +59,7 @@ public class SpeLight : MonoBehaviour
     {
         if (m_Light.isActiveAndEnabled)
         {
-            m_Light.enabled = !m_Light.enabled;
+            m_Light.enabled = false;
         }
     }
 
@@ -68,14 +78,24 @@ public class SpeLight : MonoBehaviour
 
     private void LightBlinking2()
     {
-        if (currentTimerForReactivation > 0)
+        if(currentTimerForLimitedBlinking > 0)
         {
-            currentTimerForReactivation -= 1 * Time.deltaTime;
+            currentTimerForLimitedBlinking -= 1 * Time.deltaTime;
+            LightBlinking();
         }
         else
         {
-            Blinking();
-            currentTimerForReactivation = timerForReactivation;
+            switch (stateOfLightForBlinking)
+            {
+                case true:
+                    currentLightState = LightState.On;
+                    currentTimerForLimitedBlinking = timerForLimitedBlinking;
+                    break;
+                case false:
+                    currentLightState = LightState.Off;
+                    currentTimerForLimitedBlinking = timerForLimitedBlinking;
+                    break;
+            }
         }
     }
 
