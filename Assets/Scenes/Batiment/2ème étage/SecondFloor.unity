@@ -859,6 +859,7 @@ Transform:
   m_Children:
   - {fileID: 1335487339}
   - {fileID: 1316621066}
+  - {fileID: 673281821}
   m_Father: {fileID: 427466344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7678,7 +7679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &399094488
 Transform:
   m_ObjectHideFlags: 0
@@ -7709,6 +7710,7 @@ MonoBehaviour:
   - {fileID: 1055979346}
   - {fileID: 1158625095}
   - {fileID: 1968670262}
+  - {fileID: 569471366}
   currentTriggerStates: 1
   timerForReactivation: 1
 --- !u!65 &399094490
@@ -11704,6 +11706,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 564763540}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &569471364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569471365}
+  - component: {fileID: 569471366}
+  m_Layer: 0
+  m_Name: Appear2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &569471365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569471364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1206061750}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &569471366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569471364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6908aaad9ad7b4e9221677e9f518a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToAppear:
+  - {fileID: 1068783610}
 --- !u!1 &581087778
 GameObject:
   m_ObjectHideFlags: 0
@@ -13178,6 +13225,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 672259905}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &673281820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673281821}
+  - component: {fileID: 673281822}
+  m_Layer: 0
+  m_Name: Appear1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673281821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673281820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 38632958}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673281822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673281820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6908aaad9ad7b4e9221677e9f518a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToAppear:
+  - {fileID: 399094487}
 --- !u!1001 &677250185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22621,7 +22713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1068783611
 Transform:
   m_ObjectHideFlags: 0
@@ -25393,6 +25485,7 @@ Transform:
   - {fileID: 399094488}
   - {fileID: 1158625094}
   - {fileID: 1055979345}
+  - {fileID: 569471365}
   m_Father: {fileID: 427466344}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26357,6 +26450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear:
   - {fileID: 793974091}
+  - {fileID: 2141116125}
 --- !u!1001 &1240064546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28618,6 +28712,7 @@ MonoBehaviour:
   objectsToActivate:
   - {fileID: 722606069}
   - {fileID: 1316621067}
+  - {fileID: 673281822}
   currentTriggerStates: 1
   timerForReactivation: 1
 --- !u!65 &1335487341
@@ -43823,7 +43918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2141116126
 Transform:
   m_ObjectHideFlags: 0
