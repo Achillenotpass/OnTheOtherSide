@@ -28863,7 +28863,7 @@ PrefabInstance:
     - target: {fileID: 3168330060173956086, guid: 2d1629fdf565d2c4db115902ec3af112,
         type: 3}
       propertyPath: isLeftDoor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3168330060173956086, guid: 2d1629fdf565d2c4db115902ec3af112,
         type: 3}
@@ -40598,7 +40598,7 @@ PrefabInstance:
     - target: {fileID: 3168330060173956086, guid: 2d1629fdf565d2c4db115902ec3af112,
         type: 3}
       propertyPath: isLeftDoor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3168330060173956086, guid: 2d1629fdf565d2c4db115902ec3af112,
         type: 3}
@@ -43832,7 +43832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141116125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.709999, y: -0.9100001, z: 20.66}
+  m_LocalPosition: {x: 7.89, y: -0.9100001, z: 20.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1450540939}

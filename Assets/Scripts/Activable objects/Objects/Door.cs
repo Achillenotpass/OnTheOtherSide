@@ -36,10 +36,9 @@ public class Door : Activable
 
     public override void Interaction()
     {
-        isOpen = !isOpen;
-
         if (!isLocked)
         {
+            isOpen = !isOpen;
             if (isOpen)
             {
                 if (isLeftDoor)
