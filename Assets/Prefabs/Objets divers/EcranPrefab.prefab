@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7447767254738728192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347532552095655654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.73582, y: 0.9449013, z: 2.332684}
+  m_Center: {x: -1.0141876e-14, y: -0.00024340992, z: 0.7403924}
 --- !u!1001 &1347532552095555654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9,7 +22,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 61eb0a152111f3246ad2dc0d196ef796, type: 3}
       propertyPath: m_Name
-      value: "\xE9cran d'ordinateur"
+      value: EcranPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 61eb0a152111f3246ad2dc0d196ef796, type: 3}
       propertyPath: m_LocalPosition.x
@@ -73,3 +86,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ea3ddf5c8191291429830f46f65fb9d3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61eb0a152111f3246ad2dc0d196ef796, type: 3}
+--- !u!1 &1347532552095655654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 61eb0a152111f3246ad2dc0d196ef796,
+    type: 3}
+  m_PrefabInstance: {fileID: 1347532552095555654}
+  m_PrefabAsset: {fileID: 0}
