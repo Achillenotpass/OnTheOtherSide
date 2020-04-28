@@ -23,7 +23,7 @@ public class MenuScript : MonoBehaviour
 
     public void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !m_IsPaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && !m_IsPaused)
         {
             pause.SetActive(true);
             Cursor.visible = true;
@@ -35,7 +35,7 @@ public class MenuScript : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.Tab) && m_IsPaused)
+        else if (Input.GetKeyDown(KeyCode.Escape) && m_IsPaused)
         {
             StopMenu(pause);
         }
@@ -56,5 +56,10 @@ public class MenuScript : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    public void ChangeScene()
+    {
+
     }
 }
