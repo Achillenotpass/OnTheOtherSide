@@ -83,7 +83,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLightState: 0
-  timerForReactivation: 1
+  meshRenderer: {fileID: 6297549638508028977}
+  minTimerForReactivation: 0.05
+  maxTimerForReactivation: 0.2
   currentTimerForReactivation: 0
   timerForLimitedBlinking: 5
   currentTimerForLimitedBlinking: 0
@@ -180,6 +182,12 @@ PrefabInstance:
 --- !u!4 &6297549638506129105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 32c4b970b073ccf4dbe0e392df255fa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6297549638506003539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6297549638508028977 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 32c4b970b073ccf4dbe0e392df255fa9,
     type: 3}
   m_PrefabInstance: {fileID: 6297549638506003539}
   m_PrefabAsset: {fileID: 0}

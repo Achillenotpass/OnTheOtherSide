@@ -64,6 +64,7 @@ public class MenuScript : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
         if(sceneName == "SecondFloor")
             Cursor.visible = false;
