@@ -9,7 +9,8 @@ public class SpeLight : MonoBehaviour
     private Light m_Light;
 
     [Header("Time between change in the state of the light")]
-    public float timerForReactivation = 1;
+    public float minTimerForReactivation = 0.05f;
+    public float maxTimerForReactivation = 0.2f;
 
     public float currentTimerForReactivation;
 
@@ -24,7 +25,7 @@ public class SpeLight : MonoBehaviour
     private void Start()
     {
         m_Light = GetComponent<Light>();
-        currentTimerForReactivation = timerForReactivation;
+        currentTimerForReactivation = Random.Range(minTimerForReactivation, maxTimerForReactivation);
         currentTimerForLimitedBlinking = timerForLimitedBlinking;
     }
 
@@ -72,7 +73,7 @@ public class SpeLight : MonoBehaviour
         else
         {
             Blinking();
-            currentTimerForReactivation = timerForReactivation;
+            currentTimerForReactivation = Random.Range(minTimerForReactivation, maxTimerForReactivation);
         }
     }
 
