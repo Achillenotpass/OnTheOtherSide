@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3450f61bc73e1242af823148d017c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockedDoor: {fileID: 8300000, guid: b5ca73153b9f0174da76e2d4ee18de81, type: 3}
-  openingDoor: {fileID: 8300000, guid: 87aecae0ce923684686b5023fe506c12, type: 3}
-  closingDoor: {fileID: 8300000, guid: b295f772e37bd7243ae424cf890a7fe9, type: 3}
+  lockedDoor: {fileID: 8300000, guid: 992090e5bc071c84a87ded4c28917332, type: 3}
+  openingDoor: {fileID: 8300000, guid: 1fb84bd4960065849bd31ea7b3d0124a, type: 3}
+  closingDoor: {fileID: 8300000, guid: f38b363ffa4a4534a8cbb8e5706c2cea, type: 3}
   isOpen: 0
   isLeftDoor: 1
   isLocked: 0
