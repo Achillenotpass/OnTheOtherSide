@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpeLight : MonoBehaviour
 {
     public LightState currentLightState = LightState.Off;
+    public MeshRenderer meshRenderer;
 
     private Light m_Light;
 
@@ -31,6 +32,15 @@ public class SpeLight : MonoBehaviour
 
     private void Update()
     {
+        if (m_Light.isActiveAndEnabled)
+        {
+            meshRenderer.material.EnableKeyword("_EMISSION");
+        }
+        else
+        {
+            meshRenderer.material.DisableKeyword("_EMISSION");
+        }
+
         switch(currentLightState)
         {
             case LightState.On:
