@@ -19,14 +19,21 @@ public class Monster : MonoBehaviour
     public float timeBeforeLosingAggro = 1.0f;
     private float m_CurrentTimeBeforeLosingAggro;
 
+    public float walkSpeed = 3.5f;
+    public float runSpeed = 4.5f;
+
     public bool hasSurvivalTime = false;
     public float survivalTime = 0.0f;
+
+    private Animator m_Animator;
+    public float animationSpeedAdjustment;
 
 
     private void Awake()
     {
         m_NavmeshAgent = GetComponent<NavMeshAgent>();
         m_Player = FindObjectOfType<Player>();
+        m_Animator = GetComponentInChildren<Animator>();
     }
 
     
@@ -46,6 +53,10 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_Animator.SetBool("isRunning", m_CanSeePlayer);
+
+        m_Animator.speed = m_NavmeshAgent.speed * animationSpeedAdjustment;
+
         if (hasSurvivalTime)
         {
             if (survivalTime <= 0.0f)
@@ -87,6 +98,11 @@ public class Monster : MonoBehaviour
         if (m_CanSeePlayer)
         {
             SetTarget(m_Player.gameObject);
+            m_NavmeshAgent.speed = runSpeed;
+        }
+        else
+        {
+            m_NavmeshAgent.speed = walkSpeed;
         }
 
 
