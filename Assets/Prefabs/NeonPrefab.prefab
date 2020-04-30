@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 562856537379015858}
   - component: {fileID: 6333803318641713575}
   - component: {fileID: 6112655424147768822}
+  - component: {fileID: 8889973924137520995}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -90,6 +91,19 @@ MonoBehaviour:
   timerForLimitedBlinking: 5
   currentTimerForLimitedBlinking: 0
   stateOfLightForBlinking: 1
+--- !u!65 &8889973924137520995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592156872132373006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7762046234016832807
 PrefabInstance:
   m_ObjectHideFlags: 0
