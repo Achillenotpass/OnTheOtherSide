@@ -20,7 +20,12 @@ public class Interaction : MonoBehaviour
     private Vector3 m_HeldObjectPastPosition = new Vector3(0.0f, 0.0f, 0.0f);
     private Vector3 m_HeldObjectCurrentPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
+    //UI pointer
+    public GameObject usualPointer;
+    public GameObject activablePointer;
+    public GameObject movablePointer;
 
+    private PointerState pointerState = PointerState.Usual;
 
     private void Awake()
     {
@@ -60,6 +65,8 @@ public class Interaction : MonoBehaviour
                 }
             }
         }
+        UpdatePointerData();
+        UpdatePointerImage();
 
         //Dropping a held object
         if (Input.GetKeyUp(KeyCode.Mouse0))
@@ -100,6 +107,52 @@ public class Interaction : MonoBehaviour
         }
     }
 
+    private void UpdatePointerData()
+    {
+        RaycastHit hitInfo;
+        if (Physics.Raycast(m_FpsCamera.transform.position, m_FpsCamera.transform.forward, out hitInfo, maxInteractionDistance))
+        {
+            if (hitInfo.transform.gameObject.tag == "Activable")
+            {
+                pointerState = PointerState.Activable;
+            }
+            else if (hitInfo.transform.gameObject.tag == "Movable")
+            {
+                pointerState = PointerState.Movable;
+            }
+            else
+            {
+                pointerState = PointerState.Usual;
+            }
+        }
+        else
+        {
+            pointerState = PointerState.Usual;
+        }
+    }
+
+    private void UpdatePointerImage()
+    {
+        switch (pointerState)
+        {
+            case PointerState.Usual:
+                usualPointer.SetActive(true);
+                activablePointer.SetActive(false);
+                movablePointer.SetActive(false);
+                break;
+            case PointerState.Activable:
+                usualPointer.SetActive(false);
+                activablePointer.SetActive(true);
+                movablePointer.SetActive(false);
+                break;
+            case PointerState.Movable:
+                usualPointer.SetActive(false);
+                activablePointer.SetActive(false);
+                movablePointer.SetActive(true);
+                break;
+        }
+    }
+
     private void UpdateHeldObjectPosition()
     {
         //If the player holds an object
@@ -111,4 +164,11 @@ public class Interaction : MonoBehaviour
             m_ObjectHeld.transform.position = Vector3.Lerp(m_ObjectHeld.transform.position, targetHeldObject.transform.position, 0.7f);
         }
     }
+}
+
+public enum PointerState
+{
+    Usual,
+    Activable,
+    Movable,
 }

@@ -10,6 +10,7 @@ public class Letter : Activable
     public GameObject player;
     public Activable[] objectToActivateBefore;
     public Activable[] objectToActivateAfter;
+    public bool alreadyActivated = false;
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -20,9 +21,12 @@ public class Letter : Activable
     {
         letter.SetActive(true);
         meshRenderer.enabled = false;
-        for(int i = 0; i < objectToActivateBefore.Length; i++)
+        if (!alreadyActivated)
         {
-            objectToActivateBefore[i].Interaction();
+            for (int i = 0; i < objectToActivateBefore.Length; i++)
+            {
+                objectToActivateBefore[i].Interaction();
+            }
         }
     }
 
@@ -35,9 +39,13 @@ public class Letter : Activable
                 letter.SetActive(false);
                 meshRenderer.enabled = true;
                 transform.position = player.transform.position + player.transform.forward + player.transform.up/2;
-                for (int i = 0; i < objectToActivateAfter.Length; i++)
+                if (!alreadyActivated)
                 {
-                    objectToActivateAfter[i].Interaction();
+                    alreadyActivated = true;
+                    for (int i = 0; i < objectToActivateAfter.Length; i++)
+                    {
+                        objectToActivateAfter[i].Interaction();
+                    }
                 }
             }
         }
