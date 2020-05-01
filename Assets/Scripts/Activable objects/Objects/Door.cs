@@ -16,7 +16,8 @@ public class Door : Activable
 
     public bool isLocked = false;
 
-    private CurveRotation m_CurveRotation;
+    [SerializeField]
+    public CurveRotation curveRotation;
 
     public AnimationCurve openingLeft;
     public AnimationCurve openingRight;
@@ -27,6 +28,11 @@ public class Door : Activable
     public AnimationCurve begingOpenedLeft;
     public AnimationCurve begingOpenedRight;
 
+    public AnimationCurve slamOpeningLeft;
+    public AnimationCurve slamOpeningRight;
+
+    public AnimationCurve slamEndingLeft;
+    public AnimationCurve slamEndingRight;
 
     // Start is called before the first frame update
     void Awake()
@@ -36,7 +42,7 @@ public class Door : Activable
         baseRotation = transform.rotation.eulerAngles;
         Debug.Log(transform.rotation.eulerAngles);
 
-        m_CurveRotation = GetComponent<CurveRotation>();
+        curveRotation = GetComponent<CurveRotation>();
 
         if (isOpen)
         {
@@ -44,12 +50,12 @@ public class Door : Activable
             {
 
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
-                m_CurveRotation.axeY = begingOpenedLeft;
+                curveRotation.axeY = begingOpenedLeft;
             }
             else
             {
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
-                m_CurveRotation.axeY = begingOpenedRight;
+                curveRotation.axeY = begingOpenedRight;
             }
         }
         else
@@ -68,14 +74,14 @@ public class Door : Activable
                 if (isLeftDoor)
                 {
                     //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
-                    m_CurveRotation.axeY = openingLeft;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = openingLeft;
+                    curveRotation.BeginMovement();
                 }
                 else
                 {
                     //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
-                    m_CurveRotation.axeY = openingRight;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = openingRight;
+                    curveRotation.BeginMovement();
                 }
                 m_AudioSource.PlayOneShot(openingDoor);
             }
@@ -83,13 +89,13 @@ public class Door : Activable
             {
                 if(isLeftDoor)
                 {
-                    m_CurveRotation.axeY = endingLeft;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = endingLeft;
+                    curveRotation.BeginMovement();
                 }
                 else
                 {
-                    m_CurveRotation.axeY = endingRight;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = endingRight;
+                    curveRotation.BeginMovement();
                 }
                 m_AudioSource.PlayOneShot(closingDoor);
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
