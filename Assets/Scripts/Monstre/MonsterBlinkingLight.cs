@@ -8,10 +8,8 @@ public class MonsterBlinkingLight : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("aaa");
         if(other.gameObject.GetComponent<Light>() != null)
         {
-            Debug.Log("bbb");
             if(other.gameObject.GetComponent<SpeLight>().currentLightState == LightState.On)
             other.gameObject.GetComponent<SpeLight>().currentLightState = LightState.Blinking;
         }
@@ -22,7 +20,6 @@ public class MonsterBlinkingLight : MonoBehaviour
         if (other.gameObject.GetComponent<Light>() != null)
         {
             float distanceLightMonster = Vector3.Distance(transform.position, other.gameObject.transform.position);
-            Debug.Log(distanceLightMonster);
             curveMonsterLight = GetComponent<CurveMonsterLight>();
             curveMonsterLight.ApplyBlinking(other.gameObject.GetComponent<SpeLight>(), distanceLightMonster);
         }

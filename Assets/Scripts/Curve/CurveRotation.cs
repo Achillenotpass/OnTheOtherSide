@@ -32,7 +32,6 @@ public class CurveRotation : MonoBehaviour
         m_MovementTimerZ += Time.deltaTime;
         m_Curve = Quaternion.Euler(transform.parent.rotation.x + axeX.Evaluate(m_MovementTimerX), transform.parent.rotation.y + axeY.Evaluate(m_MovementTimerY), transform.parent.rotation.z + axeZ.Evaluate(m_MovementTimerZ));
         transform.rotation = m_Curve;
-        Debug.Log(Quaternion.Euler(transform.parent.rotation.x + axeX.Evaluate(m_MovementTimerX), transform.parent.rotation.y + axeY.Evaluate(m_MovementTimerY), transform.parent.rotation.z + axeZ.Evaluate(m_MovementTimerZ)));
     }
     public void BeginMovement()
     {

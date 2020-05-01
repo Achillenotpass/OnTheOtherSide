@@ -34,6 +34,7 @@ public class Door : Activable
         m_AudioSource = GetComponent<AudioSource>();
 
         baseRotation = transform.rotation.eulerAngles;
+        Debug.Log(transform.rotation.eulerAngles);
 
         m_CurveRotation = GetComponent<CurveRotation>();
 
@@ -42,18 +43,18 @@ public class Door : Activable
             if (isLeftDoor)
             {
 
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
+                //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
                 m_CurveRotation.axeY = begingOpenedLeft;
             }
             else
             {
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
+                //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
                 m_CurveRotation.axeY = begingOpenedRight;
             }
         }
         else
         {
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
+            //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
         }
     }
 
