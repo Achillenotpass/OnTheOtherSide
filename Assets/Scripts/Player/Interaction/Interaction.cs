@@ -25,6 +25,7 @@ public class Interaction : MonoBehaviour
     public GameObject activablePointer;
     public GameObject movablePointer;
     public GameObject movableHeldPointer;
+    public GameObject letterPointer;
 
     private PointerState pointerState = PointerState.Usual;
 
@@ -119,7 +120,14 @@ public class Interaction : MonoBehaviour
             }
             else if (hitInfo.transform.gameObject.tag == "Activable")
             {
-                pointerState = PointerState.Activable;
+                if (hitInfo.transform.gameObject.GetComponent<Letter>() != null)
+                {
+                    pointerState = PointerState.Letter;
+                }
+                else
+                {
+                    pointerState = PointerState.Activable;
+                }
             }
             else if (hitInfo.transform.gameObject.tag == "Movable")
             {
@@ -145,24 +153,35 @@ public class Interaction : MonoBehaviour
                 activablePointer.SetActive(false);
                 movablePointer.SetActive(false);
                 movableHeldPointer.SetActive(false);
+                letterPointer.SetActive(false);
                 break;
             case PointerState.Activable:
                 usualPointer.SetActive(false);
                 activablePointer.SetActive(true);
                 movablePointer.SetActive(false);
                 movableHeldPointer.SetActive(false);
+                letterPointer.SetActive(false);
                 break;
             case PointerState.Movable:
                 usualPointer.SetActive(false);
                 activablePointer.SetActive(false);
                 movablePointer.SetActive(true);
                 movableHeldPointer.SetActive(false);
+                letterPointer.SetActive(false);
                 break;
             case PointerState.Held:
                 usualPointer.SetActive(false);
                 activablePointer.SetActive(false);
                 movablePointer.SetActive(false);
                 movableHeldPointer.SetActive(true);
+                letterPointer.SetActive(false);
+                break;
+            case PointerState.Letter:
+                usualPointer.SetActive(false);
+                activablePointer.SetActive(false);
+                movablePointer.SetActive(false);
+                movableHeldPointer.SetActive(false);
+                letterPointer.SetActive(true);
                 break;
         }
     }
@@ -186,4 +205,5 @@ public enum PointerState
     Activable,
     Movable,
     Held,
+    Letter,
 }
