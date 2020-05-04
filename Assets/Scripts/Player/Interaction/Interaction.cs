@@ -112,13 +112,13 @@ public class Interaction : MonoBehaviour
     private void UpdatePointerData()
     {
         RaycastHit hitInfo;
-        if (Physics.Raycast(m_FpsCamera.transform.position, m_FpsCamera.transform.forward, out hitInfo, maxInteractionDistance))
+        if (m_ObjectHeld != null)
         {
-            if (m_ObjectHeld != null)
-            {
-                pointerState = PointerState.Held;
-            }
-            else if (hitInfo.transform.gameObject.tag == "Activable")
+            pointerState = PointerState.Held;
+        }
+        else if (Physics.Raycast(m_FpsCamera.transform.position, m_FpsCamera.transform.forward, out hitInfo, maxInteractionDistance))
+        {
+            if (hitInfo.transform.gameObject.tag == "Activable")
             {
                 if (hitInfo.transform.gameObject.GetComponent<Letter>() != null)
                 {
