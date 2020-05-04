@@ -29,6 +29,7 @@ public class SlamDoor : Activable
                             doors[i].isOpen = true;
                             break;
                     }
+                    doors[i].m_AudioSource.PlayOneShot(doors[i].openingDoor);
                     break;
                 case false:
                     switch (doors[i].isLeftDoor)
@@ -44,6 +45,7 @@ public class SlamDoor : Activable
                             doors[i].isOpen = false;
                             break;
                     }
+                    doors[i].m_AudioSource.PlayOneShot(doors[i].closingDoor);
                     break;
             }
         }
