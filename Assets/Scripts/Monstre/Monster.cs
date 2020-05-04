@@ -69,7 +69,8 @@ public class Monster : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(m_Player.transform.position, transform.position) <= detectionRange)
+        Vector3 toPlayer = (m_Player.transform.position + Vector3.up) - (transform.position + Vector3.up);
+        if (toPlayer.sqrMagnitude <= detectionRange * detectionRange)
         {
             RaycastHit hitInfo;
             if (Physics.Raycast(transform.position, m_Player.transform.position - transform.position, out hitInfo, detectionRange))

@@ -24,6 +24,7 @@ public class Interaction : MonoBehaviour
     public GameObject usualPointer;
     public GameObject activablePointer;
     public GameObject movablePointer;
+    public GameObject movableHeldPointer;
 
     private PointerState pointerState = PointerState.Usual;
 
@@ -112,7 +113,11 @@ public class Interaction : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(m_FpsCamera.transform.position, m_FpsCamera.transform.forward, out hitInfo, maxInteractionDistance))
         {
-            if (hitInfo.transform.gameObject.tag == "Activable")
+            if (m_ObjectHeld != null)
+            {
+                pointerState = PointerState.Held;
+            }
+            else if (hitInfo.transform.gameObject.tag == "Activable")
             {
                 pointerState = PointerState.Activable;
             }
@@ -139,16 +144,25 @@ public class Interaction : MonoBehaviour
                 usualPointer.SetActive(true);
                 activablePointer.SetActive(false);
                 movablePointer.SetActive(false);
+                movableHeldPointer.SetActive(false);
                 break;
             case PointerState.Activable:
                 usualPointer.SetActive(false);
                 activablePointer.SetActive(true);
                 movablePointer.SetActive(false);
+                movableHeldPointer.SetActive(false);
                 break;
             case PointerState.Movable:
                 usualPointer.SetActive(false);
                 activablePointer.SetActive(false);
                 movablePointer.SetActive(true);
+                movableHeldPointer.SetActive(false);
+                break;
+            case PointerState.Held:
+                usualPointer.SetActive(false);
+                activablePointer.SetActive(false);
+                movablePointer.SetActive(false);
+                movableHeldPointer.SetActive(true);
                 break;
         }
     }
@@ -171,4 +185,5 @@ public enum PointerState
     Usual,
     Activable,
     Movable,
+    Held,
 }
