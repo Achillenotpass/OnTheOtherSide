@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1381671822742199209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964652415356356083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36757377e3e56724a932535eba66a0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axeX:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  axeY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  axeZ:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  objectToAnimate: {fileID: 0}
 --- !u!1 &7655796304649402406
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,6 +78,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1730127689728414138}
     m_Modifications:
+    - target: {fileID: 6587963337973340506, guid: 0c0781f1837cc6249b92739f378741ae,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae4e33730db4d0140a3f7ebfcd689bbc,
+        type: 2}
+    - target: {fileID: 6587963337973340506, guid: 0c0781f1837cc6249b92739f378741ae,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460385787176147802, guid: 0c0781f1837cc6249b92739f378741ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460385787176147802, guid: 0c0781f1837cc6249b92739f378741ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460385787176147802, guid: 0c0781f1837cc6249b92739f378741ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443997, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: m_Name
@@ -46,17 +112,17 @@ PrefabInstance:
     - target: {fileID: 8700408436345443998, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6463406
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443998, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2563868
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443998, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.4112806
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443998, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
@@ -151,7 +217,7 @@ PrefabInstance:
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: openingLeft.m_Curve.Array.data[1].value
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
@@ -191,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: openingRight.m_Curve.Array.data[1].value
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
@@ -211,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: endingLeft.m_Curve.Array.data[0].value
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
@@ -251,7 +317,7 @@ PrefabInstance:
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
       propertyPath: endingRight.m_Curve.Array.data[0].value
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8700408436345443999, guid: 0c0781f1837cc6249b92739f378741ae,
         type: 3}
@@ -310,6 +376,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0781f1837cc6249b92739f378741ae, type: 3}
+--- !u!1 &6964652415356356083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8700408436345443997, guid: 0c0781f1837cc6249b92739f378741ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736530289247605614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6964652415356356080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8700408436345443998, guid: 0c0781f1837cc6249b92739f378741ae,

@@ -8,7 +8,7 @@ public class Door : Activable
     public AudioClip lockedDoor;
     public AudioClip openingDoor;
     public AudioClip closingDoor;
-    private AudioSource m_AudioSource;
+    public AudioSource m_AudioSource;
 
     public bool isOpen = false;
     public bool isLeftDoor = false;
@@ -16,7 +16,8 @@ public class Door : Activable
 
     public bool isLocked = false;
 
-    private CurveRotation m_CurveRotation;
+    [SerializeField]
+    public CurveRotation curveRotation;
 
     public AnimationCurve openingLeft;
     public AnimationCurve openingRight;
@@ -27,6 +28,11 @@ public class Door : Activable
     public AnimationCurve begingOpenedLeft;
     public AnimationCurve begingOpenedRight;
 
+    public AnimationCurve slamOpeningLeft;
+    public AnimationCurve slamOpeningRight;
+
+    public AnimationCurve slamEndingLeft;
+    public AnimationCurve slamEndingRight;
 
     // Start is called before the first frame update
     void Awake()
@@ -34,26 +40,27 @@ public class Door : Activable
         m_AudioSource = GetComponent<AudioSource>();
 
         baseRotation = transform.rotation.eulerAngles;
+        Debug.Log(transform.rotation.eulerAngles);
 
-        m_CurveRotation = GetComponent<CurveRotation>();
+        curveRotation = GetComponent<CurveRotation>();
 
         if (isOpen)
         {
             if (isLeftDoor)
             {
 
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
-                m_CurveRotation.axeY = begingOpenedLeft;
+                //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
+                curveRotation.axeY = begingOpenedLeft;
             }
             else
             {
-                transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
-                m_CurveRotation.axeY = begingOpenedRight;
+                //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
+                curveRotation.axeY = begingOpenedRight;
             }
         }
         else
         {
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
+            //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
         }
     }
 
@@ -67,14 +74,14 @@ public class Door : Activable
                 if (isLeftDoor)
                 {
                     //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
-                    m_CurveRotation.axeY = openingLeft;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = openingLeft;
+                    curveRotation.BeginMovement();
                 }
                 else
                 {
                     //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
-                    m_CurveRotation.axeY = openingRight;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = openingRight;
+                    curveRotation.BeginMovement();
                 }
                 m_AudioSource.PlayOneShot(openingDoor);
             }
@@ -82,13 +89,13 @@ public class Door : Activable
             {
                 if(isLeftDoor)
                 {
-                    m_CurveRotation.axeY = endingLeft;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = endingLeft;
+                    curveRotation.BeginMovement();
                 }
                 else
                 {
-                    m_CurveRotation.axeY = endingRight;
-                    m_CurveRotation.BeginMovement();
+                    curveRotation.axeY = endingRight;
+                    curveRotation.BeginMovement();
                 }
                 m_AudioSource.PlayOneShot(closingDoor);
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));

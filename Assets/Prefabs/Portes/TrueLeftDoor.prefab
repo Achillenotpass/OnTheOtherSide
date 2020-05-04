@@ -51,7 +51,16 @@ MonoBehaviour:
     m_RotationOrder: 4
   axeY:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -184,6 +193,12 @@ PrefabInstance:
       propertyPath: begingOpenedRight.m_Curve.Array.data[0].tangentMode
       value: 136
       objectReference: {fileID: 0}
+    - target: {fileID: 5539620428696330329, guid: 2d1629fdf565d2c4db115902ec3af112,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ae4e33730db4d0140a3f7ebfcd689bbc,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d1629fdf565d2c4db115902ec3af112, type: 3}
 --- !u!1 &8914391554270000076 stripped
