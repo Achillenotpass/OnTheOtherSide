@@ -7571,6 +7571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear:
   - {fileID: 993584851}
+  objectToDisappear: []
 --- !u!1001 &345739269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7741,6 +7742,11 @@ PrefabInstance:
     - target: {fileID: 5595040324807619180, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: movablePointer
+      value: 
+      objectReference: {fileID: 1094143652}
+    - target: {fileID: 5595040324807619180, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: movableHeldPointer
       value: 
       objectReference: {fileID: 1094143652}
     - target: {fileID: 5595040324807619182, guid: a473bce0280a64c4b9e74ab6c64d761b,
@@ -15130,6 +15136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear:
   - {fileID: 399094487}
+  objectToDisappear: []
 --- !u!1001 &677250185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29581,6 +29588,7 @@ MonoBehaviour:
   objectToAppear:
   - {fileID: 2141116125}
   - {fileID: 803737705}
+  objectToDisappear: []
 --- !u!1001 &1240064546
 PrefabInstance:
   m_ObjectHideFlags: 0
