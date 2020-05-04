@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
 
     private Player m_Player;
     public float detectionRange;
+    public float detectionAngle;
 
     private bool m_CanSeePlayer = false;
     public float timeBeforeLosingAggro = 1.0f;
@@ -69,15 +70,25 @@ public class Monster : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(m_Player.transform.position, transform.position) <= detectionRange)
+        Vector3 toPlayer = (m_Player.transform.position + Vector3.up) - (transform.position + Vector3.up);
+        if (toPlayer.sqrMagnitude <= detectionRange * detectionRange)
         {
-            RaycastHit hitInfo;
-            if (Physics.Raycast(transform.position, m_Player.transform.position - transform.position, out hitInfo, detectionRange))
+            toPlayer.Normalize();
+            float angleToPlayer = Vector3.Angle(transform.forward, toPlayer);
+            if (angleToPlayer <= detectionAngle / 2f)
             {
-                if (hitInfo.transform.gameObject == m_Player.gameObject)
+                RaycastHit hitInfo;
+                if (Physics.Raycast(transform.position, m_Player.transform.position - transform.position, out hitInfo, detectionRange))
                 {
-                    m_CanSeePlayer = true;
-                    m_CurrentTimeBeforeLosingAggro = timeBeforeLosingAggro;
+                    if (hitInfo.transform.gameObject == m_Player.gameObject)
+                    {
+                        m_CanSeePlayer = true;
+                        m_CurrentTimeBeforeLosingAggro = timeBeforeLosingAggro;
+                    }
+                    else
+                    {
+                        LosingPlayerAggro();
+                    }
                 }
                 else
                 {

@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   detectionRange: 20
+  detectionAngle: 150
   timeBeforeLosingAggro: 3
   walkSpeed: 3.5
   runSpeed: 4.5
