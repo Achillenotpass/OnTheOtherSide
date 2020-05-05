@@ -6,6 +6,10 @@ public class Crank : Activable
 {
     public List<Activable> objectsToActivate = new List<Activable>();
 
+    public AnimationCurve positionArrow;
+
+    public GameObject arrow;
+
     public float maxGauge = 5;
 
     public float currentGauge = 0;
@@ -16,8 +20,6 @@ public class Crank : Activable
 
     private Player m_ScriptPlayer;
 
-    private FPSCamera m_ScriptCamera;
-
     private Camera m_Camera;
 
     public GameObject handle;
@@ -25,8 +27,8 @@ public class Crank : Activable
     private void Start()
     {
         m_ScriptPlayer = player.GetComponent<Player>();
-        m_ScriptCamera = player.GetComponentInChildren<FPSCamera>();
         m_Camera = player.GetComponentInChildren<Camera>();
+        positionArrow.keys[1].time = maxGauge;
     }
 
     private void Update()
@@ -39,41 +41,55 @@ public class Crank : Activable
 
     public override void Interaction()
     {
-        m_ScriptPlayer.enabled = !enabled;
-        //m_ScriptCamera.enabled = !enabled;
-        switch(m_Camera.fieldOfView)
+        switch(m_ScriptPlayer.enabled)
         {
-            case 60:
-                m_Camera.fieldOfView = 55;
+            case true:
+                m_ScriptPlayer.enabled = false;
                 break;
-            case 55:
-                m_Camera.fieldOfView = 60;
+            case false:
+                m_ScriptPlayer.enabled = true;
                 break;
         }
-        handle.tag = "Movable";
-        m_IsCranking = true;
+        switch(m_IsCranking)
+        {
+            case true:
+                m_IsCranking = false;
+                break;
+            case false:
+                m_IsCranking = true;
+                break;
+        }
     }
 
     void Cranked()
     {
-
-
-        /*if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            if (currentGauge >= maxGauge)
+            RaycastHit hitInfo;
+            if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hitInfo, 10))
             {
-                foreach (Activable toActivate in objectsToActivate)
+                if (hitInfo.transform.gameObject == handle)
                 {
-                    toActivate.Interaction();
+                    if (currentGauge >= maxGauge)
+                    {
+                        foreach (Activable toActivate in objectsToActivate)
+                        {
+                            toActivate.Interaction();
+                        }
+                        gameObject.tag = "Untagged";
+                        m_ScriptPlayer.enabled = true;
+                        m_IsCranking = false;
+                        Debug.Log("aaa");
+                    }
+                    else
+                    {
+                        currentGauge += 1 * Time.deltaTime;
+                        transform.GetChild(0).Rotate(1, 0, 0);
+                        arrow.transform.rotation = Quaternion.Euler(0 + positionArrow.Evaluate(currentGauge), 0, 0);
+                    }
                 }
-                gameObject.tag = "Untagged";
-                Debug.Log("aaa");
             }
-            else
-            {
-                currentGauge += 1 * Time.deltaTime;
-                transform.Rotate(0, 0, 1);
-            }
-        }*/
+            
+        }
     }
 }
