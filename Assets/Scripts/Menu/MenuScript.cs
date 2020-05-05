@@ -10,6 +10,7 @@ public class MenuScript : MonoBehaviour
     bool m_IsPaused = false;
     Player m_ScriptPlayer;
     FPSCamera m_ScriptCamera;
+    Interaction m_ScriptInteraction;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class MenuScript : MonoBehaviour
         {
             m_ScriptPlayer = player.GetComponent<Player>();
             m_ScriptCamera = player.GetComponentInChildren<FPSCamera>();
+            m_ScriptInteraction = player.GetComponentInChildren<Interaction>();
         }
     }
     void Update()
@@ -36,6 +38,8 @@ public class MenuScript : MonoBehaviour
             Time.timeScale = 0;
             m_ScriptPlayer.enabled = !m_ScriptPlayer.enabled;
             m_ScriptCamera.enabled = !m_ScriptCamera.enabled;
+            m_ScriptInteraction.enabled = !m_ScriptInteraction.enabled;
+            
 
 
         }
