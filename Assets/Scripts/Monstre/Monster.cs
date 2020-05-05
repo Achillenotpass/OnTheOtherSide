@@ -29,6 +29,14 @@ public class Monster : MonoBehaviour
     private Animator m_Animator;
     public float animationSpeedAdjustment;
 
+    public AudioSource audioSourceSteps;
+    public float m_TimeBetweenStepSounds;
+    private float m_CurrentTimerStepSounds;
+
+    public AudioSource audioSourceCry;
+    private bool m_CanCry;
+
+
 
     private void Awake()
     {
@@ -54,6 +62,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayStepSounds();
         m_Animator.SetBool("isRunning", m_CanSeePlayer);
 
         m_Animator.speed = m_NavmeshAgent.speed * animationSpeedAdjustment;
@@ -84,6 +93,12 @@ public class Monster : MonoBehaviour
                     {
                         m_CanSeePlayer = true;
                         m_CurrentTimeBeforeLosingAggro = timeBeforeLosingAggro;
+
+                        if (m_CanCry)
+                        {
+                            audioSourceCry.Play();
+                        }
+                        m_CanCry = false;
                     }
                     else
                     {
@@ -148,6 +163,7 @@ public class Monster : MonoBehaviour
             {
                 SetRandomTarget();
                 m_CanSeePlayer = false;
+                m_CanCry = true;
             }
         }
     }
@@ -158,6 +174,20 @@ public class Monster : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Death>().Die();
+        }
+    }
+
+
+    private void PlayStepSounds()
+    {
+        if (m_CurrentTimerStepSounds <= m_TimeBetweenStepSounds)
+        {
+            m_CurrentTimerStepSounds = m_CurrentTimerStepSounds + Time.deltaTime * m_NavmeshAgent.speed * animationSpeedAdjustment;
+        }
+        else
+        {
+            audioSourceSteps.Play();
+            m_CurrentTimerStepSounds = 0.0f;
         }
     }
 }
