@@ -168,6 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherWorldSpawnPoint: {fileID: 1183428135291241803}
+  playerCamera: {fileID: 0}
+  increaseIncrementalValue: 0.85
+  decreaseIncrementalValue: 2.5
+  minFOV: 5
+  maxFOV: 120
 --- !u!1 &1183428135215495139
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,3 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherWorldSpawnPoint: {fileID: 1183428134537792705}
+  playerCamera: {fileID: 0}
+  increaseIncrementalValue: 0.85
+  decreaseIncrementalValue: 2.5
+  minFOV: 5
+  maxFOV: 120
