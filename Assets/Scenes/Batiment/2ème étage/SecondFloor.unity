@@ -8217,7 +8217,7 @@ PrefabInstance:
         type: 3}
       propertyPath: footSteps
       value: 
-      objectReference: {fileID: 1283955988}
+      objectReference: {fileID: 358024749}
     - target: {fileID: 5595040324599203275, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_TimeBetweenStepSounds
@@ -8315,6 +8315,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a473bce0280a64c4b9e74ab6c64d761b, type: 3}
+--- !u!82 &358024749 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4214901644319231003, guid: a473bce0280a64c4b9e74ab6c64d761b,
+    type: 3}
+  m_PrefabInstance: {fileID: 358024748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &358525059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17902,7 +17908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &741613072
 Transform:
   m_ObjectHideFlags: 0
@@ -32105,12 +32111,6 @@ Animator:
 --- !u!54 &1283955983 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5595040324599203274, guid: a473bce0280a64c4b9e74ab6c64d761b,
-    type: 3}
-  m_PrefabInstance: {fileID: 358024748}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1283955988 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4892262724891311605, guid: a473bce0280a64c4b9e74ab6c64d761b,
     type: 3}
   m_PrefabInstance: {fileID: 358024748}
   m_PrefabAsset: {fileID: 0}

@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.D))
-        {
+        { 
             PlayStepSounds();
         }
         SimpleMovement();
@@ -87,6 +87,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            footSteps.pitch = Random.Range(0.8f, 1.2f);
             footSteps.Play();
             m_CurrentTimerStepSounds = 0.0f;
         }

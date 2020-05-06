@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5595040324599203272}
   - component: {fileID: 5595040324599203273}
   - component: {fileID: 114055856510352362}
-  - component: {fileID: 4892262724891311605}
+  - component: {fileID: 4214901644319231003}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97019505f2264414e9ff967aa51703ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footSteps: {fileID: 0}
-  m_TimeBetweenStepSounds: 0
+  footSteps: {fileID: 4214901644319231003}
+  m_TimeBetweenStepSounds: 1.7
   speedMove: 2
   multiplyMove: 1
 --- !u!114 &5595040324599203272
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
---- !u!82 &4892262724891311605
+--- !u!82 &4214901644319231003
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +211,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 88fb52f8ce787474ea22bba19f0afe91, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.102
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
