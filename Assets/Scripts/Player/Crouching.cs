@@ -44,13 +44,13 @@ public class Crouching : MonoBehaviour
     {
         if (Input.GetKeyDown(m_Crouching))
         {
-            playerCollider.center = new Vector3(0, -0.439f, 0);
-            playerCollider.size = new Vector3(1, 0.878f, 1);
+            playerCollider.center = new Vector3(0, -0.439f, 0.190235f);
+            playerCollider.size = new Vector3(0.5f, 0.878f, 0.7654327f);
         }
         if (Input.GetKeyUp(m_Crouching))
         {
-            playerCollider.center = new Vector3(0, 0, 0);
-            playerCollider.size = new Vector3(1, 1.756f, 1);
+            playerCollider.center = new Vector3(0, 0, 0.190235f);
+            playerCollider.size = new Vector3(0.5f, 1.898272f, 0.7654327f);
         }
     }
 

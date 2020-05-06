@@ -16,6 +16,11 @@ public class FPSCamera : MonoBehaviour
     private Vector2 m_SmoothV;
     // Start is called before the first frame update
 
+    bool a = true;
+
+    float b;
+    float c;
+
     // Stop camera
     private bool m_StopSuperiorAngle = false;
     private bool m_StopInferiorAngle = false;
@@ -24,13 +29,17 @@ public class FPSCamera : MonoBehaviour
     void Start()
     {
         //character = transform.parent.gameObject;
+        //m_MouseLook = new Vector2(transform.parent.rotation.x, -transform.parent.rotation.y);
+        b = transform.parent.eulerAngles.x;
+        c = transform.parent.eulerAngles.y;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(m_MouseLook);
         ControlC();
-        ControlM();
+        //ControlM();
         StopMovementOnExtremeAngle();
         
     }
@@ -80,9 +89,19 @@ public class FPSCamera : MonoBehaviour
         // incrementally add to the camera look
         m_MouseLook += m_SmoothV;
 
+        
         // vector3.right means the x-axis
-        transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
-        character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
+        if (a == true)
+        {
+            Debug.Log("aaa");
+            m_MouseLook = new Vector2(gameObject.transform.parent.eulerAngles.y, gameObject.transform.parent.eulerAngles.x);
+            a = false;
+        }
+        else
+        {
+            transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
+            character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
+        }
     }
 
     void ControlM()
