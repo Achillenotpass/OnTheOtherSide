@@ -16,28 +16,17 @@ public class FPSCamera : MonoBehaviour
     private Vector2 m_SmoothV;
     // Start is called before the first frame update
 
-    bool a = true;
-
-    float b;
-    float c;
+    bool m_AjustRotationBeginning = true;
 
     // Stop camera
     private bool m_StopSuperiorAngle = false;
     private bool m_StopInferiorAngle = false;
     private Vector2 m_ActualMouseLook;
 
-    void Start()
-    {
-        //character = transform.parent.gameObject;
-        //m_MouseLook = new Vector2(transform.parent.rotation.x, -transform.parent.rotation.y);
-        b = transform.parent.eulerAngles.x;
-        c = transform.parent.eulerAngles.y;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(m_MouseLook);
         ControlC();
         //ControlM();
         StopMovementOnExtremeAngle();
@@ -46,7 +35,6 @@ public class FPSCamera : MonoBehaviour
 
     void StopMovementOnExtremeAngle()
     {
-        //Debug.Log(transform.eulerAngles.x);
         if (m_MouseLook.y < -60)
         {
             m_StopInferiorAngle = true;
@@ -91,11 +79,10 @@ public class FPSCamera : MonoBehaviour
 
         
         // vector3.right means the x-axis
-        if (a == true)
+        if (m_AjustRotationBeginning == true)
         {
-            Debug.Log("aaa");
             m_MouseLook = new Vector2(gameObject.transform.parent.eulerAngles.y, gameObject.transform.parent.eulerAngles.x);
-            a = false;
+            m_AjustRotationBeginning = false;
         }
         else
         {
@@ -115,7 +102,15 @@ public class FPSCamera : MonoBehaviour
         m_MouseLook += m_SmoothV;
 
         // vector3.right means the x-axis
-        transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
-        character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
+        if (m_AjustRotationBeginning == true)
+        {
+            m_MouseLook = new Vector2(gameObject.transform.parent.eulerAngles.y, gameObject.transform.parent.eulerAngles.x);
+            m_AjustRotationBeginning = false;
+        }
+        else
+        {
+            transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
+            character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
+        }
     }
 }
