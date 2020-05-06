@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public AudioSource footSteps;
+    public float m_TimeBetweenStepSounds;
+    private float m_CurrentTimerStepSounds;
+
     public float speedMove = 0.20f;
     public float multiplyMove = 1;
     bool m_IsRunning = false;
@@ -15,6 +19,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.D))
+        {
+            PlayStepSounds();
+        }
         SimpleMovement();
     }
 
@@ -69,5 +77,18 @@ public class Player : MonoBehaviour
         }
 
         transform.Translate(0.75f * translationX, 0, 0);
+    }
+
+    private void PlayStepSounds()
+    {
+        if (m_CurrentTimerStepSounds <= m_TimeBetweenStepSounds)
+        {
+            m_CurrentTimerStepSounds = m_CurrentTimerStepSounds + Time.deltaTime * speedMove * multiplyMove;
+        }
+        else
+        {
+            footSteps.Play();
+            m_CurrentTimerStepSounds = 0.0f;
+        }
     }
 }
