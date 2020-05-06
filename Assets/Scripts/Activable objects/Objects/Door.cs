@@ -40,7 +40,6 @@ public class Door : Activable
         m_AudioSource = GetComponent<AudioSource>();
 
         baseRotation = transform.rotation.eulerAngles;
-        Debug.Log(transform.rotation.eulerAngles);
 
         curveRotation = GetComponent<CurveRotation>();
 

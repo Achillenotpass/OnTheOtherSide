@@ -28,7 +28,12 @@ public class Crank : Activable
     {
         m_ScriptPlayer = player.GetComponent<Player>();
         m_Camera = player.GetComponentInChildren<Camera>();
-        positionArrow.keys[1].time = maxGauge;
+        Keyframe[] keyFrame = positionArrow.keys;
+        keyFrame[0].time = 0;
+        keyFrame[0].value = 220;
+        keyFrame[1].time = maxGauge;
+        keyFrame[1].value = 320;
+        positionArrow.keys = keyFrame;
     }
 
     private void Update()
