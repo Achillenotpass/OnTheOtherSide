@@ -29,6 +29,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.67861813, y: 0.65315807, z: 1.2801263}
   m_Center: {x: -0.0036908556, y: 0.05072079, z: 0.64804286}
+--- !u!114 &5031894769618042296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174465592260866871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2742991aff64b154183cd4cce9afe90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: f62ea0bba261a784f982790b25e2af22, type: 3}
 --- !u!1001 &3174465592260900247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,7 +51,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c1cf4f3f5e9fcc243b5932ad38d0ba61, type: 3}
       propertyPath: m_Name
-      value: "Chaise Prof ondul\xE9"
+      value: ChaiseProfPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c1cf4f3f5e9fcc243b5932ad38d0ba61, type: 3}
       propertyPath: m_TagString

@@ -29,6 +29,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1913517, y: 2.1043277, z: 3.4413831}
   m_Center: {x: 0, y: 0, z: 1.6927558}
+--- !u!114 &8126732341704364744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386468690925470573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2742991aff64b154183cd4cce9afe90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: f62ea0bba261a784f982790b25e2af22, type: 3}
 --- !u!1001 &2386468690925569485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,7 +51,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c7b601d0d08971245b787e8beb597327, type: 3}
       propertyPath: m_Name
-      value: poubelle
+      value: PoubellePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c7b601d0d08971245b787e8beb597327, type: 3}
       propertyPath: m_TagString

@@ -29,6 +29,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.68415254, y: 0.24144857, z: 0.05969723}
   m_Center: {x: 0.0022046117, y: -0.002179638, z: 0.029848615}
+--- !u!114 &6337661164846159875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368946400424289131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2742991aff64b154183cd4cce9afe90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: f62ea0bba261a784f982790b25e2af22, type: 3}
 --- !u!1001 &5368946400424322507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,7 +51,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 67859d7cf11ae6445b03812dcd905262, type: 3}
       propertyPath: m_Name
-      value: CLAVIER
+      value: CalvierPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 67859d7cf11ae6445b03812dcd905262, type: 3}
       propertyPath: m_TagString

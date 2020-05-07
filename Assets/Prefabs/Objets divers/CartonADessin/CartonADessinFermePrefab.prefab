@@ -29,6 +29,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.0733333, y: 6.8898335, z: 1.182982}
   m_Center: {x: 0.20680383, y: 0.0000000034399095, z: -0.6630797}
+--- !u!114 &4309039678300541379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975667162371233524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2742991aff64b154183cd4cce9afe90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: f62ea0bba261a784f982790b25e2af22, type: 3}
 --- !u!1001 &1975667162371264596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,7 +51,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 72172bf3608511b499eeb328c5a66504, type: 3}
       propertyPath: m_Name
-      value: "carton a dessin ferm\xE9"
+      value: CartonADessinFermePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 72172bf3608511b499eeb328c5a66504, type: 3}
       propertyPath: m_TagString
