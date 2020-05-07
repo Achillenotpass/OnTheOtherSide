@@ -58,6 +58,7 @@ public class MenuScript : MonoBehaviour
         Time.timeScale = 1;
         m_ScriptPlayer.enabled = !m_ScriptPlayer.enabled;
         m_ScriptCamera.enabled = !m_ScriptCamera.enabled;
+        m_ScriptInteraction.enabled = !m_ScriptInteraction.enabled;
     }
 
     public void QuitGame()
