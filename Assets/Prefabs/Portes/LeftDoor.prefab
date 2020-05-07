@@ -49,9 +49,12 @@ MonoBehaviour:
   lockedDoor: {fileID: 8300000, guid: 992090e5bc071c84a87ded4c28917332, type: 3}
   openingDoor: {fileID: 8300000, guid: 1fb84bd4960065849bd31ea7b3d0124a, type: 3}
   closingDoor: {fileID: 8300000, guid: f38b363ffa4a4534a8cbb8e5706c2cea, type: 3}
+  slamingDoor: {fileID: 8300000, guid: edd753d84a7c7104988c25d41b69582c, type: 3}
+  m_AudioSource: {fileID: 0}
   isOpen: 0
   isLeftDoor: 1
   isLocked: 0
+  curveRotation: {fileID: 0}
   openingLeft:
     serializedVersion: 2
     m_Curve:
@@ -155,6 +158,30 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   begingOpenedRight:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  slamOpeningLeft:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  slamOpeningRight:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  slamEndingLeft:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  slamEndingRight:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2

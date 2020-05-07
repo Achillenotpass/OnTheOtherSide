@@ -8,6 +8,7 @@ public class Door : Activable
     public AudioClip lockedDoor;
     public AudioClip openingDoor;
     public AudioClip closingDoor;
+    public AudioClip slamingDoor;
     public AudioSource m_AudioSource;
 
     public bool isOpen = false;
