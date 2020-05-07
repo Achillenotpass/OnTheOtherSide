@@ -45,7 +45,7 @@ public class SlamDoor : Activable
                             doors[i].isOpen = false;
                             break;
                     }
-                    doors[i].m_AudioSource.PlayOneShot(doors[i].closingDoor);
+                    doors[i].m_AudioSource.PlayOneShot(doors[i].slamingDoor);
                     break;
             }
         }

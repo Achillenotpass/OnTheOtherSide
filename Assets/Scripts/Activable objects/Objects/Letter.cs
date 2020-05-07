@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Letter : Activable
 {
+    private AudioSource m_AudioSource;
     public GameObject letter;
     CapsuleCollider capsuleCollider;
     MeshRenderer meshRenderer;
@@ -11,14 +12,18 @@ public class Letter : Activable
     public Activable[] objectToActivateBefore;
     public Activable[] objectToActivateAfter;
     public bool alreadyActivated = false;
+
+
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     public override void Interaction()
     {
+        m_AudioSource.Play();
         letter.SetActive(true);
         meshRenderer.enabled = false;
         if (!alreadyActivated)
