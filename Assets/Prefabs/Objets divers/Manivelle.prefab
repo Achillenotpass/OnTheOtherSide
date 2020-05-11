@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &8994651348275357700
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994651347086971489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0601741
+  m_Height: 0.04569405
+  m_Direction: 1
+  m_Center: {x: 0.27567297, y: 0.2703214, z: -0.000000057742014}
 --- !u!1 &8994651347134894492
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,24 +71,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToActivate: []
+  positionArrow:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  arrow: {fileID: 8994651348726780231}
   maxGauge: 5
   currentGauge: 0
   player: {fileID: 0}
   handle: {fileID: 8994651347086971489}
---- !u!136 &8994651348275357700
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994651347086971489}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.0601741
-  m_Height: 0.04569405
-  m_Direction: 1
-  m_Center: {x: 0.27567297, y: 0.2703214, z: -0.000000057742014}
 --- !u!1001 &8994651347086873793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -347,3 +354,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2ea9e1001d477dc4a9a3a86659c41c24, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca911b1941c89974cb9be6c335df4d88, type: 3}
+--- !u!1 &8994651348726780231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ca911b1941c89974cb9be6c335df4d88,
+    type: 3}
+  m_PrefabInstance: {fileID: 8994651348726749159}
+  m_PrefabAsset: {fileID: 0}
