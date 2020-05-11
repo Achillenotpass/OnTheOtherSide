@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 2290252991971296517, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: contactShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6112655424147768822, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: currentLightState
@@ -35,7 +40,12 @@ PrefabInstance:
     - target: {fileID: 6333803318641713575, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.2
+      value: 0.95492965
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333803318641713575, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762046234016799621, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
@@ -95,6 +105,11 @@ PrefabInstance:
     - target: {fileID: 7762046234016958373, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727502432327280740, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: useVolumetric
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

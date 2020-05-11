@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 70c536a0df144484b8ab575356370503, type: 3}
       propertyPath: m_Name
-      value: feuilles diverses
+      value: FeuillesDiversesPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 70c536a0df144484b8ab575356370503, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,5 +59,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0522c4a2598e5d44e8af613048905174, type: 2}
+    - target: {fileID: 2300000, guid: 70c536a0df144484b8ab575356370503, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e173a867468b889449c9483bc79dbf6c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70c536a0df144484b8ab575356370503, type: 3}
