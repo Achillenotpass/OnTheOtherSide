@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f6251bfb58a94464b8f0f11cee3e839e, type: 3}
       propertyPath: m_Name
-      value: fenetre double rideaux
+      value: FenetresDoubleRideaux
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6251bfb58a94464b8f0f11cee3e839e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 94d9a1233b068d14d8ad9690ed13fe32, type: 2}
+    - target: {fileID: 2300000, guid: f6251bfb58a94464b8f0f11cee3e839e, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 95f01ef8f046c3b45ab17e51a10eb951, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6251bfb58a94464b8f0f11cee3e839e, type: 3}
