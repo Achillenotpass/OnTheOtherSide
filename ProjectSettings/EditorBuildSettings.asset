@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Achille/TestsInteraction.unity
     guid: 487474b401a96f04c99f57f7671bfd45
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 5b9de84e6219df844b31195bf5980311
   - enabled: 1
