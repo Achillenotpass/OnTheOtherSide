@@ -11,14 +11,12 @@ public class AppearingObject : Activable
     {
         for (int i = 0; i < objectToAppear.Length; i++)
         {
-            Debug.Log("appear");
             objectToAppear[i].SetActive(true);
         }
 
         for (int i = 0; i < objectToDisappear.Length; i++)
         {
-            Debug.Log("disappear");
-            objectToAppear[i].SetActive(false);
+            objectToDisappear[i].SetActive(false);
         }
     }
 }
