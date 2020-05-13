@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Activable
   - Movable
-  - Body
   layers:
   - Default
   - TransparentFX
