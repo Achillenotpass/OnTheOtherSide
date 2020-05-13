@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_Name
       value: NeonPrefab
@@ -221,6 +225,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
