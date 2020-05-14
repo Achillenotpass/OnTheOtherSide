@@ -65,7 +65,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -209,7 +209,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_IsActive
@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_IsActive
