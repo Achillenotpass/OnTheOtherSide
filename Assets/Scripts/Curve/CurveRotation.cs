@@ -14,10 +14,6 @@ public class CurveRotation : MonoBehaviour
     private float m_MovementTimerY = 0f;
     private float m_MovementTimerZ = 0f;
 
-    private float m_MovementDurationX = 0f;
-    private float m_MovementDurationY = 0f;
-    private float m_MovementDurationZ = 0f;
-
     public GameObject objectToAnimate;
 
     private void Update()
