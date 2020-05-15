@@ -42,6 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: f62ea0bba261a784f982790b25e2af22, type: 3}
+  monster: {fileID: 0}
 --- !u!1001 &532565536532370688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,6 +57,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e386c72ab380c7b499c210515eb61e34, type: 3}
       propertyPath: m_TagString
       value: Movable
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e386c72ab380c7b499c210515eb61e34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e386c72ab380c7b499c210515eb61e34, type: 3}
       propertyPath: m_LocalPosition.x

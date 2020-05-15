@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LavaboPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bd6e7308cfcb41a4bafbc9111ad948ac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bd6e7308cfcb41a4bafbc9111ad948ac, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bd6e7308cfcb41a4bafbc9111ad948ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.9910989

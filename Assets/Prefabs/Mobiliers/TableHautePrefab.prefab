@@ -22,7 +22,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6980f0f87196e7f48a108dd507917661, type: 3}
       propertyPath: m_Name
-      value: table haute
+      value: TableHautePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6980f0f87196e7f48a108dd507917661, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6980f0f87196e7f48a108dd507917661, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6980f0f87196e7f48a108dd507917661, type: 3}
       propertyPath: m_LocalPosition.x

@@ -35,7 +35,12 @@ public class Door : Activable
     public AnimationCurve slamEndingLeft;
     public AnimationCurve slamEndingRight;
 
-    // Start is called before the first frame update
+
+    //DESTROY DOOR
+    public int health = 3;
+
+
+    
     void Awake()
     {
         m_AudioSource = GetComponent<AudioSource>();
@@ -61,6 +66,15 @@ public class Door : Activable
         else
         {
             //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
+        }
+    }
+
+
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            DestroyDoor();
         }
     }
 
@@ -105,5 +119,10 @@ public class Door : Activable
         {
             m_AudioSource.PlayOneShot(lockedDoor);
         }
+    }
+
+    public void DestroyDoor()
+    {
+        Destroy(this.gameObject);
     }
 }

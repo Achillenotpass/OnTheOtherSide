@@ -24,6 +24,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: BureauPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 79f6db1a33f5a1d47a1c0a8375ec1bdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.58
