@@ -24014,7 +24014,7 @@ RectTransform:
   m_Children:
   - {fileID: 1856215716}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37910,7 +37910,7 @@ PrefabInstance:
     - target: {fileID: 8768540440029586292, guid: 8b49d1147d4f6714f90a7ba10a0b0eb8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8768540440029586292, guid: 8b49d1147d4f6714f90a7ba10a0b0eb8,
         type: 3}
@@ -51880,7 +51880,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1585181602
 PrefabInstance:
@@ -52014,7 +52014,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fd2ab21bca76af947b16d54d80ca3fdb, type: 2}
+  - {fileID: 2100000, guid: caed55b5183202a478b9d6c7557f18bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -57896,7 +57896,7 @@ Transform:
   - {fileID: 1479114542}
   - {fileID: 1040866535}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1776145436
 PrefabInstance:

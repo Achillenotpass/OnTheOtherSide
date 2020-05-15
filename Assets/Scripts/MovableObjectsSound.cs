@@ -7,14 +7,21 @@ public class MovableObjectsSound : MonoBehaviour
     private AudioSource m_AudioSource;
     public AudioClip collisionSound;
 
+    private Player m_Player;
     
     public Monster monster;
 
     void Awake()
     {
+        m_Player = FindObjectOfType<Player>();
         m_AudioSource = gameObject.AddComponent<AudioSource>();
         m_AudioSource.spatialBlend = 1;
         m_AudioSource.clip = collisionSound;
+    }
+
+    private void Update()
+    {
+        transform.LookAt(m_Player.transform);
     }
 
     private void OnCollisionEnter(Collision collision)

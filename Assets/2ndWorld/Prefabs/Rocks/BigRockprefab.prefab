@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &3640268591385921661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842288598114216749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.320681, y: 5.694157, z: 6.3254247}
+  m_Center: {x: -0.74353594, y: 0.39984843, z: 1.0511539}
+--- !u!1001 &5842288598114119053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_Name
+      value: BigRockprefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 101.46306
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.486496
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5941217
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.15787986
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.15787701
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7727666
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5555ee3dd850e54a95f3da4e2a66ed3, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4498ee1bcf5fa264289c4567854fd031, type: 3}
+--- !u!1 &5842288598114216749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 4498ee1bcf5fa264289c4567854fd031,
+    type: 3}
+  m_PrefabInstance: {fileID: 5842288598114119053}
+  m_PrefabAsset: {fileID: 0}
