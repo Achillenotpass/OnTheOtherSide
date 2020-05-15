@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2290252991971296517, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: contactShadows

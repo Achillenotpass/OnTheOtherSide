@@ -66,23 +66,23 @@ MonoBehaviour:
     overrideState: 1
     value: 2
   toneCurveToeStrength:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.2
   toneCurveToeLength:
-    overrideState: 0
-    value: 0.5
+    overrideState: 1
+    value: 0.65
   toneCurveShoulderStrength:
-    overrideState: 0
+    overrideState: 1
     value: 0
   toneCurveShoulderLength:
-    overrideState: 0
+    overrideState: 1
     value: 0.5
   toneCurveShoulderAngle:
-    overrideState: 0
-    value: 0
-  toneCurveGamma:
-    overrideState: 0
+    overrideState: 1
     value: 1
+  toneCurveGamma:
+    overrideState: 1
+    value: 1.1
   ldrLut:
     overrideState: 0
     value: {fileID: 0}
