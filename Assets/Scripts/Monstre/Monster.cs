@@ -37,6 +37,10 @@ public class Monster : MonoBehaviour
     private bool m_CanCry;
 
 
+    public GameObject soundDestination;
+    public float monsterHearingDistance = 15.0f;
+    public float monsterMinHearingDistance = 15.0f;
+
 
     private void Awake()
     {
@@ -48,20 +52,14 @@ public class Monster : MonoBehaviour
     
     void Start()
     {
-        if (hasApparitionTarget)
-        {
-            m_CurrentTarget = apparitionTarget;
-            m_NavmeshAgent.SetDestination(m_CurrentTarget.transform.position);
-        }
-        else
-        {
-            SetRandomTarget();
-        }
+        Invoke("DelayedStart", 4.0f);
+        m_NavmeshAgent.SetDestination(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         PlayStepSounds();
         m_Animator.SetBool("isRunning", m_CanSeePlayer);
 
@@ -176,7 +174,7 @@ public class Monster : MonoBehaviour
             collision.gameObject.GetComponent<Death>().Die();
         }
     }
-
+    
 
     private void PlayStepSounds()
     {
@@ -188,6 +186,26 @@ public class Monster : MonoBehaviour
         {
             audioSourceSteps.Play();
             m_CurrentTimerStepSounds = 0.0f;
+        }
+    }
+
+    public void FollowSounds(Vector3 position)
+    {
+        soundDestination.transform.position = position;
+        SetTarget(soundDestination);
+    }
+
+
+    public void DelayedStart()
+    {
+        if (hasApparitionTarget)
+        {
+            m_CurrentTarget = apparitionTarget;
+            m_NavmeshAgent.SetDestination(m_CurrentTarget.transform.position);
+        }
+        else
+        {
+            SetRandomTarget();
         }
     }
 }

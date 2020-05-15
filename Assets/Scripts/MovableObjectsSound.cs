@@ -6,7 +6,10 @@ public class MovableObjectsSound : MonoBehaviour
 {
     private AudioSource m_AudioSource;
     public AudioClip collisionSound;
-    // Start is called before the first frame update
+
+    
+    public Monster monster;
+
     void Awake()
     {
         m_AudioSource = gameObject.AddComponent<AudioSource>();
@@ -18,5 +21,14 @@ public class MovableObjectsSound : MonoBehaviour
     {
         m_AudioSource.pitch = Random.Range(0.7f, 1.2f);
         m_AudioSource.Play();
+
+        if (monster != null)
+        {
+            if ((Vector3.Distance(transform.position, monster.transform.position) <= monster.monsterHearingDistance) && (Vector3.Distance(transform.position, monster.transform.position) >= monster.monsterMinHearingDistance))
+            {
+                monster.FollowSounds(transform.position);
+            }
+        }
+        
     }
 }

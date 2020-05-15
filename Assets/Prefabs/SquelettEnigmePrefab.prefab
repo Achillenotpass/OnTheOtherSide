@@ -34,19 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6932173428600176549
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053959207804881969}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.023443861, y: 0.038037624, z: 0.07121424}
-  m_Center: {x: 0.14580028, y: 0.01018118, z: -0.26392406}
 --- !u!54 &7324946967663206038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -63,6 +50,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6932173428600176549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053959207804881969}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023443861, y: 0.038037624, z: 0.07121424}
+  m_Center: {x: 0.14580028, y: 0.01018118, z: -0.26392406}
 --- !u!65 &1158976969171482265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95,6 +95,22 @@ MonoBehaviour:
   - Main
   totalNumberOfParts: 3
   currentNumberOfParts: 0
+--- !u!54 &1083621935259176713
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278432257710382593}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &3863358472491473532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,13 +124,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.116949245, y: 0.14926112, z: 0.13235416}
   m_Center: {x: 0.022706334, y: 1.7329042, z: -0.20193796}
---- !u!54 &1083621935259176713
+--- !u!54 &1153550890280239598
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2278432257710382593}
+  m_GameObject: {fileID: 4019901294507106477}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -137,22 +153,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.063817166, y: 0.088117935, z: 0.09745015}
   m_Center: {x: 0.012176211, y: 0.018298764, z: 0.10624974}
---- !u!54 &1153550890280239598
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019901294507106477}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &2053959207804979857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -333,6 +333,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ff6ecab780b2c4c41bc9f0a5527acb01, type: 3}
       propertyPath: m_Name
       value: Squelette - Cerceuil
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ff6ecab780b2c4c41bc9f0a5527acb01, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ff6ecab780b2c4c41bc9f0a5527acb01, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ff6ecab780b2c4c41bc9f0a5527acb01, type: 3}
       propertyPath: m_LocalPosition.x

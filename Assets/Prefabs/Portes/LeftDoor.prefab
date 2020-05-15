@@ -187,6 +187,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  health: 3
 --- !u!65 &3168330060173956087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -297,7 +298,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!208 &8648638746801928109
+--- !u!208 &460388753560817367
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,6 +324,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 61272cf4a9916b344baa3a0d3d3ca24b, type: 3}
       propertyPath: m_Name
       value: porte double1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 61272cf4a9916b344baa3a0d3d3ca24b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 61272cf4a9916b344baa3a0d3d3ca24b, type: 3}
       propertyPath: m_LocalPosition.x
