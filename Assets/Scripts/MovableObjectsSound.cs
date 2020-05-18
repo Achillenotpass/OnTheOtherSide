@@ -21,7 +21,6 @@ public class MovableObjectsSound : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(m_Player.transform);
     }
 
     private void OnCollisionEnter(Collision collision)

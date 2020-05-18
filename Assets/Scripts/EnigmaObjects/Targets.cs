@@ -5,6 +5,13 @@ using UnityEngine;
 public class Targets : MonoBehaviour
 {
     public GameObject[] toActivate;
+    public Player player;
+
+    private void Update()
+    {
+        transform.LookAt(player.transform);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         for (int i = 0; i < toActivate.Length; i++)
