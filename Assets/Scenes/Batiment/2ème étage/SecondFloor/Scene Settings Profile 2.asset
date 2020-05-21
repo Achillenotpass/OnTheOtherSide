@@ -17,6 +17,28 @@ MonoBehaviour:
   - {fileID: 114929213757531526}
   - {fileID: 114767537728410562}
   - {fileID: 114885159630822292}
+  - {fileID: 114439227961702172}
+--- !u!114 &114439227961702172
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b6af8f7ad32324cb6941c3290e5895, type: 3}
+  m_Name: MicroShadowing
+  m_EditorClassIdentifier: 
+  active: 1
+  enable:
+    m_OverrideState: 1
+    m_Value: 1
+  opacity:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
 --- !u!114 &114767537728410562
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -174,7 +196,7 @@ MonoBehaviour:
     max: 1
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 5000
+    m_Value: 100
     min: 0
   mipFogMaxMip:
     m_OverrideState: 0
@@ -197,14 +219,14 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 80
     min: 1
   baseHeight:
     m_OverrideState: 1
     m_Value: 1
   meanHeight:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 20
     min: 1
   anisotropy:
     m_OverrideState: 1

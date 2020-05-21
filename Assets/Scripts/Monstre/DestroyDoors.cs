@@ -15,7 +15,7 @@ public class DestroyDoors : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Trigger");
+        //Debug.Log("Trigger");
         if (other.gameObject.GetComponent<Door>() != null)
         {
             Debug.Log("door");

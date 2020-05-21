@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.HDPipeline;
 
 public class SpeLight : MonoBehaviour
 {
     public LightState currentLightState = LightState.Off;
     public MeshRenderer meshRenderer;
+    public DensityVolume densityVolume;
 
     private Light m_Light;
 
@@ -35,10 +37,12 @@ public class SpeLight : MonoBehaviour
         if (m_Light.isActiveAndEnabled)
         {
             meshRenderer.material.EnableKeyword("_EMISSION");
+            densityVolume.gameObject.SetActive(true);
         }
         else
         {
             meshRenderer.material.DisableKeyword("_EMISSION");
+            densityVolume.gameObject.SetActive(false);
         }
 
         switch(currentLightState)
