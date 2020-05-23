@@ -30,7 +30,7 @@ public class CurveUtility : MonoBehaviour
         m_MovementTimerX += Time.deltaTime;
         m_MovementTimerY += Time.deltaTime;
         m_MovementTimerZ += Time.deltaTime;
-        m_Curve = new Vector3(objectToAnimate.transform.parent.position.x + axeX.Evaluate(m_MovementTimerX), objectToAnimate.transform.parent.position.y + axeY.Evaluate(m_MovementTimerY), objectToAnimate.transform.parent.position.z + axeZ.Evaluate(m_MovementTimerZ));
+        m_Curve = new Vector3(objectToAnimate.transform.parent.localPosition.x + axeX.Evaluate(m_MovementTimerX), objectToAnimate.transform.parent.localPosition.y + axeY.Evaluate(m_MovementTimerY), objectToAnimate.transform.parent.localPosition.z + axeZ.Evaluate(m_MovementTimerZ));
         objectToAnimate.transform.position = m_Curve;
     }
 

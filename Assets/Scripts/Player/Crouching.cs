@@ -18,11 +18,14 @@ public class Crouching : MonoBehaviour
 
     private KeyCode m_Crouching = KeyCode.C;
 
+    private Animator m_Animator;
+
     private void Start()
     {
         m_PlayerScript = GetComponent<Player>();
         m_CurveUtility = GetComponent<CurveUtility>();
         m_CurveUtility.objectToAnimate = playerCamera.gameObject;
+        m_Animator = GetComponentInChildren<Animator>();
     }
     void Update()
     {
@@ -58,13 +61,15 @@ public class Crouching : MonoBehaviour
     {
         if (Input.GetKeyDown(m_Crouching))
         {
-            m_CurveUtility.axeY = crouching;
-            m_CurveUtility.BeginMovement();
+            m_Animator.SetBool("IsCrouching", true);
+            //m_CurveUtility.axeY = crouching;
+            //m_CurveUtility.BeginMovement();
         }
         if(Input.GetKeyUp(m_Crouching))
         {
-            m_CurveUtility.axeY = invCrouching;
-            m_CurveUtility.BeginMovement();
+            m_Animator.SetBool("IsCrouching", false);
+            //m_CurveUtility.axeY = invCrouching;
+            //m_CurveUtility.BeginMovement();
         }
     }
 }

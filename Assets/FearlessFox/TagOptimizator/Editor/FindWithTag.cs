@@ -19,7 +19,8 @@ public class FindWithTag : EditorWindow
   private bool allSelected = false;
 
   [MenuItem("Window/FearlessFox/Find With Tag")]
-  public static void FindGameObjecWithTag()
+    [System.Obsolete]
+    public static void FindGameObjecWithTag()
   {
     editorWindow = EditorWindow.GetWindow(typeof(FindWithTag));
     editorWindow.title = "FindWithTag";

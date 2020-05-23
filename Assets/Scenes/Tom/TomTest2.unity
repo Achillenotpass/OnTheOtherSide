@@ -1181,6 +1181,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 66434807}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &71627128
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &71797379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1680,6 +1755,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 116336406}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &120619422
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &124978187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2674,6 +2824,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1106644034254730729, guid: fa38565b6a73eba43b4a3ca7fa186b0e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1876355681}
     - target: {fileID: 6597657242296793398, guid: fa38565b6a73eba43b4a3ca7fa186b0e,
         type: 3}
       propertyPath: m_Intensity
@@ -4682,6 +4837,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2079913337}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4818,7 +4978,7 @@ GameObject:
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
+  m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &455813659
@@ -4989,6 +5149,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 71627128}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6472,6 +6637,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1643256607}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7081,6 +7251,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 629306779}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &636547044
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &643120758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7501,6 +7746,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 675038302}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &680863726
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &698733660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8192,6 +8512,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1563337562}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10721,6 +11046,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 680863726}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11500,7 +11830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194424252
 GameObject:
@@ -11644,6 +11974,226 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[0].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[1].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[1].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftX.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[0].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[0].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[1].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftX.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[0].value
+      value: 0.756
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[0].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[1].value
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[1].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: bendingLeftY.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[0].value
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[0].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[1].value
+      value: 0.756
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[1].tangentMode
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570962266338910051, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: invBendingLeftY.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 4058713424123780075, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -11653,6 +12203,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203274, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595040324599203274, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 5595040324599203275, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
@@ -11672,7 +12232,7 @@ PrefabInstance:
     - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.11635
+      value: -33.577
       objectReference: {fileID: 0}
     - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
@@ -11682,7 +12242,7 @@ PrefabInstance:
     - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.94956
+      value: -12.168
       objectReference: {fileID: 0}
     - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
@@ -11707,7 +12267,7 @@ PrefabInstance:
     - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5595040324599203276, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
@@ -11818,10 +12378,10 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211559897}
+  m_GameObject: {fileID: 1211559899}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f0a7d29647921841a37af7d80bf66c2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11965,6 +12525,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 120619422}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13243,6 +13808,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1447793257}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13528,6 +14098,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1441953376}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1447793257
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &1451167778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14762,6 +15407,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1551629555}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1563337562
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1564947689
 GameObject:
   m_ObjectHideFlags: 0
@@ -15125,6 +15845,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1639033440}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1643256607
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &1645048525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16331,6 +17126,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1194424253}
     m_Modifications:
+    - target: {fileID: 230299461769276792, guid: ba09568bf16e60840bd6b7c53ca82a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 636547044}
     - target: {fileID: 592156872132373006, guid: ba09568bf16e60840bd6b7c53ca82a7b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17292,6 +18092,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1869832694}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1876355681
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1889734836
 GameObject:
   m_ObjectHideFlags: 0
@@ -18465,7 +19340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2025606244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18793,6 +19668,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2071320201}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &2079913337
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HDRP/Unlit
+  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 0
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 0
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 0
+    - _DistortionEnable: 0
+    - _DistortionOnly: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 0
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DstBlend: 0
+    - _EnableFogOnTransparent: 0
+    - _HdrpVersion: 2
+    - _PreRefractionPass: 0
+    - _SrcBlend: 1
+    - _StencilRef: 2
+    - _StencilRefMV: 128
+    - _StencilWriteMask: 7
+    - _StencilWriteMaskMV: 128
+    - _SurfaceType: 0
+    - _TransparentSortPriority: 0
+    - _ZTestModeDistortion: 8
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &2082132235
 PrefabInstance:
   m_ObjectHideFlags: 0
