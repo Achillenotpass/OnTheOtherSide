@@ -10,6 +10,7 @@ public class Targets : MonoBehaviour
     private void Update()
     {
         transform.LookAt(player.transform);
+        transform.Rotate(0.0f, -90.0f,  45.0f - transform.rotation.z);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toActivate: []
+  player: {fileID: 0}
 --- !u!1001 &1079000756653209140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35,7 +36,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_Name
-      value: Oeil Violet
+      value: OeilVioletPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,19 +52,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
-      propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.38268274
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.9238798
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_RootOrder
@@ -79,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 45.000004
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 237571bc7334bfe419cf3b210388735e, type: 3}
       propertyPath: m_Materials.Array.data[0]

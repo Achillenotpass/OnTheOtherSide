@@ -8,8 +8,6 @@ public class MovableObjectsSound : MonoBehaviour
     public AudioClip collisionSound;
 
     private Player m_Player;
-    
-    public Monster monster;
 
     void Awake()
     {
@@ -25,14 +23,5 @@ public class MovableObjectsSound : MonoBehaviour
     {
         m_AudioSource.pitch = Random.Range(0.7f, 1.2f);
         m_AudioSource.Play();
-
-        if (monster != null)
-        {
-            if ((Vector3.Distance(transform.position, monster.transform.position) <= monster.monsterHearingDistance) && (Vector3.Distance(transform.position, monster.transform.position) >= monster.monsterMinHearingDistance))
-            {
-                monster.FollowSounds(transform.position);
-            }
-        }
-        
     }
 }

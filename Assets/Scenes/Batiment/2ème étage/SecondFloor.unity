@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03899951, g: 0.055755652, b: 0.08557858, a: 1}
+  m_IndirectSpecularColor: {r: 0.025437875, g: 0.035097107, b: 0.049939465, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9258,6 +9258,11 @@ PrefabInstance:
       propertyPath: letterPointer
       value: 
       objectReference: {fileID: 1637857246}
+    - target: {fileID: 5595040324807619180, guid: a473bce0280a64c4b9e74ab6c64d761b,
+        type: 3}
+      propertyPath: maxInteractionDistance
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5595040324807619181, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_HDR

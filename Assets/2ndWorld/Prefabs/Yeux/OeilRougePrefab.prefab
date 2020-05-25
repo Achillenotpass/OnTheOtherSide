@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toActivate: []
+  player: {fileID: 0}
 --- !u!1001 &4826933959203186227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35,7 +36,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_Name
-      value: Oeil Rouge
+      value: OeilRougePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,7 +52,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_LocalRotation.y
@@ -59,11 +60,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4910a050ea380924587b3bb489063231, type: 3}
       propertyPath: m_RootOrder

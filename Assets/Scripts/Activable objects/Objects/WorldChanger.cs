@@ -31,7 +31,7 @@ public class WorldChanger : Activable
             {
                 if (playerCamera.fieldOfView <= maxFOV)
                 {
-                    playerCamera.fieldOfView = playerCamera.fieldOfView + increaseIncrementalValue;
+                    playerCamera.fieldOfView = playerCamera.fieldOfView + increaseIncrementalValue * Time.deltaTime * 60;
                 }
                 else
                 {
@@ -40,7 +40,7 @@ public class WorldChanger : Activable
             }
             else if (playerCamera.fieldOfView >= minFOV)
             {
-                playerCamera.fieldOfView = playerCamera.fieldOfView - decreaseIncrementalValue;
+                playerCamera.fieldOfView = playerCamera.fieldOfView - decreaseIncrementalValue * Time.deltaTime * 60;
             }
             else
             {

@@ -15,10 +15,8 @@ public class DestroyDoors : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        //Debug.Log("Trigger");
         if (other.gameObject.GetComponent<Door>() != null)
         {
-            Debug.Log("door");
             AttackDoor(other.gameObject.GetComponent<Door>());
         }
     }
@@ -27,7 +25,6 @@ public class DestroyDoors : MonoBehaviour
     {
         if (m_CurrentHittingDoorTimer >= hittingDoorTimer)
         {
-            Debug.Log("timer");
             m_CurrentHittingDoorTimer = 0.0f;
             door.health = door.health - 1;
         }
