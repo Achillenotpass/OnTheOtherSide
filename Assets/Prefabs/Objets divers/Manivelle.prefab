@@ -14,6 +14,48 @@ CapsuleCollider:
   m_Height: 0.04569405
   m_Direction: 1
   m_Center: {x: 0.27567297, y: 0.2703214, z: -0.000000057742014}
+--- !u!114 &6114817516110731396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994651347086971489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbb65b488170e445a80530395fb7122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToActivate: []
+  positionArrow:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.6884308
+      value: 306.82355
+      inSlope: -9.22608
+      outSlope: -9.22608
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6.1206055
+      value: 256.70587
+      inSlope: -9.22608
+      outSlope: -9.22608
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  arrow: {fileID: 8994651348726780231}
+  maxGauge: 5
+  currentGauge: 0
+  player: {fileID: 0}
+  handle: {fileID: 8994651347887010546}
 --- !u!1 &8994651347134894492
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,48 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05876783, y: 0.37130418, z: 0.3101657}
   m_Center: {x: -0.022545127, y: -0.000000044703494, z: 0.041080717}
---- !u!114 &8994651347676077331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994651347676109744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bbb65b488170e445a80530395fb7122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToActivate: []
-  positionArrow:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.6884308
-      value: 306.82355
-      inSlope: -9.22608
-      outSlope: -9.22608
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 6.1206055
-      value: 256.70587
-      inSlope: -9.22608
-      outSlope: -9.22608
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  arrow: {fileID: 8994651348726780231}
-  maxGauge: 5
-  currentGauge: 0
-  player: {fileID: 0}
-  handle: {fileID: 8994651347086971489}
 --- !u!1001 &8994651347086873793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 02223966d2cd93d4a8bda2dddfe9feb4, type: 3}
       propertyPath: m_Name
       value: Manche
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02223966d2cd93d4a8bda2dddfe9feb4, type: 3}
+      propertyPath: m_TagString
+      value: Activable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02223966d2cd93d4a8bda2dddfe9feb4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -180,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5f55e742d5a05054ba5ee79bcbed6454, type: 3}
       propertyPath: m_TagString
-      value: Activable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f55e742d5a05054ba5ee79bcbed6454, type: 3}
       propertyPath: m_LocalPosition.x
@@ -305,6 +309,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2ea9e1001d477dc4a9a3a86659c41c24, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b080e1035bc304c9bebaebaa8ae029, type: 3}
+--- !u!1 &8994651347887010546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 31b080e1035bc304c9bebaebaa8ae029,
+    type: 3}
+  m_PrefabInstance: {fileID: 8994651347886978130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8994651347887107794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 31b080e1035bc304c9bebaebaa8ae029,

@@ -14,7 +14,7 @@ public class Crank : Activable
 
     public float currentGauge = 0;
 
-    bool m_IsCranking = false;
+    bool m_IsCranking = true;
 
     public GameObject player;
 
@@ -46,7 +46,7 @@ public class Crank : Activable
 
     public override void Interaction()
     {
-        switch(m_ScriptPlayer.enabled)
+        /*switch(m_ScriptPlayer.enabled)
         {
             case true:
                 m_ScriptPlayer.enabled = false;
@@ -63,17 +63,18 @@ public class Crank : Activable
             case false:
                 m_IsCranking = true;
                 break;
-        }
+        }*/
     }
 
     void Cranked()
     {
+
         if (Input.GetKey(KeyCode.Mouse0))
         {
             RaycastHit hitInfo;
             if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out hitInfo, 10))
             {
-                if (hitInfo.transform.gameObject == handle)
+                if (hitInfo.transform.gameObject == gameObject)
                 {
                     if (currentGauge >= maxGauge)
                     {
@@ -89,7 +90,7 @@ public class Crank : Activable
                     else
                     {
                         currentGauge += 1 * Time.deltaTime;
-                        transform.GetChild(0).Rotate(1, 0, 0);
+                        handle.transform.Rotate(1, 0, 0);
                         arrow.transform.rotation = Quaternion.Euler(0 + positionArrow.Evaluate(currentGauge), 0, 0);
                     }
                 }
