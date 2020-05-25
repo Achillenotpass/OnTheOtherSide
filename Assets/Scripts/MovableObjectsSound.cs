@@ -19,9 +19,7 @@ public class MovableObjectsSound : MonoBehaviour
         m_AudioSource.clip = collisionSound;
     }
 
-    private void Update()
-    {
-    }
+    
 
     private void OnCollisionEnter(Collision collision)
     {
