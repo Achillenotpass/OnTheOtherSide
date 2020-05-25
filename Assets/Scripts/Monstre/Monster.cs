@@ -53,7 +53,7 @@ public class Monster : MonoBehaviour
     void Start()
     {
         Invoke("DelayedStart", 4.0f);
-        m_NavmeshAgent.SetDestination(transform.position);
+        SetRandomTarget();
     }
 
     // Update is called once per frame
