@@ -22,7 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c85a53018684c224ba9e1f2d8f3834b8, type: 3}
       propertyPath: m_Name
-      value: Tronc arbre
+      value: TroncArbrePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c85a53018684c224ba9e1f2d8f3834b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c85a53018684c224ba9e1f2d8f3834b8, type: 3}
       propertyPath: m_LocalPosition.x

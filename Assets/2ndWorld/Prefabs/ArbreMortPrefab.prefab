@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 9039909824334884715}
   - component: {fileID: 664486187291902186}
   m_Layer: 0
-  m_Name: arbre mort
+  m_Name: ArbreMortPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &9039909824337177993
 Transform:

@@ -130,7 +130,7 @@ public class Monster : MonoBehaviour
         }
 
 
-        if (Vector3.Distance(m_CurrentTarget.transform.position, transform.position) <= 2.0f)
+        if (Vector3.Distance(m_CurrentTarget.transform.position, transform.position) <= 5.0f)
         {
             SetRandomTarget();
         }

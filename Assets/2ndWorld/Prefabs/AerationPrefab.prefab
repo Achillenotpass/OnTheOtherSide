@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 72f65e2db0920d5489d586598d6c8c0a, type: 3}
       propertyPath: m_Name
-      value: "A\xE9ration"
+      value: AerationPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 72f65e2db0920d5489d586598d6c8c0a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72f65e2db0920d5489d586598d6c8c0a, type: 3}
       propertyPath: m_LocalPosition.x

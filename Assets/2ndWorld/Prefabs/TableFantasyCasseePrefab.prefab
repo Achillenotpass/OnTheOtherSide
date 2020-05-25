@@ -22,11 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 4a07036f51e53b34a9b4ea7462bc2bd5, type: 3}
       propertyPath: m_Name
-      value: "Table cass\xE9"
+      value: TableFantasyCasseePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4a07036f51e53b34a9b4ea7462bc2bd5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4a07036f51e53b34a9b4ea7462bc2bd5, type: 3}
       propertyPath: m_NavMeshLayer

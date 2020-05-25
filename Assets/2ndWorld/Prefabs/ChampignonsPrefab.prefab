@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 7756551408320510527}
   - component: {fileID: 6214282205458555628}
   m_Layer: 0
-  m_Name: champignons
+  m_Name: ChampignonsPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7756551408318085341
 Transform:
