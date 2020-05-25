@@ -22,7 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6e8f751bd7ab0244997b352ea49b540c, type: 3}
       propertyPath: m_Name
-      value: Caillou gros
+      value: MediumRockPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6e8f751bd7ab0244997b352ea49b540c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e8f751bd7ab0244997b352ea49b540c, type: 3}
       propertyPath: m_LocalPosition.x

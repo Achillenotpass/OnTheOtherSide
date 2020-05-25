@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 7895092389200023258}
   - component: {fileID: 7447503121263002958}
   m_Layer: 0
-  m_Name: champi grand
+  m_Name: ChampignonGrandPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7895092389198253108
 Transform:

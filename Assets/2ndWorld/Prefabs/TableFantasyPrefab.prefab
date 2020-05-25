@@ -22,11 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: b9146b4565a782d41bdab544b185e7e6, type: 3}
       propertyPath: m_Name
-      value: Table
+      value: TableFantasyPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b9146b4565a782d41bdab544b185e7e6, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b9146b4565a782d41bdab544b185e7e6, type: 3}
       propertyPath: m_NavMeshLayer

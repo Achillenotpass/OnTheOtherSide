@@ -22,11 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: bedeac29508a0ee4f895c1692713da87, type: 3}
       propertyPath: m_Name
-      value: Chauffage
+      value: ChauffagePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bedeac29508a0ee4f895c1692713da87, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bedeac29508a0ee4f895c1692713da87, type: 3}
       propertyPath: m_NavMeshLayer

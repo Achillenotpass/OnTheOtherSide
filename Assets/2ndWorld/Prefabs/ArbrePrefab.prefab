@@ -22,7 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3bee4342d07039e41ad85a4d1dc6c6b4, type: 3}
       propertyPath: m_Name
-      value: Arbre 1
+      value: ArbrePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bee4342d07039e41ad85a4d1dc6c6b4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bee4342d07039e41ad85a4d1dc6c6b4, type: 3}
       propertyPath: m_LocalPosition.x
