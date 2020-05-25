@@ -12,9 +12,18 @@ public class Player : MonoBehaviour
     public float multiplyMove = 1;
     bool m_IsRunning = false;
 
+    public float speed = 5;
+
+    public float maxVelocityChange = 10.0f;
+
+    private Rigidbody m_Rigidbody;
+
+    private bool grounded = false;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -31,7 +40,7 @@ public class Player : MonoBehaviour
     {
 
         // Variable pour le sprint
-        if (m_IsRunning) { multiplyMove = 3; }
+        if (m_IsRunning) { multiplyMove = 2; }
         else { multiplyMove = 1; }
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Sprint") > 0)
@@ -43,40 +52,36 @@ public class Player : MonoBehaviour
             m_IsRunning = false;
         }
 
+        // Calculate how fast we should be moving
+        if (grounded)
+        {
+            // Calculate how fast we should be moving
+            Vector3 targetVelocity;
+            targetVelocity.x = Input.GetAxis("Horizontal") * 0.75f;
+            targetVelocity.y = 0;
+            if (Input.GetAxis("Vertical") < 0)
+                targetVelocity.z = Input.GetAxis("Vertical") * 0.5f;
+            else
+                targetVelocity.z = Input.GetAxis("Vertical");
+            targetVelocity = transform.TransformDirection(targetVelocity);
+            targetVelocity *= speed;
 
-        // déplacement clavier
-        if (Input.GetKey(KeyCode.Z))
-        {
-            transform.Translate(0, 0, multiplyMove * speedMove * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0, 0, -0.5f * multiplyMove * speedMove * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            transform.Translate(-0.75f * multiplyMove * speedMove * Time.deltaTime, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(0.75f * multiplyMove * speedMove * Time.deltaTime, 0, 0);
-        }
+            // Apply a force that attempts to reach our target velocity
+            Vector3 velocity = m_Rigidbody.velocity;
+            Vector3 velocityChange = (targetVelocity - velocity);
+            velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+            velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+            velocityChange.y = 0;
+            m_Rigidbody.AddForce(velocityChange * multiplyMove, ForceMode.VelocityChange);
 
-        // déplacement mannette 
-        float translationX = Input.GetAxis("LeftJoystickX") * speedMove * multiplyMove * Time.deltaTime;
-        float translationY = Input.GetAxis("LeftJoystickY") * speedMove * multiplyMove * Time.deltaTime;
-
-
-        if (translationY > 0)
-        {
-            transform.Translate(0, 0, -translationY * 0.5f);
-        }
-        else
-        {
-            transform.Translate(0, 0, -translationY);
         }
 
-        transform.Translate(0.75f * translationX, 0, 0);
+        grounded = false;
+    }
+
+    void OnCollisionStay()
+    {
+        grounded = true;
     }
 
     private void PlayStepSounds()

@@ -18,53 +18,14 @@ public class FPSCamera : MonoBehaviour
 
     bool m_AjustRotationBeginning = true;
 
-    // Stop camera
-    private bool m_StopSuperiorAngle = false;
-    private bool m_StopInferiorAngle = false;
-    private Vector2 m_ActualMouseLook;
-
 
     // Update is called once per frame
     void Update()
     {
         ControlC();
         //ControlM();
-        StopMovementOnExtremeAngle();
-        
-    }
+        m_MouseLook.y = Mathf.Clamp(m_MouseLook.y, -70, 70);
 
-    void StopMovementOnExtremeAngle()
-    {
-        if (m_MouseLook.y < -60)
-        {
-            m_StopInferiorAngle = true;
-        }
-        if (m_MouseLook.y > 60f)
-        {
-            m_StopSuperiorAngle = true;
-        }
-
-        if(m_StopSuperiorAngle)
-        {
-            if (m_ActualMouseLook.y > m_MouseLook.y)
-                m_StopSuperiorAngle = false;
-        }
-        if (m_StopInferiorAngle)
-        {
-            if (m_ActualMouseLook.y < m_MouseLook.y)
-                m_StopInferiorAngle = false;
-        }
-
-        if (m_StopSuperiorAngle)
-        {
-            m_MouseLook.y = 60;
-            m_ActualMouseLook = new Vector2(m_MouseLook.x, m_MouseLook.y);
-        }
-        if (m_StopInferiorAngle)
-        {
-            m_MouseLook.y = -60;
-            m_ActualMouseLook = new Vector2(m_MouseLook.x, m_MouseLook.y);
-        }
     }
 
     void ControlC()
