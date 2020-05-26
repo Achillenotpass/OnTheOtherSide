@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
                 targetVelocity.z = Input.GetAxis("Vertical");
             targetVelocity = transform.TransformDirection(targetVelocity);
             targetVelocity *= speed;
+            targetVelocity *= multiplyMove;
 
             // Apply a force that attempts to reach our target velocity
             Vector3 velocity = m_Rigidbody.velocity;
@@ -72,7 +73,7 @@ public class Player : MonoBehaviour
             velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
             velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
             velocityChange.y = 0;
-            m_Rigidbody.AddForce(velocityChange * multiplyMove, ForceMode.VelocityChange);
+            m_Rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
 
         }
 
