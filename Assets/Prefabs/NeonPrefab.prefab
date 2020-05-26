@@ -201,6 +201,8 @@ MonoBehaviour:
   timerForLimitedBlinking: 5
   currentTimerForLimitedBlinking: 0
   stateOfLightForBlinking: 1
+  active: {r: 0.7490196, g: 0.7490196, b: 0.7058824, a: 1}
+  desactive: {r: 0, g: 0, b: 0.003921569, a: 1}
 --- !u!1 &592156872132373006
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +297,8 @@ MonoBehaviour:
   timerForLimitedBlinking: 5
   currentTimerForLimitedBlinking: 0
   stateOfLightForBlinking: 1
+  active: {r: 0, g: 0, b: 0, a: 0}
+  desactive: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8889973924137520995
 BoxCollider:
   m_ObjectHideFlags: 0

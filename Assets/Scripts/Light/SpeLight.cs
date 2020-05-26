@@ -25,6 +25,10 @@ public class SpeLight : MonoBehaviour
     [Header("Do you want the light on at the end ?")]
     public bool stateOfLightForBlinking = true;
 
+    [Header("State of emissive material activate/desactivate")]
+    public Color active;
+    public Color desactive;
+
     private void Start()
     {
         m_Light = GetComponent<Light>();
@@ -36,12 +40,12 @@ public class SpeLight : MonoBehaviour
     {
         if (m_Light.isActiveAndEnabled)
         {
-            meshRenderer.material.EnableKeyword("_EMISSION");
+            meshRenderer.material.SetColor("_EmissionColor", active);
             densityVolume.gameObject.SetActive(true);
         }
         else
         {
-            meshRenderer.material.DisableKeyword("_EMISSION");
+            meshRenderer.material.SetColor("_EmissionColor", desactive);
             densityVolume.gameObject.SetActive(false);
         }
 
