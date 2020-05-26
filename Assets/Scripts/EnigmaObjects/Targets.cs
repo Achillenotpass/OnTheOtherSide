@@ -6,6 +6,7 @@ public class Targets : MonoBehaviour
 {
     public GameObject[] toActivate;
     public Player player;
+    
 
     private void Update()
     {
