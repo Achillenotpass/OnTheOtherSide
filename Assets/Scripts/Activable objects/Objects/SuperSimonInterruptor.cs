@@ -15,6 +15,7 @@ public class SuperSimonInterruptor : Activable
     public override void Interaction()
     {
         superSimon.superSimonList.Add(this);
+        superSimon.Interaction();
         m_Animator.SetTrigger("Activated");
     }
 }
