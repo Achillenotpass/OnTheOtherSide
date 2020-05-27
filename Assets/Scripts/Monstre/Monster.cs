@@ -52,8 +52,7 @@ public class Monster : MonoBehaviour
     
     void Start()
     {
-        Invoke("DelayedStart", 4.0f);
-        SetRandomTarget();
+        NavigationStart();
     }
 
     // Update is called once per frame
@@ -196,7 +195,7 @@ public class Monster : MonoBehaviour
     }
 
 
-    public void DelayedStart()
+    public void NavigationStart()
     {
         if (hasApparitionTarget)
         {

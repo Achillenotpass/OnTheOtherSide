@@ -9,10 +9,14 @@ public class SuperSimonDoor : Activable
     public int numberOfHitToDestroy = 3;
     private int m_CurrentNumberOfHit = 0;
 
+    private bool m_IsDestroyed = false;
 
     public override void Interaction()
     {
-        Hit();
+        if (!m_IsDestroyed)
+        {
+            Hit();
+        }
     }
 
     void Hit()
@@ -26,6 +30,7 @@ public class SuperSimonDoor : Activable
 
     void Destroyed()
     {
+        m_IsDestroyed = true;
         foreach (Activable toActivate in toActivateWhenBroken)
         {
             toActivate.Interaction();
