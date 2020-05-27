@@ -185,7 +185,7 @@ MonoBehaviour:
     m_Value: 2
   fogType:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 0
 --- !u!114 &114957494470126148
 MonoBehaviour:
   m_ObjectHideFlags: 3
