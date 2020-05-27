@@ -6,6 +6,6 @@ public class GridDoor : Activable
 {
     public override void Interaction()
     {
-        transform.Translate(0.0f, - transform.localScale.y / 3, 0.0f);
+        transform.Translate(0.0f, 0.0f, -1.2f);
     }
 }

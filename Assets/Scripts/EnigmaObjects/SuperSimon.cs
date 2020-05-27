@@ -4,43 +4,56 @@ using UnityEngine;
 
 public class SuperSimon : Activable
 {
-    public List<Activable> objectsToActivate = new List<Activable>();
+    public List<Activable> objectsToActivateWhenRight = new List<Activable>();
+    public List<Activable> objectsToActivateWhenWrong = new List<Activable>();
 
     public Activable[] superSimonArray;
 
     public List<Activable> superSimonList;
 
-    private AudioSource m_audioSource;
+    public int currentListIndex = 0;
 
-    private void Start()
-    {
-        m_audioSource = GetComponent<AudioSource>();
-    }
+    private bool m_FinishedSuperSimon = false;
+
+   
 
     public override void Interaction()
     {
-        if (superSimonList.Count == superSimonArray.Length)
+        if (!m_FinishedSuperSimon)
         {
-            for (int i = 0; i < superSimonArray.Length; i++)
+            if (superSimonList[currentListIndex] == superSimonArray[currentListIndex])
             {
-                if (superSimonArray[i] != superSimonList[i])
+                if ((currentListIndex + 1) == superSimonArray.Length)
                 {
-                    Wrong();
-                    return;
+                    Right();
+                }
+                else
+                {
+                    currentListIndex = currentListIndex + 1;
                 }
             }
-            foreach (Activable toActivate in objectsToActivate)
+            else
             {
-                toActivate.Interaction();
+                Wrong();
             }
         }
-        else
-            Wrong();
+    }
+
+    void Right()
+    {
+        foreach (Activable toActivate in objectsToActivateWhenRight)
+        {
+            toActivate.Interaction();
+        }
     }
 
     void Wrong()
     {
-        m_audioSource.Play();
+        foreach (Activable toActivate in objectsToActivateWhenWrong)
+        {
+            toActivate.Interaction();
+        }
         superSimonList.Clear();
+        currentListIndex = 0;
     }
 }
