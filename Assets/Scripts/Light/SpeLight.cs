@@ -40,13 +40,15 @@ public class SpeLight : MonoBehaviour
     {
         if (m_Light.isActiveAndEnabled)
         {
-            meshRenderer.material.SetColor("_EmissionColor", active);
-            densityVolume.gameObject.SetActive(true);
+            //meshRenderer.material.SetColor("_EmissionColor", active);
+            if(densityVolume != null)
+                densityVolume.gameObject.SetActive(true);
         }
         else
         {
-            meshRenderer.material.SetColor("_EmissionColor", desactive);
-            densityVolume.gameObject.SetActive(false);
+            //meshRenderer.material.SetColor("_EmissionColor", desactive);
+            if (densityVolume != null)
+                densityVolume.gameObject.SetActive(false);
         }
 
         switch(currentLightState)
