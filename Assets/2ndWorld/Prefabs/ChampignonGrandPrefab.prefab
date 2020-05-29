@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 7895092389201120282}
   - component: {fileID: 7895092389200023258}
   - component: {fileID: 7447503121263002958}
+  - component: {fileID: 1508040190900689611}
   m_Layer: 0
   m_Name: ChampignonGrandPrefab
   m_TagString: Untagged
@@ -255,5 +256,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.6393023, y: 5.398966, z: 12.522366}
-  m_Center: {x: -4.809627, y: -12.45263, z: 6.1956325}
+  m_Size: {x: 1.3738316, y: 1.6944396, z: 8.95504}
+  m_Center: {x: -4.905669, y: -12.576119, z: 4.41197}
+--- !u!65 &1508040190900689611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895092389198090260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.5378, y: 10.561674, z: 3.6561933}
+  m_Center: {x: -4.9145746, y: -12.505287, z: 10.628729}
