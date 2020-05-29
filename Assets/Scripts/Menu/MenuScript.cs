@@ -73,5 +73,11 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         if(sceneName == "SecondFloor")
             Cursor.visible = false;
+        if (sceneName == "2nd level")
+            Cursor.visible = false;
+        if (sceneName == "MaineMenu")
+            Cursor.visible = true;
+        if (sceneName == "Victory")
+            Cursor.visible = true;
     }
 }

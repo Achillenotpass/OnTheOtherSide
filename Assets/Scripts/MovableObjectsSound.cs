@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MovableObjectsSound : MonoBehaviour
 {
@@ -12,8 +13,7 @@ public class MovableObjectsSound : MonoBehaviour
     void Awake()
     {
         m_Player = FindObjectOfType<Player>();
-        m_AudioSource = gameObject.AddComponent<AudioSource>();
-        m_AudioSource.spatialBlend = 1;
+        m_AudioSource = gameObject.GetComponent<AudioSource>();
         m_AudioSource.clip = collisionSound;
     }
 
@@ -21,7 +21,7 @@ public class MovableObjectsSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        m_AudioSource.pitch = Random.Range(0.7f, 1.2f);
+        m_AudioSource.pitch = Random.Range(0.85f, 1.15f);
         m_AudioSource.Play();
     }
 }
