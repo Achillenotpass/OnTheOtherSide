@@ -9,6 +9,14 @@ public class SceneChange : Activable
 
     public override void Interaction()
     {
+        if (sceneToGoTo == "SecondFloor")
+            Cursor.visible = false;
+        if (sceneToGoTo == "2nd level")
+            Cursor.visible = false;
+        if (sceneToGoTo == "MaineMenu")
+            Cursor.visible = true;
+        if (sceneToGoTo == "Victory")
+            Cursor.visible = true;
         SceneManager.LoadScene(sceneToGoTo);
     }
 }
