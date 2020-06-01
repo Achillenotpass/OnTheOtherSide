@@ -194,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLightState: 0
   meshRenderer: {fileID: 7762046234014532933}
+  activateLight: {fileID: 2100000, guid: 422c105e96f1bd14a89c19c6d5b29347, type: 2}
+  desactivateLight: {fileID: 2100000, guid: 774b9bd99edb43440861129121c08740, type: 2}
   densityVolume: {fileID: 7841880511320620113}
   minTimerForReactivation: 0.05
   maxTimerForReactivation: 0.2
@@ -363,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 422c105e96f1bd14a89c19c6d5b29347, type: 2}
+      objectReference: {fileID: 2100000, guid: 774b9bd99edb43440861129121c08740, type: 2}
     - target: {fileID: 2300002, guid: 32c4b970b073ccf4dbe0e392df255fa9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -7,6 +7,8 @@ public class SpeLight : MonoBehaviour
 {
     public LightState currentLightState = LightState.Off;
     public MeshRenderer meshRenderer;
+    public Material activateLight;
+    public Material desactivateLight;
     public DensityVolume densityVolume;
 
     private Light m_Light;
@@ -40,19 +42,12 @@ public class SpeLight : MonoBehaviour
     {
         if (m_Light.isActiveAndEnabled)
         {
-            //meshRenderer.material.SetColor("_EmissionColor", active);
-            if(densityVolume != null && currentLightState != LightState.Blinking)
-                densityVolume.gameObject.SetActive(true);
+            meshRenderer.material = activateLight;
         }
         else
         {
-            //meshRenderer.material.SetColor("_EmissionColor", desactive);
-            if (densityVolume != null && currentLightState != LightState.Blinking)
-                densityVolume.gameObject.SetActive(false);
+            meshRenderer.material = desactivateLight;
         }
-
-        if (currentLightState == LightState.Blinking)
-            densityVolume.gameObject.SetActive(false);
 
         switch (currentLightState)
         {
@@ -64,9 +59,6 @@ public class SpeLight : MonoBehaviour
                 break;
             case LightState.Blinking:
                 LightBlinking();
-                break;
-            case LightState.Blinking2:
-                LightBlinking2();
                 break;
         }
     }
@@ -100,29 +92,6 @@ public class SpeLight : MonoBehaviour
         }
     }
 
-    private void LightBlinking2()
-    {
-        if(currentTimerForLimitedBlinking > 0)
-        {
-            currentTimerForLimitedBlinking -= 1 * Time.deltaTime;
-            LightBlinking();
-        }
-        else
-        {
-            switch (stateOfLightForBlinking)
-            {
-                case true:
-                    currentLightState = LightState.On;
-                    currentTimerForLimitedBlinking = timerForLimitedBlinking;
-                    break;
-                case false:
-                    currentLightState = LightState.Off;
-                    currentTimerForLimitedBlinking = timerForLimitedBlinking;
-                    break;
-            }
-        }
-    }
-
     private void Blinking()
     {
         m_Light.enabled = !m_Light.enabled;
@@ -134,5 +103,4 @@ public enum LightState
     On,
     Off,
     Blinking,
-    Blinking2,
 }

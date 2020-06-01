@@ -16,35 +16,39 @@ public class SlamDoor : Activable
             switch (openning)
             {
                 case true:
-                    switch(doors[i].isLeftDoor)
+                    doors[i].animator.SetTrigger("Slam");
+                    doors[i].animator.SetBool("IsOpen", true);
+                    /*switch (doors[i].isLeftDoor)
                     {
                         case true:
-                            doors[i].curveRotation.axeY = doors[i].slamOpeningLeft;
+                            //doors[i].curveRotation.axeY = doors[i].slamOpeningLeft;
                             doors[i].curveRotation.BeginMovement();
                             doors[i].isOpen = true;
                             break;
                         case false:
-                            doors[i].curveRotation.axeY = doors[i].slamOpeningRight;
+                            //doors[i].curveRotation.axeY = doors[i].slamOpeningRight;
                             doors[i].curveRotation.BeginMovement();
                             doors[i].isOpen = true;
                             break;
-                    }
+                    }*/
                     doors[i].m_AudioSource.PlayOneShot(doors[i].openingDoor);
                     break;
                 case false:
-                    switch (doors[i].isLeftDoor)
+                    doors[i].animator.SetTrigger("Slam");
+                    doors[i].animator.SetBool("IsOpen", false);
+                    /*switch (doors[i].isLeftDoor)
                     {
                         case true:
-                            doors[i].curveRotation.axeY = doors[i].slamEndingLeft;
+                            //doors[i].curveRotation.axeY = doors[i].slamEndingLeft;
                             doors[i].curveRotation.BeginMovement();
                             doors[i].isOpen = false;
                             break;
                         case false:
-                            doors[i].curveRotation.axeY = doors[i].slamEndingRight;
+                            //doors[i].curveRotation.axeY = doors[i].slamEndingRight;
                             doors[i].curveRotation.BeginMovement();
                             doors[i].isOpen = false;
                             break;
-                    }
+                    }*/
                     doors[i].m_AudioSource.PlayOneShot(doors[i].slamingDoor);
                     break;
             }

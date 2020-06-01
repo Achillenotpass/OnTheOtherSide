@@ -18,9 +18,12 @@ public class Door : Activable
     public bool isLocked = false;
 
     [SerializeField]
+    public Animator animator;
+
+    [SerializeField]
     public CurveRotation curveRotation;
 
-    public AnimationCurve openingLeft;
+/*    public AnimationCurve openingLeft;
     public AnimationCurve openingRight;
 
     public AnimationCurve endingLeft;
@@ -33,7 +36,7 @@ public class Door : Activable
     public AnimationCurve slamOpeningRight;
 
     public AnimationCurve slamEndingLeft;
-    public AnimationCurve slamEndingRight;
+    public AnimationCurve slamEndingRight;*/
 
 
     //DESTROY DOOR
@@ -49,22 +52,25 @@ public class Door : Activable
 
         curveRotation = GetComponent<CurveRotation>();
 
+        animator = GetComponent<Animator>();
+
         if (isOpen)
         {
+            animator.SetBool("IsOpen", true);
             if (isLeftDoor)
             {
-
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
-                curveRotation.axeY = begingOpenedLeft;
+                //curveRotation.axeY = begingOpenedLeft;
             }
             else
             {
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
-                curveRotation.axeY = begingOpenedRight;
+                //curveRotation.axeY = begingOpenedRight;
             }
         }
         else
         {
+            animator.SetBool("IsOpen", false);
             //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
         }
     }
@@ -82,35 +88,37 @@ public class Door : Activable
     {
         if (!isLocked)
         {
-            isOpen = !isOpen;
-            if (isOpen)
+            if (!animator.GetBool("IsOpen"))
             {
-                if (isLeftDoor)
+                animator.SetBool("IsOpen", true);
+                /*if (isLeftDoor)
                 {
+
                     //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, 90.0f, 0.0f)));
-                    curveRotation.axeY = openingLeft;
+                    //curveRotation.axeY = openingLeft;
                     curveRotation.BeginMovement();
                 }
                 else
                 {
                     //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation + new Vector3(0.0f, -90.0f, 0.0f)));
-                    curveRotation.axeY = openingRight;
+                    //curveRotation.axeY = openingRight;
                     curveRotation.BeginMovement();
-                }
+                }*/
                 m_AudioSource.PlayOneShot(openingDoor);
             }
             else
             {
-                if(isLeftDoor)
+                animator.SetBool("IsOpen", false);
+                /*if (isLeftDoor)
                 {
-                    curveRotation.axeY = endingLeft;
+                    //curveRotation.axeY = endingLeft;
                     curveRotation.BeginMovement();
                 }
                 else
                 {
-                    curveRotation.axeY = endingRight;
+                    //curveRotation.axeY = endingRight;
                     curveRotation.BeginMovement();
-                }
+                }*/
                 m_AudioSource.PlayOneShot(closingDoor);
                 //transform.SetPositionAndRotation(transform.position, Quaternion.Euler(baseRotation));
             }
