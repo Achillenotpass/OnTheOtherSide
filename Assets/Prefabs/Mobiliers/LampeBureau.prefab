@@ -42,7 +42,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4463260735611030056}
   m_LocalRotation: {x: 0.64018255, y: 0.28356206, z: 0.2891516, w: 0.6528018}
-  m_LocalPosition: {x: 0.08700002, y: 0.53, z: -0.0000000012984016}
+  m_LocalPosition: {x: 0.12, y: 0.5, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6906352631360991887}
@@ -194,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLightState: 0
   meshRenderer: {fileID: 0}
+  activateLight: {fileID: 0}
+  desactivateLight: {fileID: 0}
   densityVolume: {fileID: 0}
   minTimerForReactivation: 0.05
   maxTimerForReactivation: 0.2

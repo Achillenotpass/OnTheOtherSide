@@ -42,11 +42,13 @@ public class SpeLight : MonoBehaviour
     {
         if (m_Light.isActiveAndEnabled)
         {
-            meshRenderer.material = activateLight;
+            if(meshRenderer != null)
+                meshRenderer.material = activateLight;
         }
         else
         {
-            meshRenderer.material = desactivateLight;
+            if (meshRenderer != null)
+                meshRenderer.material = desactivateLight;
         }
 
         switch (currentLightState)
