@@ -55387,11 +55387,6 @@ PrefabInstance:
       propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5595040324807619182, guid: a473bce0280a64c4b9e74ab6c64d761b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.756
-      objectReference: {fileID: 0}
     - target: {fileID: 6657273062973033726, guid: a473bce0280a64c4b9e74ab6c64d761b,
         type: 3}
       propertyPath: m_IsActive
