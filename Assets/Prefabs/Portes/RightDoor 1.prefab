@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 6587963337973340506}
   - component: {fileID: 1769004811748881639}
   m_Layer: 0
-  m_Name: RightDoor
+  m_Name: RightDoor 1
   m_TagString: Activable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ Transform:
   m_GameObject: {fileID: 8700408436345443997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 8460385787176147802}
   m_Father: {fileID: 0}
@@ -85,8 +85,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4112132, y: 3.100874, z: 0.1070415}
-  m_Center: {x: -0.7188832, y: 1.5188, z: -0.025946}
+  m_Size: {x: 1.412132, y: 3.100874, z: 0.1070415}
+  m_Center: {x: 0.7188832, y: 1.5188, z: -0.025946}
 --- !u!82 &6587963337973340506
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 61272cf4a9916b344baa3a0d3d3ca24b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.727
+      value: -4.297
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 61272cf4a9916b344baa3a0d3d3ca24b, type: 3}
       propertyPath: m_LocalPosition.y
