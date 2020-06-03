@@ -17,7 +17,28 @@ MonoBehaviour:
   - {fileID: 114929213757531526}
   - {fileID: 114767537728410562}
   - {fileID: 114957494470126148}
-  - {fileID: 114788879907820508}
+  - {fileID: 114024718633553562}
+--- !u!114 &114024718633553562
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f034cba68ab55e046ae1445a42f18c0e, type: 3}
+  m_Name: IndirectLightingController
+  m_EditorClassIdentifier: 
+  active: 1
+  indirectSpecularIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+  indirectDiffuseIntensity:
+    m_OverrideState: 1
+    m_Value: 0.15
+    min: 0
 --- !u!114 &114767537728410562
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -93,27 +114,6 @@ MonoBehaviour:
   enableSunDisk:
     m_OverrideState: 1
     m_Value: 0
---- !u!114 &114788879907820508
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f034cba68ab55e046ae1445a42f18c0e, type: 3}
-  m_Name: IndirectLightingController
-  m_EditorClassIdentifier: 
-  active: 1
-  indirectSpecularIntensity:
-    m_OverrideState: 1
-    m_Value: 0
-    min: 0
-  indirectDiffuseIntensity:
-    m_OverrideState: 1
-    m_Value: 0.15
-    min: 0
 --- !u!114 &114865853345712628
 MonoBehaviour:
   m_ObjectHideFlags: 3
