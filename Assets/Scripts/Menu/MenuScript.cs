@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class MenuScript : MonoBehaviour
     Player m_ScriptPlayer;
     FPSCamera m_ScriptCamera;
     Interaction m_ScriptInteraction;
+
+    public GameObject loadingScreen;
+    public Slider slider;
 
     private void Start()
     {
@@ -69,9 +73,10 @@ public class MenuScript : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        
         Time.timeScale = 1;
-        SceneManager.LoadScene(sceneName);
-        if(sceneName == "SecondFloor")
+        StartCoroutine(LoadAsynchronously(sceneName));
+        if (sceneName == "SecondFloor")
             Cursor.visible = false;
         if (sceneName == "2nd level")
             Cursor.visible = false;
@@ -79,5 +84,25 @@ public class MenuScript : MonoBehaviour
             Cursor.visible = true;
         if (sceneName == "Victory")
             Cursor.visible = true;
+    }
+
+    IEnumerator LoadAsynchronously(string sceneName)
+    {
+        loadingScreen.SetActive(true);
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+
+        //Debug.Log("aaa");
+
+        while(!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+
+            slider.value = progress;
+
+            //Debug.Log(operation.progress);
+
+            yield return null;
+        }
     }
 }
