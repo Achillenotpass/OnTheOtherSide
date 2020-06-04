@@ -64,17 +64,7 @@ public class Monster : MonoBehaviour
 
         m_Animator.speed = m_NavmeshAgent.speed * animationSpeedAdjustment;
 
-        if (hasSurvivalTime)
-        {
-            if (survivalTime <= 0.0f)
-            {
-                Disappear();
-            }
-            else
-            {
-                survivalTime = survivalTime - Time.deltaTime;
-            }
-        }
+        
 
         Vector3 toPlayer = (m_Player.transform.position + Vector3.up) - (transform.position + Vector3.up);
         if (toPlayer.sqrMagnitude <= detectionRange * detectionRange)
@@ -132,6 +122,18 @@ public class Monster : MonoBehaviour
         if (Vector3.Distance(m_CurrentTarget.transform.position, transform.position) <= 5.0f)
         {
             SetRandomTarget();
+        }
+
+        if (hasSurvivalTime)
+        {
+            if (survivalTime <= 0.0f)
+            {
+                Disappear();
+            }
+            else
+            {
+                survivalTime = survivalTime - Time.deltaTime;
+            }
         }
     }
 
