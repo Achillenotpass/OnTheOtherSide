@@ -41,6 +41,7 @@ public class SuperSimonDoor : Activable
         }
         else
         {
+            m_AudioSource.PlayOneShot(hitSound);
             Instantiate(dustPrefab, transform);
         }
     }
