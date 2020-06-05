@@ -14,7 +14,9 @@ public class SuperSimonDoor : Activable
     private AudioSource m_AudioSource;
     public AudioClip hitSound;
     public AudioClip destroyedSound;
-    
+
+    public GameObject dustSpawnPoint;
+
     public GameObject dustPrefab;
 
 
@@ -42,14 +44,14 @@ public class SuperSimonDoor : Activable
         else
         {
             m_AudioSource.PlayOneShot(hitSound);
-            Instantiate(dustPrefab, transform);
+            Instantiate(dustPrefab, dustSpawnPoint.transform);
         }
     }
 
     void Destroyed()
     {
         m_AudioSource.PlayOneShot(destroyedSound);
-        Instantiate(dustPrefab, transform);
+        Instantiate(dustPrefab, dustSpawnPoint.transform);
 
         m_IsDestroyed = true;
         foreach (Activable toActivate in toActivateWhenBroken)
