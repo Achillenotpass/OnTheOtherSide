@@ -6019,7 +6019,7 @@ MonoBehaviour:
   pause: {fileID: 0}
   player: {fileID: 0}
   loadingScreen: {fileID: 357376512}
-  loading: {fileID: 0}
+  loading: {fileID: 1748872176}
   comments:
   - {fileID: 571244335}
   - {fileID: 882715159}
