@@ -94,8 +94,8 @@ public class MenuScript : MonoBehaviour
         }
         if (sceneName == "Victory")
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
