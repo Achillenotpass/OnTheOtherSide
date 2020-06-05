@@ -5,22 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Achille/TestsInteraction.unity
-    guid: 487474b401a96f04c99f57f7671bfd45
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 5b9de84e6219df844b31195bf5980311
-  - enabled: 0
-    path: Assets/Scenes/Tom/TestMenu.unity
-    guid: 63ee9fddc4a3b2f4a9592b6aaa184554
   - enabled: 1
     path: "Assets/Scenes/Batiment/2\xE8me \xE9tage/SecondFloor.unity"
     guid: 9b959a59be3e95049809fe22e2bcf463
   - enabled: 1
     path: "Assets/Scenes/Batiment/2\xE8me niveau/2nd level.unity"
     guid: 30eec786d0f08de4493a1d3c1f5d31f4
-  - enabled: 0
-    path: Assets/Scenes/Tom/New Scene.unity
-    guid: 425706b372fd96f49b51bd87b000c789
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 4c1c4f58b31ac9a428dc6abab32a4859
   m_configObjects: {}
