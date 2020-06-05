@@ -99,9 +99,9 @@ public class MenuScript : MonoBehaviour
 
         while(!operation.isDone)
         {
-            //float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
 
-            loading.value = operation.progress;
+            loading.value = progress;
 
             //Debug.Log(operation.progress);
 
