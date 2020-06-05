@@ -20,13 +20,14 @@ public class GridDoor : Activable
     {
         transform.Translate(0.0f, 0.0f, -1.2f);
 
+
+        m_InteractionNumber = m_InteractionNumber + 1;
         if (m_InteractionNumber == 3)
         {
             m_AudioSource.PlayOneShot(finalDownSound);
         }
         else
         {
-            m_InteractionNumber = m_InteractionNumber + 1;
             m_AudioSource.PlayOneShot(downSound);
         }
     }
