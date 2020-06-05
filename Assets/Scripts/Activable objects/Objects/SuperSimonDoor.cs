@@ -15,13 +15,15 @@ public class SuperSimonDoor : Activable
     public AudioClip hitSound;
     public AudioClip destroyedSound;
 
-    private Animator m_Animator;
+    public GameObject dustSpawnPoint;
+
+    public GameObject dustPrefab;
+
 
 
     private void Awake()
     {
         m_AudioSource = GetComponent<AudioSource>();
-        m_Animator = GetComponent<Animator>();
     }
 
     public override void Interaction()
@@ -41,15 +43,15 @@ public class SuperSimonDoor : Activable
         }
         else
         {
-            m_Animator.SetTrigger("Hit");
             m_AudioSource.PlayOneShot(hitSound);
+            Instantiate(dustPrefab, dustSpawnPoint.transform);
         }
     }
 
     void Destroyed()
     {
-        m_Animator.SetBool("Destroyed", true);
         m_AudioSource.PlayOneShot(destroyedSound);
+        Instantiate(dustPrefab, dustSpawnPoint.transform);
 
         m_IsDestroyed = true;
         foreach (Activable toActivate in toActivateWhenBroken)

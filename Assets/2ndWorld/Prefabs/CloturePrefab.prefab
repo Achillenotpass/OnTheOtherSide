@@ -22,7 +22,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8b602f1ce0c39eb42886e4a25ffa1d5c, type: 3}
       propertyPath: m_Name
-      value: "barri\xE8re"
+      value: CloturePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8b602f1ce0c39eb42886e4a25ffa1d5c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8b602f1ce0c39eb42886e4a25ffa1d5c, type: 3}
       propertyPath: m_LocalPosition.x
