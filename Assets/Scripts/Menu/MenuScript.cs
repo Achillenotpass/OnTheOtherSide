@@ -14,7 +14,8 @@ public class MenuScript : MonoBehaviour
     Interaction m_ScriptInteraction;
 
     public GameObject loadingScreen;
-    public Slider slider;
+    public Slider loading;
+    public List<Image> comments;
 
     private void Start()
     {
@@ -90,19 +91,34 @@ public class MenuScript : MonoBehaviour
     {
         loadingScreen.SetActive(true);
 
+        LoadingScreenComments();
+
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
         //Debug.Log("aaa");
 
         while(!operation.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            //float progress = Mathf.Clamp01(operation.progress / 0.9f);
 
-            slider.value = progress;
+            loading.value = operation.progress;
 
             //Debug.Log(operation.progress);
 
             yield return null;
+        }
+    }
+
+    public void LoadingScreenComments()
+    {
+        int r = Random.Range(0, comments.Count - 1);
+
+        for(int i = 0; i < comments.Count; i++)
+        {
+            if (i == r)
+                comments[i].gameObject.SetActive(true);
+            else
+                comments[i].gameObject.SetActive(false);
         }
     }
 }
