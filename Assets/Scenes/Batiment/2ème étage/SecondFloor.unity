@@ -64955,7 +64955,11 @@ MonoBehaviour:
   player: {fileID: 1752567030}
   loadingScreen: {fileID: 1532225814}
   loading: {fileID: 1486315927}
-  comments: []
+  comments:
+  - {fileID: 193382108}
+  - {fileID: 967234529}
+  - {fileID: 28957785}
+  - {fileID: 1981122900}
 --- !u!4 &1939758979
 Transform:
   m_ObjectHideFlags: 0
