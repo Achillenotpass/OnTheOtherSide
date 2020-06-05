@@ -78,13 +78,25 @@ public class MenuScript : MonoBehaviour
         Time.timeScale = 1;
         StartCoroutine(LoadAsynchronously(sceneName));
         if (sceneName == "SecondFloor")
+        {
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+        }
         if (sceneName == "2nd level")
+        {
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        if (sceneName == "MaineMenu")
+        }
+        if (sceneName == "MainMenu")
+        {
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
         if (sceneName == "Victory")
+        {
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
     }
 
     IEnumerator LoadAsynchronously(string sceneName)
