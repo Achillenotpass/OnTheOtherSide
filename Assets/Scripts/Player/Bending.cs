@@ -25,11 +25,6 @@ public class Bending : MonoBehaviour
         m_Animator = GetComponentInChildren<Animator>();
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(playerCamera.gameObject.transform.position, 0.25f);
-    }
-
     private void Update()
     {
         //Gizmos.DrawSphere(playerCamera.gameObject.transform.position, 0.5f);
