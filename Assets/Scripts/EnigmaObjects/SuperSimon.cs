@@ -15,10 +15,16 @@ public class SuperSimon : Activable
 
     private bool m_FinishedSuperSimon = false;
 
-   
+
+
+
+
+
 
     public override void Interaction()
     {
+
+
         if (!m_FinishedSuperSimon)
         {
             if (superSimonList[currentListIndex] == superSimonArray[currentListIndex])
@@ -38,6 +44,7 @@ public class SuperSimon : Activable
             }
         }
     }
+
 
     void Right()
     {
