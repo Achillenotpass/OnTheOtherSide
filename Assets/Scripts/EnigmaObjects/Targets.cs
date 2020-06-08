@@ -6,7 +6,18 @@ public class Targets : MonoBehaviour
 {
     public GameObject[] toActivate;
     public Player player;
-    
+
+    private MeshRenderer m_MeshRenderer;
+    private AudioSource m_AudioSource;
+    private BoxCollider m_BoxCollider;
+
+
+    private void Awake()
+    {
+        m_MeshRenderer = GetComponent<MeshRenderer>();
+        m_AudioSource = GetComponent<AudioSource>();
+        m_BoxCollider = GetComponent<BoxCollider>();
+    }
 
     private void Update()
     {
@@ -23,7 +34,10 @@ public class Targets : MonoBehaviour
 
         if (collision.gameObject.tag == "Movable")
         {
-            Destroy(this.gameObject);
+            m_MeshRenderer.enabled = false;
+            m_BoxCollider.enabled = false;
+            m_AudioSource.Play();
+            Invoke("DestroyThis", 2.0f);
         }
     }
 }
