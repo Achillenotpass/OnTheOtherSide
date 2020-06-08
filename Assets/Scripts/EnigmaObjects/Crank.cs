@@ -91,7 +91,7 @@ public class Crank : Activable
                     {
                         currentGauge += 1 * Time.deltaTime;
                         handle.transform.Rotate(1, 0, 0);
-                        arrow.transform.rotation = Quaternion.Euler(0 + positionArrow.Evaluate(currentGauge), 0, 0);
+                        arrow.transform.localRotation = Quaternion.Euler(0 + positionArrow.Evaluate(currentGauge), 0, 0);
                     }
                 }
             }
