@@ -43,11 +43,11 @@ public class Player : MonoBehaviour
         if (m_IsRunning) { multiplyMove = 2; }
         else { multiplyMove = 1; }
 
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetAxis("Sprint") > 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             m_IsRunning = true;
         }
-        else
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             m_IsRunning = false;
         }
