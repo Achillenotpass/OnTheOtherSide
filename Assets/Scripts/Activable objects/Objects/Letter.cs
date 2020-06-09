@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +13,35 @@ public class Letter : Activable
     public Activable[] objectToActivateAfter;
     public bool alreadyActivated = false;
 
+    //To disable
+    private Player m_Player;
+    private Bending m_Bending;
+    private Crouching m_Crouching;
+    private FPSCamera m_FPSCamera;
+    private Interaction m_Interaction;
+
 
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         m_AudioSource = GetComponent<AudioSource>();
+
+        m_Player = FindObjectOfType<Player>();
+        m_Bending = FindObjectOfType<Bending > ();
+        m_Crouching = FindObjectOfType<Crouching>();
+        m_FPSCamera = FindObjectOfType<FPSCamera>();
+        m_Interaction = FindObjectOfType<Interaction>();
     }
 
     public override void Interaction()
     {
+        m_Player.enabled = false;
+        m_Bending.enabled = false;
+        m_Crouching.enabled = false;
+        m_FPSCamera.enabled = false;
+        m_Interaction.enabled = false;
+
         m_AudioSource.Play();
         letter.SetActive(true);
         meshRenderer.enabled = false;
@@ -39,8 +58,14 @@ public class Letter : Activable
     {
         if(letter.activeSelf)
         {
-            if(Input.GetKeyUp(KeyCode.Mouse0))
+            if(Input.GetKeyDown(KeyCode.Mouse0))
             {
+                m_Player.enabled = true;
+                m_Bending.enabled = true;
+                m_Crouching.enabled = true;
+                m_FPSCamera.enabled = true;
+                m_Interaction.enabled = true;
+
                 letter.SetActive(false);
                 meshRenderer.enabled = true;
                 transform.position = player.transform.position + player.transform.forward + player.transform.up/2;
