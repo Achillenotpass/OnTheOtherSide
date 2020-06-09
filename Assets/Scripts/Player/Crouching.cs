@@ -29,9 +29,9 @@ public class Crouching : MonoBehaviour
     private void ChangePlayerSpeedOnCrouching()
     {
         if (Input.GetKeyDown(m_Crouching))
-            m_PlayerScript.speedMove /= 2;
+            m_PlayerScript.speed /= 3;
         if (Input.GetKeyUp(m_Crouching))
-            m_PlayerScript.speedMove *= 2;
+            m_PlayerScript.speed *= 3;
 
     }
 

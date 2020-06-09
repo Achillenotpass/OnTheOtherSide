@@ -23,7 +23,6 @@ public class FPSCamera : MonoBehaviour
     void Update()
     {
         ControlC();
-        //ControlM();
         m_MouseLook.y = Mathf.Clamp(m_MouseLook.y, -70, 70);
 
     }
@@ -39,29 +38,6 @@ public class FPSCamera : MonoBehaviour
         m_MouseLook += m_SmoothV;
 
         
-        // vector3.right means the x-axis
-        if (m_AjustRotationBeginning == true)
-        {
-            m_MouseLook = new Vector2(gameObject.transform.parent.eulerAngles.y, gameObject.transform.parent.eulerAngles.x);
-            m_AjustRotationBeginning = false;
-        }
-        else
-        {
-            transform.localRotation = Quaternion.AngleAxis(-m_MouseLook.y, Vector3.right);
-            character.transform.localRotation = Quaternion.AngleAxis(m_MouseLook.x, character.transform.up);
-        }
-    }
-
-    void ControlM()
-    {
-        var md = new Vector2(Input.GetAxisRaw("RightJoystickX"), Input.GetAxisRaw("RightJoystickY"));
-        md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
-        // the interpolated float result between the two float values
-        m_SmoothV.x = Mathf.Lerp(m_SmoothV.x, md.x, 1f / smoothing);
-        m_SmoothV.y = Mathf.Lerp(m_SmoothV.y, md.y, 1f / smoothing);
-        // incrementally add to the camera look
-        m_MouseLook += m_SmoothV;
-
         // vector3.right means the x-axis
         if (m_AjustRotationBeginning == true)
         {
