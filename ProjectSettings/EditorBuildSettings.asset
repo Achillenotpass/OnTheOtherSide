@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Batiment/2\xE8me \xE9tage/SecondFloor.unity"
     guid: 9b959a59be3e95049809fe22e2bcf463
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Batiment/2\xE8me niveau/2nd level.unity"
     guid: 30eec786d0f08de4493a1d3c1f5d31f4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Victory.unity
     guid: 4c1c4f58b31ac9a428dc6abab32a4859
   m_configObjects: {}

@@ -4822,6 +4822,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toActivate: []
   player: {fileID: 0}
+  deathParticles: {fileID: 1271343508286196477, guid: d6d34db103b4e984c891761dcce9e750,
+    type: 3}
 --- !u!1001 &4826933959203186227
 PrefabInstance:
   m_ObjectHideFlags: 0

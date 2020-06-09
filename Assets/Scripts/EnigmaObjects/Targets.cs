@@ -11,6 +11,8 @@ public class Targets : MonoBehaviour
     private AudioSource m_AudioSource;
     private BoxCollider m_BoxCollider;
 
+    public GameObject deathParticles;
+
 
     private void Awake()
     {
@@ -27,13 +29,14 @@ public class Targets : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        for (int i = 0; i < toActivate.Length; i++)
-        {
-            toActivate[i].GetComponent<Activable>().Interaction();
-        }
-
         if (collision.gameObject.tag == "Movable")
         {
+            for (int i = 0; i < toActivate.Length; i++)
+            {
+                toActivate[i].GetComponent<Activable>().Interaction();
+            }
+
+            Instantiate(deathParticles, transform);
             m_MeshRenderer.enabled = false;
             m_BoxCollider.enabled = false;
             m_AudioSource.Play();
