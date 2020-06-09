@@ -43,4 +43,9 @@ public class Targets : MonoBehaviour
             Invoke("DestroyThis", 2.0f);
         }
     }
+
+    public void DestroyThis()
+    {
+        Destroy(this.gameObject);
+    }
 }
