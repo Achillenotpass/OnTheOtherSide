@@ -18,9 +18,14 @@ public class WorldChanger : Activable
     public float minFOV;
     public float maxFOV;
 
+    //SOUNDS
+    private AudioSource m_AudioSource;
+
+
     private void Start()
     {
         m_StartFOV = playerCamera.fieldOfView;
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -67,6 +72,9 @@ public class WorldChanger : Activable
         playerCamera.gameObject.GetComponent<Interaction>().enabled = false;
         playerCamera.gameObject.GetComponentInParent<Player>().enabled = false;
         playerCamera.gameObject.GetComponentInParent<Crouching>().enabled = false;
+
+        m_AudioSource.pitch = Random.Range(0.85f, 1.15f);
+        m_AudioSource.Play();
     }
 
     private void WorldChange()

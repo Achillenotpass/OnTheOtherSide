@@ -26,7 +26,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 51541f488b55819418c9e5956eaaba81, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toActivate: []
   player: {fileID: 0}
+  deathParticles: {fileID: 1271343508286196477, guid: d6d34db103b4e984c891761dcce9e750,
+    type: 3}
 --- !u!1 &8212279231581120701
 GameObject:
   m_ObjectHideFlags: 0

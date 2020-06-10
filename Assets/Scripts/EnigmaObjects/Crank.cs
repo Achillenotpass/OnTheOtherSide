@@ -24,8 +24,16 @@ public class Crank : Activable
 
     public GameObject handle;
 
+    //SOUNDS
+    public float soundTimer;
+    private float m_CurrentSoundTimer;
+    private AudioSource m_AudioSource;
+    public AudioClip audioClip;
+
+
     private void Start()
     {
+        m_AudioSource = GetComponent<AudioSource>();
         m_ScriptPlayer = player.GetComponent<Player>();
         m_Camera = player.GetComponentInChildren<Camera>();
         Keyframe[] keyFrame = positionArrow.keys;
@@ -92,6 +100,17 @@ public class Crank : Activable
                         currentGauge += 1 * Time.deltaTime;
                         handle.transform.Rotate(1, 0, 0);
                         arrow.transform.localRotation = Quaternion.Euler(0 + positionArrow.Evaluate(currentGauge), 0, 0);
+
+                        if (m_CurrentSoundTimer >= soundTimer)
+                        {
+                            m_AudioSource.PlayOneShot(audioClip);
+                            m_AudioSource.pitch = m_AudioSource.pitch + 0.025f;
+                            m_CurrentSoundTimer = 0.0f;
+                        }
+                        else
+                        {
+                            m_CurrentSoundTimer = m_CurrentSoundTimer + Time.deltaTime;
+                        }
                     }
                 }
             }
