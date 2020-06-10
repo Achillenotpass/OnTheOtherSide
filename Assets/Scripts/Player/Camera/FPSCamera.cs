@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FPSCamera : MonoBehaviour
 {
-    [SerializeField]
-    public float sensitivity = 5.0f;
+    /*[SerializeField]
+    public float sensitivity = 5.0f;*/
     [SerializeField]
     public float smoothing = 2.0f;
     // the chacter is the capsule
@@ -14,7 +14,9 @@ public class FPSCamera : MonoBehaviour
     private Vector2 m_MouseLook;
     // smooth the mouse moving
     private Vector2 m_SmoothV;
-    // Start is called before the first frame update
+
+
+    public MenuVariables settings;
 
     bool m_AjustRotationBeginning = true;
 
@@ -30,7 +32,7 @@ public class FPSCamera : MonoBehaviour
     void ControlC()
     {
         var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-        md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+        md = Vector2.Scale(md, new Vector2(settings.sensitivity * smoothing, settings.sensitivity * smoothing));
         // the interpolated float result between the two float values
         m_SmoothV.x = Mathf.Lerp(m_SmoothV.x, md.x, 1f / smoothing);
         m_SmoothV.y = Mathf.Lerp(m_SmoothV.y, md.y, 1f / smoothing);

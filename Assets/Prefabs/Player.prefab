@@ -442,9 +442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd68ed016175f0458c6f2a6ac72b74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 5
   smoothing: 2
   character: {fileID: 5595040324599203270}
+  settings: {fileID: 11400000, guid: 29f60306639b5e045810b66b1ab5b8cc, type: 2}
 --- !u!114 &5595040324807619180
 MonoBehaviour:
   m_ObjectHideFlags: 0
