@@ -123,4 +123,27 @@ public class SettingsMenu : MonoBehaviour
         settings.isFullscreen = isFullscreen;
         Screen.fullScreen = settings.isFullscreen;
     }
+
+    public void ResetValue(string name)
+    {
+        switch(name)
+        {
+            case "Brightness":
+                SetBrightness(1);
+                brightness.value = settings.brightness.x;
+                break;
+            case "Sensitivity":
+                SetSensitivity(5);
+                sensitivity.value = settings.sensitivity;
+                break;
+            case "Music":
+                SetVolumeMusic(-20);
+                music.value = settings.musicVolume;
+                break;
+            case "Effect":
+                SetVolumeSound(-20);
+                effect.value = settings.effectVolume;
+                break;
+        }
+    }
 }
