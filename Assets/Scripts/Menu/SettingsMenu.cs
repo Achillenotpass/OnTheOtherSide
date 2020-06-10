@@ -19,8 +19,6 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    public bool mainMenu = false;
-
     public Text musicNumber;
     public Text effectNumber;
     public Text sensitivityNumber;
@@ -37,44 +35,37 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
-        if (mainMenu)
+        resolutions = Screen.resolutions;
+
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        int currentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
         {
-            resolutions = Screen.resolutions;
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
 
-            resolutionDropdown.ClearOptions();
-
-            List<string> options = new List<string>();
-
-            int currentResolutionIndex = 0;
-            for (int i = 0; i < resolutions.Length; i++)
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
-                string option = resolutions[i].width + " x " + resolutions[i].height;
-                options.Add(option);
-
-                if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-                {
-                    currentResolutionIndex = i;
-                }
+                currentResolutionIndex = i;
             }
-
-            m_ColorGrading = postProcess.GetSetting<ColorGrading>();
-
-            resolutionDropdown.AddOptions(options);
-            resolutionDropdown.value = currentResolutionIndex;
-            resolutionDropdown.RefreshShownValue();
-
-            music.value = settings.musicVolume;
-            effect.value = settings.effectVolume;
-            sensitivity.value = settings.sensitivity;
-            brightness.value = settings.brightness.x;
-            resolution.value = settings.resolutionIndex;
-            quality.value = settings.qualityIndex;
-            fullscreen.isOn = settings.isFullscreen;
-
-            
-
-            mainMenu = false;
         }
+
+        m_ColorGrading = postProcess.GetSetting<ColorGrading>();
+
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+
+        music.value = settings.musicVolume;
+        effect.value = settings.effectVolume;
+        sensitivity.value = settings.sensitivity;
+        brightness.value = settings.brightness.x;
+        resolution.value = settings.resolutionIndex;
+        quality.value = settings.qualityIndex;
+        fullscreen.isOn = settings.isFullscreen;
 
     }
 
