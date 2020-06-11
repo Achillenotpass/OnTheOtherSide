@@ -5,6 +5,9 @@ using UnityEngine;
 public class AssemblingPart : MonoBehaviour
 {
     public List<Activable> objectsToActivate = new List<Activable>();
+    public List<Activable> objectsToActivate1 = new List<Activable>();
+    public List<Activable> objectsToActivate2 = new List<Activable>();
+    public List<Activable> objectsToActivate3 = new List<Activable>();
 
     public List<string> nameOfPart = new List<string>();
 
@@ -21,6 +24,30 @@ public class AssemblingPart : MonoBehaviour
                 if(collision.gameObject.name == nameOfPart[i])
                 {
                     currentNumberOfParts += 1;
+
+                    switch (currentNumberOfParts)
+                    {
+                        case 1:
+                            foreach (Activable toActivate in objectsToActivate1)
+                            {
+                                toActivate.Interaction();
+                            }
+                            break;
+                        case 2:
+                            foreach (Activable toActivate in objectsToActivate2)
+                            {
+                                toActivate.Interaction();
+                            }
+                            break;
+                        case 3:
+                            foreach (Activable toActivate in objectsToActivate3)
+                            {
+                                toActivate.Interaction();
+                            }
+                            break;
+
+                    }
+
                     for (int z = 0; z < transform.childCount; z++)
                     {
                         if(transform.GetChild(z).name == collision.gameObject.name)

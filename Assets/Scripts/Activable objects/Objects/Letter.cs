@@ -27,15 +27,17 @@ public class Letter : Activable
         capsuleCollider = GetComponent<CapsuleCollider>();
         m_AudioSource = GetComponent<AudioSource>();
 
-        m_Player = FindObjectOfType<Player>();
-        m_Bending = FindObjectOfType<Bending > ();
-        m_Crouching = FindObjectOfType<Crouching>();
-        m_FPSCamera = FindObjectOfType<FPSCamera>();
-        m_Interaction = FindObjectOfType<Interaction>();
+        
     }
 
     public override void Interaction()
     {
+        m_Player = FindObjectOfType<Player>();
+        m_Bending = FindObjectOfType<Bending>();
+        m_Crouching = FindObjectOfType<Crouching>();
+        m_FPSCamera = FindObjectOfType<FPSCamera>();
+        m_Interaction = FindObjectOfType<Interaction>();
+
         m_Player.enabled = false;
         m_Bending.enabled = false;
         m_Crouching.enabled = false;
