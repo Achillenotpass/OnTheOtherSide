@@ -36548,7 +36548,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 1
   m_MaxValue: 10
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
@@ -48106,10 +48106,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 229375830}
   m_HandleRect: {fileID: 2015096453}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
-  m_WholeNumbers: 0
-  m_Value: -20
+  m_MinValue: 0
+  m_MaxValue: 20
+  m_WholeNumbers: 1
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -58051,10 +58051,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 33459504}
   m_HandleRect: {fileID: 812364843}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
-  m_WholeNumbers: 0
-  m_Value: -20
+  m_MinValue: 0
+  m_MaxValue: 20
+  m_WholeNumbers: 1
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -61626,10 +61626,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1806203934}
   m_HandleRect: {fileID: 909900070}
   m_Direction: 0
-  m_MinValue: -4
-  m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 1
+  m_MinValue: 1
+  m_MaxValue: 15
+  m_WholeNumbers: 1
+  m_Value: 6
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -70057,7 +70057,6 @@ MonoBehaviour:
   audioMixerSound: {fileID: 24100000, guid: ae4e33730db4d0140a3f7ebfcd689bbc, type: 2}
   resolutionDropdown: {fileID: 780679867}
   postProcess: {fileID: 11400000, guid: 9b58e60be8d72984aa5df6ba54437b93, type: 2}
-  mainMenu: 0
   musicNumber: {fileID: 124457958}
   effectNumber: {fileID: 1011265266}
   sensitivityNumber: {fileID: 146298754}

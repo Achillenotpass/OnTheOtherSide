@@ -958,36 +958,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141850417}
   m_CullTransparentMesh: 0
---- !u!1 &148460079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 148460080}
-  m_Layer: 0
-  m_Name: PoseCamera1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &148460080
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148460079}
-  m_LocalRotation: {x: -0.035711758, y: 0.85059, z: 0.058261473, w: 0.5213703}
-  m_LocalPosition: {x: -40.84037, y: 2.2156963, z: -9.068344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &151010540
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,10 +3522,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1888406781}
   m_HandleRect: {fileID: 297755446}
   m_Direction: 0
-  m_MinValue: -4
-  m_MaxValue: 10
-  m_WholeNumbers: 0
-  m_Value: 1
+  m_MinValue: 1
+  m_MaxValue: 15
+  m_WholeNumbers: 1
+  m_Value: 6
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -10726,10 +10696,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 511881152}
   m_HandleRect: {fileID: 5302369}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
-  m_WholeNumbers: 0
-  m_Value: -20
+  m_MinValue: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -14565,36 +14535,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272704539}
   m_CullTransparentMesh: 0
---- !u!1 &1274512374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1274512375}
-  m_Layer: 0
-  m_Name: PoseCamera2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1274512375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274512374}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -6.359788, y: 8.316662, z: -99.45982}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1280819316
 GameObject:
   m_ObjectHideFlags: 0
@@ -17495,7 +17435,6 @@ MonoBehaviour:
   audioMixerSound: {fileID: 24100000, guid: ae4e33730db4d0140a3f7ebfcd689bbc, type: 2}
   resolutionDropdown: {fileID: 1424262493}
   postProcess: {fileID: 11400000, guid: 9b58e60be8d72984aa5df6ba54437b93, type: 2}
-  mainMenu: 1
   musicNumber: {fileID: 1329863617}
   effectNumber: {fileID: 300647046}
   sensitivityNumber: {fileID: 620333206}
@@ -20783,10 +20722,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1397857785}
   m_HandleRect: {fileID: 324626789}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
-  m_WholeNumbers: 0
-  m_Value: -20
+  m_MinValue: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -22298,7 +22237,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 1
   m_MaxValue: 10
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:

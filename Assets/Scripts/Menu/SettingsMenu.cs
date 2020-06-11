@@ -59,13 +59,18 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        music.value = settings.musicVolume;
-        effect.value = settings.effectVolume;
+        music.value = settings.musicVolume + 30;
+        effect.value = settings.effectVolume + 30;
         sensitivity.value = settings.sensitivity;
-        brightness.value = settings.brightness.x;
+        brightness.value = settings.brightness.x + 5;
         resolution.value = settings.resolutionIndex;
         quality.value = settings.qualityIndex;
         fullscreen.isOn = settings.isFullscreen;
+
+        musicNumber.text = (settings.musicVolume /4 + 40).ToString();
+        effectNumber.text = (settings.effectVolume /4 + 40).ToString();
+        sensitivityNumber.text = settings.sensitivity.ToString();
+        brightnessNumber.text = (settings.brightness.x + 5).ToString();
 
     }
 
@@ -79,6 +84,7 @@ public class SettingsMenu : MonoBehaviour
     public void SetVolumeMusic(float volume)
     {
         settings.musicVolume = volume;
+        settings.musicVolume = settings.musicVolume * 4 - 40;
         audioMixerMusic.SetFloat("Volume", settings.musicVolume);
         musicNumber.text = volume.ToString();
     }
@@ -86,6 +92,7 @@ public class SettingsMenu : MonoBehaviour
     public void SetVolumeSound(float volume)
     {
         settings.effectVolume = volume;
+        settings.effectVolume = settings.effectVolume * 4 - 40;
         audioMixerSound.SetFloat("Volume", settings.effectVolume);
         effectNumber.text = volume.ToString();
     }
@@ -98,9 +105,10 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetBrightness(float brightness)
     {
+        brightness -= 5;
         settings.brightness = new Vector4(brightness, brightness, brightness, brightness);
         m_ColorGrading.gain.value = settings.brightness;
-        brightnessNumber.text = brightness.ToString();
+        brightnessNumber.text = (brightness + 5).ToString();
     }
 
     public void SetQuality(int qualityIndex)
@@ -120,20 +128,20 @@ public class SettingsMenu : MonoBehaviour
         switch(name)
         {
             case "Brightness":
-                SetBrightness(1);
-                brightness.value = settings.brightness.x;
+                SetBrightness(6);
+                brightness.value = settings.brightness.x + 5;
                 break;
             case "Sensitivity":
                 SetSensitivity(5);
                 sensitivity.value = settings.sensitivity;
                 break;
             case "Music":
-                SetVolumeMusic(-20);
-                music.value = settings.musicVolume;
+                SetVolumeMusic(10);
+                music.value = settings.musicVolume /4 + 40;
                 break;
             case "Effect":
-                SetVolumeSound(-20);
-                effect.value = settings.effectVolume;
+                SetVolumeSound(10);
+                effect.value = settings.effectVolume /4 + 40;
                 break;
         }
     }

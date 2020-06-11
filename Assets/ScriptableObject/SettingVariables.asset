@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d34cf055e4e301649ac6f7b5426ccd82, type: 3}
   m_Name: SettingVariables
   m_EditorClassIdentifier: 
-  brightness: {x: 1, y: 1, z: 1, w: 1}
-  sensitivity: 5.943192
-  effectVolume: -29.954338
-  musicVolume: -60.09129
+  brightness: {x: 6, y: 6, z: 6, w: 6}
+  sensitivity: 5
+  effectVolume: 20
+  musicVolume: 20
   resolutionIndex: 18
   qualityIndex: 5
   isFullscreen: 1
