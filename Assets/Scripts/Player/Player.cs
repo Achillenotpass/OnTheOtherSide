@@ -52,6 +52,11 @@ public class Player : MonoBehaviour
             m_IsRunning = false;
         }
 
+        if(Input.GetButtonDown("Sprint"))
+        {
+            Debug.Log("aaaa");
+        }
+
         // Calculate how fast we should be moving
         if (grounded)
         {

@@ -59,19 +59,18 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        music.value = settings.musicVolume + 30;
-        effect.value = settings.effectVolume + 30;
+        music.value = settings.musicVolume /4 + 10;
+        effect.value = settings.effectVolume /4 + 10;
         sensitivity.value = settings.sensitivity;
         brightness.value = settings.brightness.x + 5;
         resolution.value = settings.resolutionIndex;
         quality.value = settings.qualityIndex;
         fullscreen.isOn = settings.isFullscreen;
 
-        musicNumber.text = (settings.musicVolume /4 + 40).ToString();
-        effectNumber.text = (settings.effectVolume /4 + 40).ToString();
+        musicNumber.text = (settings.musicVolume /4 + 10).ToString();
+        effectNumber.text = (settings.effectVolume /4 + 10).ToString();
         sensitivityNumber.text = settings.sensitivity.ToString();
         brightnessNumber.text = (settings.brightness.x + 5).ToString();
-
     }
 
     public void setResolution(int resolutionIndex)

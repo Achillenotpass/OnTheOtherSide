@@ -19,6 +19,9 @@ public class Death : MonoBehaviour
     private FPSCamera m_FPSCamera;
     private Interaction m_Interaction;
 
+    private GameObject m_PlayerCamera;
+    private Animator m_Animator;
+
 
     private void Update()
     {
@@ -34,6 +37,12 @@ public class Death : MonoBehaviour
         m_Crouching = FindObjectOfType<Crouching>();
         m_FPSCamera = FindObjectOfType<FPSCamera>();
         m_Interaction = FindObjectOfType<Interaction>();
+
+        m_Animator = GetComponentInChildren<Animator>();
+
+        //m_Animator.Play("Death");
+
+        
 
         canvas.SetActive(false);
         deathCanvas.SetActive(true);

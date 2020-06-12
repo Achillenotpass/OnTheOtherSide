@@ -74,7 +74,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: v
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -150,7 +150,7 @@ InputManager:
     axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Sprint
+    m_Name: a
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
