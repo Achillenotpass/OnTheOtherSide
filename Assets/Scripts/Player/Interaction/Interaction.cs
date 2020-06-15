@@ -124,6 +124,10 @@ public class Interaction : MonoBehaviour
                 {
                     pointerState = PointerState.Letter;
                 }
+                else if (hitInfo.transform.gameObject.GetComponent<Door>() != null)
+                {
+                    pointerState = PointerState.Movable;
+                }
                 else
                 {
                     pointerState = PointerState.Activable;

@@ -137,7 +137,7 @@ public class Door : Activable
     {
         m_AudioSource.PlayOneShot(breakingSound);
         Instantiate(dustParticles, transform);
-        GetComponent<MeshRenderer>().enabled = false;
+        GetComponentInChildren<MeshRenderer>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         Invoke("DestroyThis", 2.0f);
     }

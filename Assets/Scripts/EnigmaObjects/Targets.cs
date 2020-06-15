@@ -13,18 +13,23 @@ public class Targets : MonoBehaviour
 
     public GameObject deathParticles;
 
+    private Vector3 basePosition;
+    public float shakingValue;
+
 
     private void Awake()
     {
         m_MeshRenderer = GetComponent<MeshRenderer>();
         m_AudioSource = GetComponent<AudioSource>();
         m_BoxCollider = GetComponent<BoxCollider>();
+        basePosition = transform.position;
     }
 
     private void Update()
     {
         transform.LookAt(player.transform);
         transform.Rotate(0.0f, -90.0f,  45.0f - transform.rotation.z);
+        transform.position = new Vector3(basePosition.x + Random.Range(-shakingValue, shakingValue), basePosition.y + Random.Range(-shakingValue, shakingValue), basePosition.z + Random.Range(-shakingValue, shakingValue));
     }
 
     private void OnCollisionEnter(Collision collision)
