@@ -35,7 +35,7 @@ public class Monster : MonoBehaviour
 
     public AudioSource audioSourceCry;
     private bool m_CanCry;
-
+    
 
     public GameObject soundDestination;
     public float monsterHearingDistance = 15.0f;
@@ -185,6 +185,7 @@ public class Monster : MonoBehaviour
         }
         else
         {
+            audioSourceSteps.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
             audioSourceSteps.Play();
             m_CurrentTimerStepSounds = 0.0f;
         }

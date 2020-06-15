@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Door : Activable
 {
+    public bool canBeBroken = true;
+    public GameObject dustParticles;
+    public AudioClip breakingSound;
+
     //SoundEffects
     public AudioClip lockedDoor;
     public AudioClip openingDoor;
@@ -78,7 +82,7 @@ public class Door : Activable
 
     private void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && canBeBroken)
         {
             DestroyDoor();
         }
@@ -130,6 +134,15 @@ public class Door : Activable
     }
 
     public void DestroyDoor()
+    {
+        m_AudioSource.PlayOneShot(breakingSound);
+        Instantiate(dustParticles, transform);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        Invoke("DestroyThis", 2.0f);
+    }
+
+    public void DestroyThis()
     {
         Destroy(this.gameObject);
     }

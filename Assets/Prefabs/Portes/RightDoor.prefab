@@ -63,6 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3450f61bc73e1242af823148d017c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canBeBroken: 1
+  dustParticles: {fileID: 9174961579560936256, guid: 63e9ed557b2ecbd40b8637d9ab5a304f,
+    type: 3}
+  breakingSound: {fileID: 8300000, guid: 0db55f52471499045b5261b7f9c9f85a, type: 3}
   lockedDoor: {fileID: 8300000, guid: 992090e5bc071c84a87ded4c28917332, type: 3}
   openingDoor: {fileID: 8300000, guid: 1fb84bd4960065849bd31ea7b3d0124a, type: 3}
   closingDoor: {fileID: 8300000, guid: f38b363ffa4a4534a8cbb8e5706c2cea, type: 3}
