@@ -51966,6 +51966,11 @@ PrefabInstance:
       propertyPath: walkSpeed
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7565573898449074286, guid: f0090224c85d5c14fba57c227093982c,
+        type: 3}
+      propertyPath: runSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7565573898449074287, guid: f0090224c85d5c14fba57c227093982c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53804,7 +53809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502754051}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.000000104308114}
-  m_LocalPosition: {x: -28.256, y: 1.19, z: -27.1717}
+  m_LocalPosition: {x: -28.256, y: 1.16, z: -27.1717}
   m_LocalScale: {x: 0.6327797, y: 7.7602863, z: 13.689528}
   m_Children: []
   m_Father: {fileID: 1104132957}
@@ -64298,7 +64303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a0cb46deeab22f4f88fc639dabaa698, type: 2}
+  - {fileID: 2100000, guid: fd2ab21bca76af947b16d54d80ca3fdb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
