@@ -544,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 8994651347134894493, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6087605
+      value: -0.00000004470348
       objectReference: {fileID: 0}
     - target: {fileID: 8994651347134894493, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
@@ -554,7 +554,7 @@ PrefabInstance:
     - target: {fileID: 8994651347134894493, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79335415
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8994651347134894493, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 8994651347134894493, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8994651347134894493, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
@@ -1874,27 +1874,27 @@ PrefabInstance:
     - target: {fileID: 6114817516110731396, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: positionArrow.m_Curve.Array.data[0].inSlope
-      value: 108
+      value: 21.6
       objectReference: {fileID: 0}
     - target: {fileID: 6114817516110731396, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: positionArrow.m_Curve.Array.data[0].outSlope
-      value: 108
+      value: 21.6
       objectReference: {fileID: 0}
     - target: {fileID: 6114817516110731396, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: positionArrow.m_Curve.Array.data[1].time
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6114817516110731396, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: positionArrow.m_Curve.Array.data[1].inSlope
-      value: 108
+      value: 21.6
       objectReference: {fileID: 0}
     - target: {fileID: 6114817516110731396, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
       propertyPath: positionArrow.m_Curve.Array.data[1].outSlope
-      value: 108
+      value: 21.6
       objectReference: {fileID: 0}
     - target: {fileID: 8994651347134894492, guid: b092dc4682176a9419b2b10d44f978ce,
         type: 3}
