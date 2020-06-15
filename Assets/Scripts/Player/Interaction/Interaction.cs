@@ -71,7 +71,7 @@ public class Interaction : MonoBehaviour
         UpdatePointerImage();
 
         //Dropping a held object
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetButtonUp("Interact"))
         {
             //If the player holds an object
             if (m_ObjectHeld != null)
@@ -89,7 +89,7 @@ public class Interaction : MonoBehaviour
         }
 
         //Throwing a held object forward when pressing right-click
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetButtonDown("Throw Object"))
         {
             //If the player holds an object
             if (m_ObjectHeld != null)

@@ -10,10 +10,6 @@ public class Bending : MonoBehaviour
 
     private Player m_PlayerScript;
 
-    private KeyCode m_BendingLeft = KeyCode.A;
-
-    private KeyCode m_BendingRight = KeyCode.E;
-
     private float m_PlayerSpeed;
 
     private Animator m_Animator;
@@ -35,11 +31,11 @@ public class Bending : MonoBehaviour
 
     private void ChangePlayerSpeedOnBending()
     {
-        if(Input.GetKeyDown(m_BendingLeft) || Input.GetKeyDown(m_BendingRight))
+        if(Input.GetButtonDown("BendingLeft") || Input.GetButtonDown("BendingRight"))
         {
             m_PlayerScript.speedMove = 0;
         }
-        if (Input.GetKeyUp(m_BendingLeft) || Input.GetKeyUp(m_BendingRight))
+        if (Input.GetButtonUp("BendingLeft") || Input.GetButtonUp("BendingRight"))
         {
             m_PlayerScript.speedMove = m_PlayerSpeed;
         }
@@ -48,14 +44,14 @@ public class Bending : MonoBehaviour
     private void ChangePositionCameraOnBendingLeft()
     {
         
-        if (Input.GetKeyDown(m_BendingLeft))
+        if (Input.GetButtonDown("BendingLeft"))
         {
             if (m_Animator.GetBool("IsCrouching"))
                 m_Animator.SetBool("IsBendingLeftCrouching", true);
             else
                 m_Animator.SetBool("IsBendingLeft", true);
         }
-        if (Input.GetKeyUp(m_BendingLeft))
+        if (Input.GetButtonUp("BendingLeft"))
         {
             if (m_Animator.GetBool("IsCrouching"))
                 m_Animator.SetBool("IsBendingLeftCrouching", false);
@@ -66,14 +62,14 @@ public class Bending : MonoBehaviour
 
     private void ChangePositionCameraOnBendingRight()
     {
-        if (Input.GetKeyDown(m_BendingRight))
+        if (Input.GetButtonDown("BendingRight"))
         {
             if (m_Animator.GetBool("IsCrouching"))
                 m_Animator.SetBool("IsBendingRightCrouching", true);
             else
                 m_Animator.SetBool("IsBendingRight", true);
         }
-        if (Input.GetKeyUp(m_BendingRight))
+        if (Input.GetButtonUp("BendingRight"))
         {
             if (m_Animator.GetBool("IsCrouching"))
                 m_Animator.SetBool("IsBendingRightCrouching", false);
