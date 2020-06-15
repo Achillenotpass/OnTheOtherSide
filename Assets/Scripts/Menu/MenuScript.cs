@@ -34,7 +34,7 @@ public class MenuScript : MonoBehaviour
 
     public void PauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !m_IsPaused)
+        if (Input.GetButtonDown("Pause Menu") && !m_IsPaused)
         {
             pause.SetActive(true);
             Cursor.visible = true;
@@ -48,7 +48,7 @@ public class MenuScript : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.Tab)&& m_IsPaused)
+        else if (Input.GetButtonDown("Pause Menu") && m_IsPaused)
         {
             StopMenu(pause);
         }

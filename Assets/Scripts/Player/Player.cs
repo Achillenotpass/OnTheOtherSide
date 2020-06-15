@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         { 
             PlayStepSounds();
         }
@@ -43,18 +43,13 @@ public class Player : MonoBehaviour
         if (m_IsRunning) { multiplyMove = 2; }
         else { multiplyMove = 1; }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetButtonDown("Sprint"))
         {
             m_IsRunning = true;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetButtonUp("Sprint"))
         {
             m_IsRunning = false;
-        }
-
-        if(Input.GetButtonDown("Sprint"))
-        {
-            Debug.Log("aaaa");
         }
 
         // Calculate how fast we should be moving
