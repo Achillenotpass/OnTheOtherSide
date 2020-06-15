@@ -22,6 +22,38 @@ public class Crouching : MonoBehaviour
         ChangeColliderOnCrouching();
         ChangePositionCameraOnCrouching();
         ChangePlayerSpeedOnCrouching();
+        AnimationHead();
+    }
+
+    void AnimationHead()
+    {
+        if (Input.GetAxis("Vertical") != 0 && !m_Animator.GetBool("IsCrouching") && !Input.GetButton("Sprint") || Input.GetAxis("Horizontal") != 0 && !m_Animator.GetBool("IsCrouching") && !Input.GetButton("Sprint"))
+        {
+            m_Animator.SetBool("IsWalking", true);
+            m_Animator.SetBool("IsWalkingCrouching", false);
+            m_Animator.SetBool("IsWalkingSprint", false);
+        }
+        else if (Input.GetAxis("Vertical") != 0 && !m_Animator.GetBool("IsCrouching") && Input.GetButton("Sprint") || Input.GetAxis("Horizontal") != 0 && !m_Animator.GetBool("IsCrouching") && Input.GetButton("Sprint"))
+        {
+            m_Animator.SetBool("IsWalkingSprint", true);
+            m_Animator.SetBool("IsWalking", false);
+            m_Animator.SetBool("IsWalkingCrouching", false);
+        }
+        else if(Input.GetAxis("Vertical") != 0 && m_Animator.GetBool("IsCrouching") || Input.GetAxis("Horizontal") != 0 && m_Animator.GetBool("IsCrouching"))
+        {
+            m_Animator.SetBool("IsWalkingCrouching", true);
+            m_Animator.SetBool("IsWalking", false);
+
+            m_Animator.SetBool("IsWalkingSprint", false);
+        }
+        else
+        {
+            m_Animator.SetBool("IsWalking", false);
+            m_Animator.SetBool("IsWalkingCrouching", false);
+            m_Animator.SetBool("IsWalkingSprint", false);
+        }
+            
+
     }
 
     private void ChangePlayerSpeedOnCrouching()
@@ -30,7 +62,6 @@ public class Crouching : MonoBehaviour
             m_PlayerScript.speed /= 3;
         if (Input.GetButtonUp("Crouching"))
             m_PlayerScript.speed *= 3;
-
     }
 
     private void ChangeColliderOnCrouching()

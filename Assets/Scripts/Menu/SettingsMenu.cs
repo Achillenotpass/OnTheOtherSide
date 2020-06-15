@@ -136,11 +136,11 @@ public class SettingsMenu : MonoBehaviour
                 break;
             case "Music":
                 SetVolumeMusic(10);
-                music.value = settings.musicVolume /4 + 40;
+                music.value = settings.musicVolume /4 + 10;
                 break;
             case "Effect":
                 SetVolumeSound(10);
-                effect.value = settings.effectVolume /4 + 40;
+                effect.value = settings.effectVolume /4 + 10;
                 break;
         }
     }
