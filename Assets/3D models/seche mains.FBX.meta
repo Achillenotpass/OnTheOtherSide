@@ -5,13 +5,10 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: seche main
-    2100002: piti truc devant
-    2100004: derriere
-    2100006: trou ventilation dessous
+    2100000: 01 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Box002
+    4300000: Sechoir
   externalObjects: {}
   materials:
     importMaterials: 1
