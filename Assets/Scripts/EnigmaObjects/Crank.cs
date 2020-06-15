@@ -104,7 +104,7 @@ public class Crank : Activable
                         if (m_CurrentSoundTimer >= soundTimer)
                         {
                             m_AudioSource.PlayOneShot(audioClip);
-                            m_AudioSource.pitch = m_AudioSource.pitch + 0.025f;
+                            m_AudioSource.pitch = m_AudioSource.pitch + 0.0125f;
                             m_CurrentSoundTimer = 0.0f;
                         }
                         else
