@@ -37,7 +37,7 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         UpdateHeldObjectPosition();
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetButtonDown("Interact"))
         {
             RaycastHit hitInfo;
             //Activating an activable object when pressing left-click
