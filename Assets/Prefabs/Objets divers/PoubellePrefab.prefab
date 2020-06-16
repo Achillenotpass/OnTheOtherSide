@@ -27,8 +27,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1913517, y: 2.1043277, z: 3.4413831}
-  m_Center: {x: 0, y: 0, z: 1.6927558}
+  m_Size: {x: 0.5111002, y: 2.1043248, z: 3.441383}
+  m_Center: {x: -0.8401252, y: -3.5337215e-15, z: 1.6927557}
 --- !u!82 &82175595713995916
 AudioSource:
   m_ObjectHideFlags: 0
@@ -175,6 +175,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e54461d0957afb6409a73d3eb33202ac, type: 3}
+--- !u!65 &6582232379456085667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386468690925470573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43012446, y: 2.1043248, z: 3.441383}
+  m_Center: {x: 0.88061327, y: -3.5337215e-15, z: 1.6927557}
+--- !u!65 &808135825451457161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386468690925470573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.19135, y: 0.38358605, z: 3.4413807}
+  m_Center: {x: 0, y: -0.8603706, z: 1.6927545}
+--- !u!65 &650625706432437647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386468690925470573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.19135, y: 0.52529705, z: 3.441381}
+  m_Center: {x: 0, y: 0.7895147, z: 1.6927547}
+--- !u!65 &6151265971267087016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2386468690925470573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.19135, y: 2.1043248, z: 0.4655175}
+  m_Center: {x: 0, y: -5.394886e-16, z: 0.20482261}
 --- !u!1001 &2386468690925569485
 PrefabInstance:
   m_ObjectHideFlags: 0

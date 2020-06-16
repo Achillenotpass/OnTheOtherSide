@@ -27,8 +27,73 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6623792, y: 0.6847568, z: 1.1077842}
-  m_Center: {x: 0.000068843365, y: -0.014588494, z: 0.05309541}
+  m_Size: {x: 0.081403375, y: 0.1037812, z: 0.58103293}
+  m_Center: {x: -0.29041904, y: 0.2758994, z: -0.21028027}
+--- !u!65 &2184537974755352084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532565536532403104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6623792, y: 0.6847568, z: 0.046535414}
+  m_Center: {x: 0.000068843365, y: -0.014588505, z: 0.056968633}
+--- !u!65 &3144759656821325792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532565536532403104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.081403136, y: 0.09603492, z: 0.5655401}
+  m_Center: {x: 0.29055685, y: -0.30894956, z: -0.2180267}
+--- !u!65 &4533876689219673508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532565536532403104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.081403255, y: 0.07279582, z: 0.5500474}
+  m_Center: {x: -0.2904191, y: -0.3205691, z: -0.22577304}
+--- !u!65 &4755574141332010580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532565536532403104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6623792, y: 0.07279585, z: 0.5732866}
+  m_Center: {x: 0.000068843365, y: 0.2913921, z: 0.32034424}
+--- !u!65 &5549135451124311564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532565536532403104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.089149594, y: 0.09603494, z: 0.5655401}
+  m_Center: {x: 0.28668362, y: 0.27977252, z: -0.2180267}
 --- !u!82 &82310228715259192
 AudioSource:
   m_ObjectHideFlags: 0
@@ -51,7 +116,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 25
+  MaxDistance: 30
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
