@@ -84,6 +84,7 @@ public class Door : Activable
     {
         if (health <= 0 && canBeBroken)
         {
+            canBeBroken = false;
             DestroyDoor();
         }
     }
