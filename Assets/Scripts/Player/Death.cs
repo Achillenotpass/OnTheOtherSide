@@ -5,8 +5,6 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     public GameObject respawnPoint;
-
-    private bool m_IsDying = false;
     public float deathTime;
 
     //To disable

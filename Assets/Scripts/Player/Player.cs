@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public float speed = 5;
 
+    public float speedCrouching = 1;
+
     public float maxVelocityChange = 10.0f;
 
     private Rigidbody m_Rigidbody;
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         { 
-            PlayStepSounds();
+            //PlayStepSounds();
         }
         SimpleMovement();
     }
@@ -89,7 +91,7 @@ public class Player : MonoBehaviour
     {
         if (m_CurrentTimerStepSounds <= m_TimeBetweenStepSounds)
         {
-            m_CurrentTimerStepSounds = m_CurrentTimerStepSounds + Time.deltaTime * speedMove * multiplyMove;
+            m_CurrentTimerStepSounds = m_CurrentTimerStepSounds + Time.deltaTime * speedMove * multiplyMove * speedCrouching;
         }
         else
         {
