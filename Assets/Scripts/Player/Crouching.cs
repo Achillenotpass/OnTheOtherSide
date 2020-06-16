@@ -59,9 +59,15 @@ public class Crouching : MonoBehaviour
     private void ChangePlayerSpeedOnCrouching()
     {
         if (Input.GetButtonDown("Crouching"))
+        {
             m_PlayerScript.speed /= 3;
+            m_PlayerScript.speedCrouching = 0.5f;
+        } 
         if (Input.GetButtonUp("Crouching"))
+        {
             m_PlayerScript.speed *= 3;
+            m_PlayerScript.speedCrouching = 1;
+        }
     }
 
     private void ChangeColliderOnCrouching()
