@@ -15,6 +15,7 @@ public class SuperSimon : Activable
 
     private bool m_FinishedSuperSimon = false;
 
+    
 
 
 
@@ -23,7 +24,6 @@ public class SuperSimon : Activable
 
     public override void Interaction()
     {
-
 
         if (!m_FinishedSuperSimon)
         {

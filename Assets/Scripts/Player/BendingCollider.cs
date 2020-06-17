@@ -15,7 +15,6 @@ public class BendingCollider : MonoBehaviour
     {
         if (other.gameObject.tag != "Player")
         {
-            Debug.Log("aaa");
             if (m_Animator.GetBool("IsCrouching"))
             {
                 m_Animator.SetBool("IsBendingLeftCrouching", false);

@@ -17,7 +17,7 @@ public class Bending : MonoBehaviour
     private void Start()
     {
         m_PlayerScript = GetComponent<Player>();
-        m_PlayerSpeed = m_PlayerScript.speedMove;
+        m_PlayerSpeed = m_PlayerScript.speed;
         m_Animator = GetComponentInChildren<Animator>();
     }
 
@@ -33,11 +33,11 @@ public class Bending : MonoBehaviour
     {
         if(Input.GetButtonDown("BendingLeft") || Input.GetButtonDown("BendingRight"))
         {
-            m_PlayerScript.speedMove = 0;
+            m_PlayerScript.speed = 0;
         }
         if (Input.GetButtonUp("BendingLeft") || Input.GetButtonUp("BendingRight"))
         {
-            m_PlayerScript.speedMove = m_PlayerSpeed;
+            m_PlayerScript.speed = m_PlayerSpeed;
         }
     }
 

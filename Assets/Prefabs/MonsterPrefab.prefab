@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3042122654275925082}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4903118187587746211}
   m_Layer: 0
   m_Name: MonsterPrefab
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   audioSourceCry: {fileID: 4903118187587746211}
   soundDestination: {fileID: 4568279443815915011}
   monsterHearingDistance: 15
+  monsterMinHearingDistance: 15
 --- !u!195 &7565573898449074272
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -432,7 +433,7 @@ GameObject:
   - component: {fileID: 8110386353548524300}
   m_Layer: 0
   m_Name: FuckDoors
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,7 +511,7 @@ GameObject:
   - component: {fileID: 9138821136729956076}
   m_Layer: 0
   m_Name: MonsterFuckTheLight
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,9 +656,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7565573898449074287}
     m_Modifications:
+    - target: {fileID: 100000, guid: 4e26cf6998286624cbd13ef5d1a45c33, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 100084, guid: 4e26cf6998286624cbd13ef5d1a45c33, type: 3}
       propertyPath: m_Name
       value: Monstre Animation v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100084, guid: 4e26cf6998286624cbd13ef5d1a45c33, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 100086, guid: 4e26cf6998286624cbd13ef5d1a45c33, type: 3}
+      propertyPath: m_TagString
+      value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 400084, guid: 4e26cf6998286624cbd13ef5d1a45c33, type: 3}
       propertyPath: m_LocalPosition.x

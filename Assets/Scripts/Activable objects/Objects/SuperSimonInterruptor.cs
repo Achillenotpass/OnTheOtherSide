@@ -11,9 +11,12 @@ public class SuperSimonInterruptor : Activable
     private float m_ReactivationTimer = 1.5f;
     private float m_CurrentReactivationTimer = 0.0f;
 
+    private AudioSource m_AudioSource;
+
     private void Awake()
     {
         m_Animator = GetComponent<Animator>();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -40,6 +43,7 @@ public class SuperSimonInterruptor : Activable
     {
         if (m_CanBeActivated)
         {
+            m_AudioSource.Play();
             m_CanBeActivated = false;
             m_CurrentReactivationTimer = m_ReactivationTimer;
 
